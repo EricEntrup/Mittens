@@ -1,0 +1,135 @@
+extends ../Layouts/master
+block content
+    .container-fluid
+        .row
+            .col-sm-12
+                .iq-card
+                    .iq-card-body
+                        .row
+                            .col-lg-6
+                                img.img-fluid.w-25(src='assets/images/logo.gif' alt='')
+                            .col-lg-6.align-self-center
+                                h4.mb-0.float-right Invoice
+                            .col-sm-12
+                                hr.mt-3
+                                h5.mb-0 Hello, Nik Jones
+                                p
+                                    | It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &apos;Content here, content here&apos;, making it look like readable English.
+                        .row
+                            .col-lg-12
+                                .table-responsive-sm
+                                    table.table
+                                        thead
+                                            tr
+                                                th(scope='col') Order Date
+                                                th(scope='col') Order Status
+                                                th(scope='col') Order ID
+                                                th(scope='col') Billing Address
+                                                th(scope='col') Shipping Address
+                                        tbody
+                                            tr
+                                                td Jan 17, 2016
+                                                td
+                                                    span.badge.badge-danger Unpaid
+                                                td 250028
+                                                td
+                                                    p.mb-0
+                                                        | PO Box 16122 Collins Street West
+                                                        br
+                                                        | Victoria 8007 Australia
+                                                        br
+                                                        |                                                                     Phone: +123 456 7890
+                                                        br
+                                                        |                                                                     Email: demo@Metorik.com
+                                                        br
+                                                        |                                                                     Web: www.Metorik.com
+                                                td
+                                                    p.mb-0
+                                                        | PO Box 16122 Collins Street West
+                                                        br
+                                                        | Victoria 8007 Australia
+                                                        br
+                                                        |                                                                     Phone: +123 456 7890
+                                                        br
+                                                        |                                                                     Email: demo@Metorik.com
+                                                        br
+                                                        |                                                                     Web: www.Metorik.com
+                        .row
+                            .col-sm-12
+                                h5 Order Summary
+                                .table-responsive-sm
+                                    table.table.table-striped
+                                        thead
+                                            tr
+                                                th.text-center(scope='col') #
+                                                th(scope='col') Item
+                                                th.text-center(scope='col') Quantity
+                                                th.text-center(scope='col') Price
+                                                th.text-center(scope='col') Totals
+                                        tbody
+                                            tr
+                                                th.text-center(scope='row') 1
+                                                td
+                                                    h6.mb-0 Web Design
+                                                    p.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                td.text-center 5
+                                                td.text-center $120.00
+                                                td.text-center
+                                                    b $2,880.00
+                                            tr
+                                                th.text-center(scope='row') 2
+                                                td
+                                                    h6.mb-0 Web Design
+                                                    p.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                td.text-center 5
+                                                td.text-center $120.00
+                                                td.text-center
+                                                    b $2,880.00
+                                            tr
+                                                th.text-center(scope='row') 3
+                                                td
+                                                    h6.mb-0 Web Design
+                                                    p.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                td.text-center 5
+                                                td.text-center $120.00
+                                                td.text-center
+                                                    b $2,880.00
+                                            tr
+                                                th.text-center(scope='row') 4
+                                                td
+                                                    h6.mb-0 Web Design
+                                                    p.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                td.text-center 5
+                                                td.text-center $120.00
+                                                td.text-center
+                                                    b $2,880.00
+                                h5.mt-5 Order Details
+                                .table-responsive-sm
+                                    table.table.table-striped
+                                        thead
+                                            tr
+                                                th(scope='col') Bank
+                                                th(scope='col') .Acc.No
+                                                th(scope='col') Due Date
+                                                th(scope='col') Sub-total
+                                                th(scope='col') Discount
+                                                th(scope='col') Total
+                                        tbody
+                                            tr
+                                                th(scope='row') Threadneedle St
+                                                td 12333456789
+                                                td 12 November 2019
+                                                td $4597.50
+                                                td 10%
+                                                td
+                                                    b $4137.75 USD
+                            .col-sm-6
+                            .col-sm-6.text-right
+                                button.btn.btn-link.mr-3(type='button')
+                                    i.ri-printer-line
+                                    |  Download Print
+                                button.btn.btn-primary(type='button') Submit
+                            .col-sm-12.mt-5
+                                b.text-danger Notes:
+                                p
+                                    | It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &apos;Content here, content here&apos;, making it look like readable English.

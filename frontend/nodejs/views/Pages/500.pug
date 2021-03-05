@@ -1,0 +1,15 @@
+extends ../Layouts/default
+
+block content
+    .wrapper
+        .container-fluid.p-0
+            .row.no-gutters
+                .col-sm-12.text-center
+                    .iq-error
+                        img.img-fluid.iq-error-img(src='assets/images/error/03.png', alt='')
+                        h1 500
+                        h3.mb-0.mt-4 Oops! This Page is Not Working.
+                        p The requested is Internal Server Error.
+                        a.btn.btn-primary.mt-3(href='index.html')
+                            i.ri-home-4-line
+                            | Back to Home

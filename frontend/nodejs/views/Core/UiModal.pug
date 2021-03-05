@@ -1,0 +1,295 @@
+extends ../Layouts/master
+
+block content
+    .container-fluid
+        .row
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Modal components
+                    .iq-card-body
+                        p
+                            | Below is a
+                            em static
+                            |  modal example (meaning its
+                            code position
+                            |  and
+                            code display
+                            |  have been overridden). Included are the modal header, modal body (required for
+                            code padding
+                            | ), and modal footer (optional). We ask that you include modal headers with dismiss actions whenever possible, or provide another explicit dismiss action.
+                        // Button trigger modal
+                        button.btn.btn-primary(type='button' data-toggle='modal' data-target='#exampleModal')
+                            | Launch demo modal
+                        // Modal
+                        #exampleModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+                            .modal-dialog(role='document')
+                                .modal-content
+                                    .modal-header
+                                        h5#exampleModalLabel.modal-title Modal title
+                                        button.close(type='button' data-dismiss='modal' aria-label='Close')
+                                            span(aria-hidden='true') &times;
+                                    .modal-body
+                                        | ...
+                                    .modal-footer
+                                        button.btn.btn-secondary(type='button' data-dismiss='modal') Close
+                                        button.btn.btn-primary(type='button') Save changes
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Modal Scrolling
+                    .iq-card-body
+                        p
+                            | When modals become too long for the user&rsquo;s viewport or device, they scroll independent of the page itself. Try the demo below to see what we mean.
+                        // Button trigger modal
+                        button.btn.btn-primary(type='button' data-toggle='modal' data-target='#exampleModalScrollable')
+                            | Launch demo modal
+                        // Modal
+                        #exampleModalScrollable.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalScrollableTitle' aria-hidden='true')
+                            .modal-dialog.modal-dialog-scrollable(role='document')
+                                .modal-content
+                                    .modal-header
+                                        h5#exampleModalScrollableTitle.modal-title Modal title
+                                        button.close(type='button' data-dismiss='modal' aria-label='Close')
+                                            span(aria-hidden='true') &times;
+                                    .modal-body
+                                        p
+                                            | Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                                        p
+                                            | Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                                        p
+                                            | Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                                        p
+                                            | Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                                        p
+                                            | Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                                        p
+                                            | Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                                        p
+                                            | Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                                        p
+                                            | Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                                        p
+                                            | Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                                        p
+                                            | Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                                        p
+                                            | Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                                        p
+                                            | Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                                        p
+                                            | Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                                        p
+                                            | Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                                        p
+                                            | Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                                        p
+                                            | Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                                        p
+                                            | Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                                        p
+                                            | Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                                    .modal-footer
+                                        button.btn.btn-secondary(type='button' data-dismiss='modal') Close
+                                        button.btn.btn-primary(type='button') Save changes
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Optional sizes
+                    .iq-card-body
+                        p
+                            | Modals have three optional sizes, available via modifier classes to be placed on a .modal-dialog. These sizes kick in at certain breakpoints to avoid horizontal scrollbars on narrower viewports.
+                        // Extra large modal
+                        button.btn.btn-primary(type='button' data-toggle='modal' data-target='.bd-example-modal-xl') Extra large modal
+                        .modal.fade.bd-example-modal-xl(tabindex='-1' role='dialog' aria-hidden='true')
+                            .modal-dialog.modal-xl
+                                .modal-content
+                                    .modal-header
+                                        h5.modal-title Modal title
+                                        button.close(type='button' data-dismiss='modal' aria-label='Close')
+                                            span(aria-hidden='true') &times;
+                                    .modal-body
+                                        p Modal body text goes here.
+                                    .modal-footer
+                                        button.btn.btn-secondary(type='button' data-dismiss='modal') Close
+                                        button.btn.btn-primary(type='button') Save changes
+                        // Large modal
+                        button.btn.btn-primary(type='button' data-toggle='modal' data-target='.bd-example-modal-lg') Large modal
+                        .modal.fade.bd-example-modal-lg(tabindex='-1' role='dialog' aria-hidden='true')
+                            .modal-dialog.modal-lg
+                                .modal-content
+                                    .modal-header
+                                        h5.modal-title Modal title
+                                        button.close(type='button' data-dismiss='modal' aria-label='Close')
+                                            span(aria-hidden='true') &times;
+                                    .modal-body
+                                        p Modal body text goes here.
+                                    .modal-footer
+                                        button.btn.btn-secondary(type='button' data-dismiss='modal') Close
+                                        button.btn.btn-primary(type='button') Save changes
+                        // Small modal
+                        button.btn.btn-primary(type='button' data-toggle='modal' data-target='.bd-example-modal-sm') Small modal
+                        .modal.fade.bd-example-modal-sm(tabindex='-1' role='dialog' aria-hidden='true')
+                            .modal-dialog.modal-sm
+                                .modal-content
+                                    .modal-header
+                                        h5.modal-title Modal title
+                                        button.close(type='button' data-dismiss='modal' aria-label='Close')
+                                            span(aria-hidden='true') &times;
+                                    .modal-body
+                                        p Modal body text goes here.
+                                    .modal-footer
+                                        button.btn.btn-secondary(type='button' data-dismiss='modal') Close
+                                        button.btn.btn-primary(type='button') Save changes
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Scrolling long content
+                    .iq-card-body
+                        p
+                            | When modals become too long for the user&rsquo;s viewport or device, they scroll independent of the page itself. Try the demo below to see what we mean.
+                        // Button trigger modal
+                        button.btn.btn-primary(type='button' data-toggle='modal' data-target='#exampleModalLong')
+                            | Launch demo modal
+                        // Modal
+                        #exampleModalLong.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLongTitle' aria-hidden='true')
+                            .modal-dialog(role='document')
+                                .modal-content
+                                    .modal-header
+                                        h5#exampleModalLongTitle.modal-title Modal title
+                                        button.close(type='button' data-dismiss='modal' aria-label='Close')
+                                            span(aria-hidden='true') &times;
+                                    .modal-body
+                                        p
+                                            | Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                                        p
+                                            | Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                                        p
+                                            | Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                                        p
+                                            | Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                                        p
+                                            | Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                                        p
+                                            | Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                                        p
+                                            | Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                                        p
+                                            | Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                                        p
+                                            | Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                                        p
+                                            | Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                                        p
+                                            | Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                                        p
+                                            | Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                                        p
+                                            | Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                                        p
+                                            | Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                                        p
+                                            | Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                                        p
+                                            | Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                                        p
+                                            | Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                                        p
+                                            | Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                                    .modal-footer
+                                        button.btn.btn-secondary(type='button' data-dismiss='modal') Close
+                                        button.btn.btn-primary(type='button') Save changes
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Vertically centered
+                    .iq-card-body
+                        p
+                            | Add
+                            code.highlighter-rouge .modal-dialog-centered
+                            |  to
+                            code.highlighter-rouge .modal-dialog
+                            |  to vertically center the modal.
+                        // Button trigger modal
+                        button.btn.btn-primary(type='button' data-toggle='modal' data-target='#exampleModalCenter')
+                            | Launch demo modal
+                        button.btn.btn-primary(type='button' data-toggle='modal' data-target='#exampleModalCenteredScrollable')
+                            | Vertically centered scrollable modal
+                        // Modal
+                        #exampleModalCenter.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true')
+                            .modal-dialog.modal-dialog-centered(role='document')
+                                .modal-content
+                                    .modal-header
+                                        h5#exampleModalCenterTitle.modal-title Modal title
+                                        button.close(type='button' data-dismiss='modal' aria-label='Close')
+                                            span(aria-hidden='true') &times;
+                                    .modal-body
+                                        | ...
+                                    .modal-footer
+                                        button.btn.btn-secondary(type='button' data-dismiss='modal') Close
+                                        button.btn.btn-primary(type='button') Save changes
+                        #exampleModalCenteredScrollable.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalCenteredScrollableTitle' aria-hidden='true')
+                            .modal-dialog.modal-dialog-scrollable.modal-dialog-centered(role='document')
+                                .modal-content
+                                    .modal-header
+                                        h5#exampleModalCenteredScrollableTitle.modal-title Modal title
+                                        button.close(type='button' data-dismiss='modal' aria-label='Close')
+                                            span(aria-hidden='true') &times;
+                                    .modal-body
+                                        p
+                                            | Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                                        p
+                                            | Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                                        p
+                                            | Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                                        p
+                                            | Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                                        p
+                                            | Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                                    .modal-footer
+                                        button.btn.btn-secondary(type='button' data-dismiss='modal') Close
+                                        button.btn.btn-primary(type='button') Save changes
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Using the grid
+                    .iq-card-body
+                        p
+                            | Utilize the Bootstrap grid system within a modal by nesting
+                            code .container-fluid
+                            |  within the
+                            code .modal-body
+                            | . Then, use the normal grid system classes as you would anywhere else.
+                        button.btn.btn-primary(type='button' data-toggle='modal' data-target='#gridSystemModal')
+                            | Launch demo modal
+                        #gridSystemModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='gridModalLabel' aria-hidden='true')
+                            .modal-dialog(role='document')
+                                .modal-content
+                                    .modal-header
+                                        h5#gridModalLabel.modal-title Grids in modals
+                                        button.close(type='button' data-dismiss='modal' aria-label='Close')
+                                            span(aria-hidden='true') &times;
+                                    .modal-body
+                                        .iq-example-row
+                                            .container-fluid
+                                                .row.mb-3
+                                                    .col-md-4 .col-md-4
+                                                    .col-md-4.ml-auto .col-md-4 .ml-auto
+                                                .row.mb-3
+                                                    .col-md-3.ml-auto .col-md-3 .ml-auto
+                                                    .col-md-2.ml-auto .col-md-2 .ml-auto
+                                                .row.mb-3
+                                                    .col-md-6.ml-auto .col-md-6 .ml-auto
+                                                .row
+                                                    .col-sm-9
+                                                        | Level 1: .col-sm-9
+                                                        .row
+                                                            .col-8.col-sm-6
+                                                                | Level 2: .col-8 .col-sm-6
+                                                            .col-4.col-sm-6
+                                                                | Level 2: .col-4 .col-sm-6
+                                    .modal-footer
+                                        button.btn.btn-secondary(type='button' data-dismiss='modal') Close
+                                        button.btn.btn-primary(type='button') Save changes

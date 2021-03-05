@@ -1,0 +1,45 @@
+extends ../Layouts/default
+
+block content
+    section.sign-in-page
+        .container.p-0
+            .row.no-gutters
+                .col-sm-12.align-self-center
+                    .sign-in-from.bg-white
+                        h1.mb-0 Sign Up
+                        p Enter your email address and password to access admin panel.
+                        form.mt-4(method='POST', action='/register', role='form')
+                            .form-group
+                                label(for='exampleInputEmail1') Your Full Name
+                                input#exampleInputEmail1.form-control.mb-0(type='text',name='name', placeholder='Your Full Name')
+                                if (locals.messages && messages.errors && messages.errors.name)
+                                    strong.invalid-feedback.d-block #{messages.errors.name}
+                            .form-group
+                                label(for='exampleInputEmail2') Email address
+                                input#exampleInputEmail2.form-control.mb-0(type='email', name='username', placeholder='Enter email')
+                                if (locals.messages && messages.databaseError)
+                                    strong.invalid-feedback.d-block #{messages.databaseError}
+                            .form-group
+                                label(for='exampleInputPassword1') Password
+                                input#exampleInputPassword1.form-control.mb-0(type='password', name='password', placeholder='Password')
+                            .d-inline-block.w-100
+                                .custom-control.custom-checkbox.d-inline-block.mt-2.pt-1
+                                    input#customCheck1.custom-control-input(type='checkbox')
+                                    label.custom-control-label(for='customCheck1')
+                                        | I accept
+                                        a(href='#') Terms and Conditions
+                                button.btn.btn-primary.float-right(type='submit') Sign Up
+                            .sign-info
+                                span.dark-color.d-inline-block.line-height-2
+                                    | Already Have Account ?
+                                    a(href='login') Log In
+                                ul.iq-social-media
+                                    li
+                                        a(href='#')
+                                            i.ri-facebook-box-line
+                                    li
+                                        a(href='#')
+                                            i.ri-twitter-line
+                                    li
+                                        a(href='#')
+                                            i.ri-instagram-line

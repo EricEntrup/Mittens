@@ -1,0 +1,231 @@
+extends ../Layouts/master
+
+block content
+    .container-fluid
+        .row
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title List group
+                    .iq-card-body
+                        p
+                            | The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.
+                        ul.list-group
+                            li.list-group-item Cras justo odio
+                            li.list-group-item Dapibus ac facilisis in
+                            li.list-group-item Morbi leo risus
+                            li.list-group-item Porta ac consectetur ac
+                            li.list-group-item Vestibulum at eros
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Disabled items
+                    .iq-card-body
+                        p
+                            | Add
+                            code .disabled
+                            |  to a
+                            code .list-group-item
+                            |  to make it
+                            em appear
+                            |  disabled. Note that some elements with
+                            code .disabled
+                            |  will also require custom JavaScript to fully disable their click events (e.g., links).
+                        ul.list-group
+                            li.list-group-item.disabled(aria-disabled='true') Cras justo odio
+                            li.list-group-item Dapibus ac facilisis in
+                            li.list-group-item Morbi leo risus
+                            li.list-group-item Porta ac consectetur ac
+                            li.list-group-item Vestibulum at eros
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Flush
+                    .iq-card-body
+                        p
+                            | Add
+                            code.highlighter-rouge .list-group-flush
+                            |  to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards).
+                        ul.list-group.list-group-flush
+                            li.list-group-item Cras justo odio
+                            li.list-group-item Dapibus ac facilisis in
+                            li.list-group-item Morbi leo risus
+                            li.list-group-item Porta ac consectetur ac
+                            li.list-group-item Vestibulum at eros
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Contextual classes
+                    .iq-card-body
+                        p Use contextual classes to style list items with a stateful background and color.
+                        ul.list-group
+                            li.list-group-item Dapibus ac facilisis in
+                            li.list-group-item.list-group-item-primary A simple primary list group item
+                            li.list-group-item.list-group-item-secondary A simple secondary list group item
+                            li.list-group-item.list-group-item-success A simple success list group item
+                            li.list-group-item.list-group-item-danger A simple danger list group item
+                            li.list-group-item.list-group-item-warning A simple warning list group item
+                            li.list-group-item.list-group-item-info A simple info list group item
+                            li.list-group-item.list-group-item-light A simple light list group item
+                            li.list-group-item.list-group-item-dark A simple dark list group item
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title With badges
+                    .iq-card-body
+                        p
+                            | Add badges to any list group item to show unread counts, activity, and more with the help of some
+                            a(href='/docs/4.3/utilities/flex/') utilities
+                            | .
+                        ul.list-group
+                            li.list-group-item.d-flex.justify-content-between.align-items-center
+                                | Cras justo odio
+                                span.badge.badge-primary.badge-pill 14
+                            li.list-group-item.d-flex.justify-content-between.align-items-center
+                                | Dapibus ac facilisis in
+                                span.badge.badge-success.badge-pill 2
+                            li.list-group-item.d-flex.justify-content-between.align-items-center
+                                | Morbi leo risus
+                                span.badge.badge-danger.badge-pill 1
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title With badges
+                    .iq-card-body
+                        p
+                            | Add badges to any list group item to show unread counts, activity, and more with the help of some
+                            a(href='/docs/4.3/utilities/flex/') utilities
+                            | .
+                        ul.list-group
+                            li.list-group-item.d-flex.justify-content-between.align-items-center.iq-bg-primary
+                                | Cras justo odio
+                                span.badge.badge-primary.badge-pill 14
+                            li.list-group-item.d-flex.justify-content-between.align-items-center.iq-bg-success
+                                | Dapibus ac facilisis in
+                                span.badge.badge-success.badge-pill 2
+                            li.list-group-item.d-flex.justify-content-between.align-items-center.iq-bg-danger
+                                | Morbi leo risus
+                                span.badge.badge-danger.badge-pill 1
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title List Active
+                    .iq-card-body
+                        p
+                            | Add
+                            code .active
+                            |  to a
+                            code .list-group-item
+                            |  to indicate the current active selection.
+                        ul.list-group
+                            li.list-group-item.active Cras justo odio
+                            li.list-group-item Dapibus ac facilisis in
+                            li.list-group-item Morbi leo risus
+                            li.list-group-item Porta ac consectetur ac
+                            li.list-group-item Vestibulum at eros
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Links and buttons
+                    .iq-card-body
+                        p
+                            | Use
+                            code &lt;a&gt;
+                            | s or
+                            code &lt;button&gt;
+                            | s to create
+                            em actionable
+                            |  list group items with hover, disabled, and active states by adding
+                            code .list-group-item-action
+                            | . We separate these pseudo-classes to ensure list groups made of non-interactive elements (like
+                            code &lt;li&gt;
+                            | s or
+                            code &lt;div&gt;
+                            | s) don&rsquo;t provide a click or tap affordance.
+                        p
+                            | Be sure to
+                            strong
+                                | not use the standard
+                                code .btn
+                                |  classes here
+                            | .
+                        .list-group
+                            a.list-group-item.list-group-item-action.active(href='#')
+                                | Cras justo odio
+                            a.list-group-item.list-group-item-action(href='#') Dapibus ac facilisis in
+                            a.list-group-item.list-group-item-action(href='#') Morbi leo risus
+                            a.list-group-item.list-group-item-action(href='#') Porta ac consectetur ac
+                            a.list-group-item.list-group-item-action.disabled(href='#' tabindex='-1' aria-disabled='true') Vestibulum at eros
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Horizontal
+                    .iq-card-body
+                        p
+                            | Add
+                            code .list-group-horizontal
+                            |  to change the layout of list group items from vertical to horizontal across all breakpoints. Alternatively, choose a responsive variant
+                            code .list-group-horizontal-{sm|md|lg|xl}
+                            |  to make a list group horizontal starting at that breakpoint&rsquo;s
+                            code min-width
+                            | . Currently
+                            strong horizontal list groups cannot be combined with flush list groups.
+                        p
+                            strong ProTip:
+                            |  Want equal-width list group items when horizontal? Add
+                            code .flex-fill
+                            |  to each list group item.
+                        ul.list-group.list-group-horizontal
+                            li.list-group-item Cras justo odio
+                            li.list-group-item Dapibus ac facilisis in
+                            li.list-group-item Morbi leo risus
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Contextual classes Action
+                    .iq-card-body
+                        p Use contextual classes to style list items with a stateful background and color.
+                        .list-group
+                            a.list-group-item.list-group-item-action(href='#') Dapibus ac facilisis in
+                            a.list-group-item.list-group-item-action.list-group-item-primary(href='#') A simple primary list group item
+                            a.list-group-item.list-group-item-action.list-group-item-secondary(href='#') A simple secondary list group item
+                            a.list-group-item.list-group-item-action.list-group-item-success(href='#') A simple success list group item
+                            a.list-group-item.list-group-item-action.list-group-item-danger(href='#') A simple danger list group item
+                            a.list-group-item.list-group-item-action.list-group-item-warning(href='#') A simple warning list group item
+                            a.list-group-item.list-group-item-action.list-group-item-info(href='#') A simple info list group item
+                            a.list-group-item.list-group-item-action.list-group-item-light(href='#') A simple light list group item
+                            a.list-group-item.list-group-item-action.list-group-item-dark(href='#') A simple dark list group item
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Custom content
+                    .iq-card-body
+                        p
+                            | Add nearly any HTML within, even for linked list groups like the one below, with the help of
+                            a(href='/docs/4.3/utilities/flex/') flexbox utilities
+                            | .
+                        .list-group
+                            a.list-group-item.list-group-item-action.active(href='#')
+                                .d-flex.w-100.justify-content-between
+                                    h5.mb-1.text-white List group item heading
+                                    small 3 days ago
+                                p.mb-1
+                                    | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                                small Donec id elit non mi porta.
+                            a.list-group-item.list-group-item-action(href='#')
+                                .d-flex.w-100.justify-content-between
+                                    h5.mb-1 List group item heading
+                                    small.text-muted 3 days ago
+                                p.mb-1
+                                    | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                                small.text-muted Donec id elit non mi porta.
+                            a.list-group-item.list-group-item-action(href='#')
+                                .d-flex.w-100.justify-content-between
+                                    h5.mb-1 List group item heading
+                                    small.text-muted 3 days ago
+                                p.mb-1
+                                    | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                                small.text-muted Donec id elit non mi porta.
+

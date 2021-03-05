@@ -1,0 +1,135 @@
+extends ../Layouts/master
+
+block content
+
+    .container-fluid
+        .row
+            .col-sm-12.col-lg-12
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Vertical Wizard
+                    .iq-card-body
+                        .row
+                            .col-md-3
+                                ul#top-tabbar-vertical.p-0
+                                    li#personal.active
+                                        a(href='javascript:void();')
+                                            i.ri-lock-unlock-line.text-primary
+                                            span Personal
+                                    li#contact
+                                        a(href='javascript:void();')
+                                            i.ri-user-fill.text-danger
+                                            span Contact
+                                    li#official
+                                        a(href='javascript:void();')
+                                            i.ri-camera-fill.text-success
+                                            span Official
+                                    li#payment
+                                        a(href='javascript:void();')
+                                            i.ri-check-fill.text-warning
+                                            span Payment
+                            .col-md-9
+                                form#form-wizard3.text-center
+                                    // fieldsets
+                                    fieldset
+                                        .form-card.text-left
+                                            .row
+                                                .col-12
+                                                    h3.mb-4 User Information:
+                                            .row
+                                                .col-md-12
+                                                    .form-group
+                                                        label(for='fname') First Name: *
+                                                        input#fname.form-control(type='text', name='fname', placeholder='First Name', required='required')
+                                                .col-md-12
+                                                    .form-group
+                                                        label(for='lname') Last Name: *
+                                                        input#lname.form-control(type='text', name='lname', placeholder='Last Name')
+                                                .col-md-12
+                                                    .form-group
+                                                        label Gender: *
+                                                        .form-check
+                                                            .custom-control.custom-radio.custom-control-inline
+                                                                input#customRadio1.custom-control-input(type='radio', name='customRadio')
+                                                                label.custom-control-label(for='customRadio1')  Male
+                                                            .custom-control.custom-radio.custom-control-inline
+                                                                input#customRadio2.custom-control-input(type='radio', name='customRadio')
+                                                                label.custom-control-label(for='customRadio2')  Female
+                                                .col-md-12
+                                                    .form-group
+                                                        label(for='dob') Date Of Birth: *
+                                                        input#dob.form-control(type='date', name='dob')
+                                        button#submit.btn.btn-primary.next.action-button.float-right(type='button', name='next', value='Next') Next
+                                    fieldset
+                                        .form-card.text-left
+                                            .row
+                                                .col-12
+                                                    h3.mb-4 Contact Information:
+                                            .row
+                                                .col-md-12
+                                                    .form-group
+                                                        label(for='email') Email Id: *
+                                                        input#email.form-control(type='email', name='email', placeholder='Email Id')
+                                                .col-md-12
+                                                    .form-group
+                                                        label(for='ccno') Contact Number: *
+                                                        input#ccno.form-control(type='text', name='ccno', placeholder='Contact Number')
+                                                .col-md-12
+                                                    .form-group
+                                                        label(for='city') City: *
+                                                        input#city.form-control(type='text', name='city', placeholder='City.')
+                                                .col-md-12
+                                                    .form-group
+                                                        label(for='state') State: *
+                                                        input#state.form-control(type='text', name='state', placeholder='State.')
+                                        button.btn.btn-primary.next.action-button.float-right(type='button', name='next', value='Next') Next
+                                        button.btn.btn-dark.previous.action-button-previous.float-right.mr-3(type='button', name='previous', value='Previous') Previous
+                                    fieldset
+                                        .form-card.text-left
+                                            .row
+                                                .col-12
+                                                    h3.mb-4 Official Information:
+                                            .row
+                                                .col-md-12
+                                                    .form-group
+                                                        label(for='empid') Employee Id: *
+                                                        input#empid.form-control(type='email', name='empid', placeholder='Employee Id.')
+                                                .col-md-12
+                                                    .form-group
+                                                        label(for='desg') Designation: *
+                                                        input#desg.form-control(type='text', name='desg', placeholder='Designation.')
+                                                .col-md-12
+                                                    .form-group
+                                                        label(for='accname') Departmrnt Name: *
+                                                        input#accname.form-control(type='text', name='accname', placeholder='Departmrnt Name.')
+                                                .col-md-12
+                                                    .form-group
+                                                        label(for='workhour') Working Hour: *
+                                                        input#workhour.form-control(type='text', name='workhour', placeholder='Working Hour.')
+                                        button.btn.btn-primary.next.action-button.float-right(type='button', name='next', value='Next') Next
+                                        button.btn.btn-dark.previous.action-button-previous.float-right.mr-3(type='button', name='previous', value='Previous') Previous
+                                    fieldset
+                                        .form-card.text-left
+                                            .row
+                                                .col-12
+                                                    h3.mb-4.text-left Payment:
+                                            .row
+                                                .col-md-12
+                                                    .form-group
+                                                        label(for='panno') Pan No: *
+                                                        input#panno.form-control(type='text', name='panno', placeholder='Pan No.')
+                                                .col-md-12
+                                                    .form-group
+                                                        label(for='accno') Account No: *
+                                                        input#accno.form-control(type='text', name='accno', placeholder='Account No.')
+                                                .col-md-12
+                                                    .form-group
+                                                        label(for='holname') Account Holder Name: *
+                                                        input#holname.form-control(type='text', name='accname', placeholder='Account Holder Name.')
+                                                .col-md-12
+                                                    .form-group
+                                                        label(for='ifsc') IFSC Code: *
+                                                        input#ifsc.form-control(type='text', name='ifsc', placeholder='IFSC Code.')
+                                        a.btn.btn-primary.action-button.float-right(href='form-wizard-vertical') Submit
+                                        button.btn.btn-dark.previous.action-button-previous.float-right.mr-3(type='button', name='previous', value='Previous') Previous

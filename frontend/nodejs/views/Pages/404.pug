@@ -1,0 +1,14 @@
+extends ../Layouts/default
+
+block content
+    .wrapper
+        .container-fluid.p-0
+            .row.no-gutters
+                .col-sm-12.text-center
+                    .iq-error
+                        img.img-fluid.iq-error-img(src='assets/images/error/01.png', alt='')
+                        h3.mb-0.mt-4 Oops! This Page is Not Found.
+                        p The requested page dose not exist.
+                        a.btn.btn-primary.mt-3(href='/')
+                            i.ri-home-4-line
+                            | Back to Home

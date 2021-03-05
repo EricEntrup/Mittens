@@ -1,0 +1,14 @@
+extends ../Layouts/default
+
+block content
+    section.sign-in-page
+        .container.p-0
+            .row.no-gutters
+                .col-sm-12.align-self-center
+                    .sign-in-from.bg-white
+                        img(src='assets/images/login/mail.png', width='80', alt='')
+                        h1.mt-3.mb-0 Success !
+                        p
+                            | A email has been send to youremail@domain.com. Please check for an email from company and click on the included link to reset your password.
+                        .d-inline-block.w-100
+                            button.btn.btn-primary.mt-3(type='submit') Back to Home

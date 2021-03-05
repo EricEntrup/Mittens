@@ -1,0 +1,249 @@
+extends ../Layouts/master
+
+block content
+    .container-fluid
+        .row
+            .col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Pagination Examples
+                    .iq-card-body
+                        p
+                            | In addition, as pages likely have more than one such navigation section, it&rsquo;s advisable to provide a descriptive
+                            code aria-label
+                            |  for the
+                            code &lt;nav&gt;
+                            |  to reflect its purpose. For example, if the pagination component is used to navigate between a set of search results, an appropriate label could be
+                            code aria-label=&quot;Search results pages&quot;
+                            | .
+                        nav(aria-label='Page navigation example')
+                            ul.pagination.mb-0
+                                li.page-item
+                                    a.page-link(href='#') Previous
+                                li.page-item
+                                    a.page-link(href='#') 1
+                                li.page-item
+                                    a.page-link(href='#') 2
+                                li.page-item
+                                    a.page-link(href='#') 3
+                                li.page-item
+                                    a.page-link(href='#') Next
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Disabled and active states
+                    .iq-card-body
+                        p
+                            | Pagination links are customizable for different circumstances. Use
+                            code .disabled
+                            |  for links that appear un-clickable and
+                            code .active
+                            |  to indicate the current page.
+                        p
+                            | While the
+                            code .disabled
+                            |  class uses
+                            code pointer-events: none
+                            |  to
+                            em try
+                            |  to disable the link functionality of
+                            code &lt;a&gt;
+                            | s, that CSS property is not yet standardized and doesn&rsquo;t account for keyboard navigation. As such, you should always add
+                            code tabindex=&quot;-1&quot;
+                            |  on disabled links and use custom JavaScript to fully disable their functionality.
+                        nav(aria-label='...')
+                            ul.pagination
+                                li.page-item.disabled
+                                    a.page-link(href='#' tabindex='-1' aria-disabled='true') Previous
+                                li.page-item
+                                    a.page-link(href='#') 1
+                                li.page-item.active(aria-current='page')
+                                    a.page-link(href='#')
+                                        | 2
+                                        span.sr-only (current)
+                                li.page-item
+                                    a.page-link(href='#') 3
+                                li.page-item
+                                    a.page-link(href='#') Next
+                        p
+                            | You can optionally swap out active or disabled anchors for
+                            code &lt;span&gt;
+                            | , or omit the anchor in the case of the prev/next arrows, to remove click functionality and prevent keyboard focus while retaining intended styles.
+                        nav(aria-label='...')
+                            ul.pagination
+                                li.page-item.disabled
+                                    span.page-link Previous
+                                li.page-item
+                                    a.page-link(href='#') 1
+                                li.page-item.active(aria-current='page')
+                                    span.page-link
+                                        | 2
+                                        span.sr-only (current)
+                                li.page-item
+                                    a.page-link(href='#') 3
+                                li.page-item
+                                    a.page-link(href='#') Next
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Pagination With Color
+                    .iq-card-body
+                        p
+                            | In addition, as pages likely have more than one such navigation section, it&rsquo;s advisable to provide a descriptive
+                            code aria-label
+                            |  for the
+                            code &lt;nav&gt;
+                            |  to reflect its purpose. For example, if the pagination component is used to navigate between a set of search results, an appropriate label could be
+                            code aria-label=&quot;Search results pages&quot;
+                            | .
+                        nav(aria-label='Page navigation example')
+                            ul.pagination
+                                li.page-item
+                                    a.page-link.border-primary.bg-primary.text-white(href='#') Previous
+                                li.page-item
+                                    a.page-link.border-primary.bg-primary.text-white(href='#') 1
+                                li.page-item
+                                    a.page-link.border-primary.bg-primary.text-white(href='#') 2
+                                li.page-item
+                                    a.page-link.border-primary.bg-primary.text-white(href='#') 3
+                                li.page-item
+                                    a.page-link.border-primary.bg-primary.text-white(href='#') Next
+                        nav(aria-label='Page navigation example')
+                            ul.pagination
+                                li.page-item
+                                    a.page-link.border-success.bg-success.text-white(href='#') Previous
+                                li.page-item
+                                    a.page-link.border-success.bg-success.text-white(href='#') 1
+                                li.page-item
+                                    a.page-link.border-success.bg-success.text-white(href='#') 2
+                                li.page-item
+                                    a.page-link.border-success.bg-success.text-white(href='#') 3
+                                li.page-item
+                                    a.page-link.border-success.bg-success.text-white(href='#') Next
+                        nav(aria-label='Page navigation example')
+                            ul.pagination.mb-0
+                                li.page-item
+                                    a.page-link.border-info.bg-info.text-white(href='#') Previous
+                                li.page-item
+                                    a.page-link.border-info.bg-info.text-white(href='#') 1
+                                li.page-item
+                                    a.page-link.border-info.bg-info.text-white(href='#') 2
+                                li.page-item
+                                    a.page-link.border-info.bg-info.text-white(href='#') 3
+                                li.page-item
+                                    a.page-link.border-info.bg-info.text-white(href='#') Next
+            .col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Working with icons
+                    .iq-card-body
+                        p
+                            | Looking to use an icon or symbol in place of text for some pagination links? Be sure to provide proper screen reader support with
+                            code aria
+                            |  attributes.
+                        nav(aria-label='Page navigation example')
+                            ul.pagination.mb-0
+                                li.page-item
+                                    a.page-link(href='#' aria-label='Previous')
+                                        span(aria-hidden='true') &laquo;
+                                li.page-item
+                                    a.page-link(href='#') 1
+                                li.page-item
+                                    a.page-link(href='#') 2
+                                li.page-item
+                                    a.page-link(href='#') 3
+                                li.page-item
+                                    a.page-link(href='#' aria-label='Next')
+                                        span(aria-hidden='true') &raquo;
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Pagination Sizing
+                    .iq-card-body
+                        p
+                            | Fancy larger or smaller pagination? Add
+                            code .pagination-lg
+                            |  or
+                            code .pagination-sm
+                            |  for additional sizes.
+                        nav(aria-label='...')
+                            ul.pagination.pagination-lg
+                                li.page-item.active(aria-current='page')
+                                    span.page-link
+                                        | 1
+                                        span.sr-only (current)
+                                li.page-item
+                                    a.page-link(href='#') 2
+                                li.page-item
+                                    a.page-link(href='#') 3
+                        nav(aria-label='...')
+                            ul.pagination
+                                li.page-item.active(aria-current='page')
+                                    span.page-link
+                                        | 1
+                                        span.sr-only (current)
+                                li.page-item
+                                    a.page-link(href='#') 2
+                                li.page-item
+                                    a.page-link(href='#') 3
+                        nav(aria-label='...')
+                            ul.pagination.pagination-sm
+                                li.page-item.active(aria-current='page')
+                                    span.page-link
+                                        | 1
+                                        span.sr-only (current)
+                                li.page-item
+                                    a.page-link(href='#') 2
+                                li.page-item
+                                    a.page-link(href='#') 3
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Alignment
+                    .iq-card-body
+                        p
+                            | Change the alignment of pagination components with
+                            a(href='/docs/4.3/utilities/flex/') flexbox utilities
+                            | .
+                        h6 left
+                        nav(aria-label='Page navigation example')
+                            ul.pagination
+                                li.page-item.disabled
+                                    a.page-link(href='#' tabindex='-1' aria-disabled='true') Previous
+                                li.page-item
+                                    a.page-link(href='#') 1
+                                li.page-item
+                                    a.page-link(href='#') 2
+                                li.page-item
+                                    a.page-link(href='#') 3
+                                li.page-item
+                                    a.page-link(href='#') Next
+                        h6.text-center Center
+                        nav(aria-label='Page navigation example')
+                            ul.pagination.justify-content-center
+                                li.page-item.disabled
+                                    a.page-link(href='#' tabindex='-1' aria-disabled='true') Previous
+                                li.page-item
+                                    a.page-link(href='#') 1
+                                li.page-item
+                                    a.page-link(href='#') 2
+                                li.page-item
+                                    a.page-link(href='#') 3
+                                li.page-item
+                                    a.page-link(href='#') Next
+                        h6.text-right Right
+                        nav(aria-label='Page navigation example')
+                            ul.pagination.justify-content-end
+                                li.page-item.disabled
+                                    a.page-link(href='#' tabindex='-1' aria-disabled='true') Previous
+                                li.page-item
+                                    a.page-link(href='#') 1
+                                li.page-item
+                                    a.page-link(href='#') 2
+                                li.page-item
+                                    a.page-link(href='#') 3
+                                li.page-item
+                                    a.page-link(href='#') Next
+

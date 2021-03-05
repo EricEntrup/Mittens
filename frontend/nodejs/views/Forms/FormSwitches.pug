@@ -1,0 +1,135 @@
+extends ../Layouts/master
+
+block content
+
+    .container-fluid
+        .row
+            .col-sm-12.col-lg-12
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title State
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        .custom-control.custom-switch.custom-control-inline
+                            input#customSwitch1.custom-control-input(type='checkbox')
+                            label.custom-control-label(for='customSwitch1') false / Inactive
+                        .custom-control.custom-switch.custom-control-inline
+                            input#customSwitch2.custom-control-input(type='checkbox', checked='')
+                            label.custom-control-label(for='customSwitch2') true / active
+                        .custom-control.custom-switch.custom-control-inline
+                            input#customSwitch3.custom-control-input(type='checkbox', disabled='', checked='')
+                            label.custom-control-label(for='customSwitch3') disable / active
+                        .custom-control.custom-switch.custom-control-inline
+                            input#customSwitch4.custom-control-input(type='checkbox', disabled='')
+                            label.custom-control-label(for='customSwitch4') disable / Inactive
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Text
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        .custom-control.custom-switch.custom-switch-text.custom-control-inline
+                            .custom-switch-inner
+                                p.mb-0  Primary 
+                                input#customSwitch-11.custom-control-input(type='checkbox', checked='')
+                                label.custom-control-label(for='customSwitch-11', data-on-label='On', data-off-label='Off')
+                        .custom-control.custom-switch.custom-switch-text.custom-switch-color.custom-control-inline
+                            .custom-switch-inner
+                                p.mb-0  Success 
+                                input#customSwitch-22.custom-control-input.bg-success(type='checkbox', checked='')
+                                label.custom-control-label(for='customSwitch-22', data-on-label='Tr', data-off-label='Fal')
+                        .custom-control.custom-switch.custom-switch-text.custom-switch-color.custom-control-inline
+                            .custom-switch-inner
+                                p.mb-0  Danger 
+                                input#customSwitch-33.custom-control-input.bg-danger(type='checkbox', checked='')
+                                label.custom-control-label(for='customSwitch-33', data-on-label='Yes', data-off-label='No')
+            .col-sm-12.col-lg-12
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Color
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        .custom-control.custom-switch.custom-switch-color.custom-control-inline
+                            input#customSwitch01.custom-control-input.bg-primary(type='checkbox', checked='')
+                            label.custom-control-label(for='customSwitch01') Primary
+                        .custom-control.custom-switch.custom-switch-color.custom-control-inline
+                            input#customSwitch02.custom-control-input.bg-success(type='checkbox', checked='')
+                            label.custom-control-label(for='customSwitch02') Success
+                        .custom-control.custom-switch.custom-switch-color.custom-control-inline
+                            input#customSwitch03.custom-control-input.bg-danger(type='checkbox', checked='')
+                            label.custom-control-label(for='customSwitch03') Danger
+                        .custom-control.custom-switch.custom-switch-color.custom-control-inline
+                            input#customSwitch04.custom-control-input.bg-waring(type='checkbox', checked='')
+                            label.custom-control-label(for='customSwitch04') Waring
+                        .custom-control.custom-switch.custom-switch-color.custom-control-inline
+                            input#customSwitch05.custom-control-input.bg-dark(type='checkbox', checked='')
+                            label.custom-control-label(for='customSwitch05') Dark
+                        .custom-control.custom-switch.custom-switch-color.custom-control-inline
+                            input#customSwitch06.custom-control-input.bg-info(type='checkbox', checked='')
+                            label.custom-control-label(for='customSwitch06') Info
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Icon
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        .custom-control.custom-switch.custom-switch-icon.custom-control-inline
+                            .custom-switch-inner
+                                p.mb-0  Primary 
+                                input#customSwitch-1.custom-control-input(type='checkbox', checked='')
+                                label.custom-control-label(for='customSwitch-1')
+                                    span.switch-icon-left
+                                        i.fa.fa-check
+                                    span.switch-icon-right
+                                        i.fa.fa-check
+                        .custom-control.custom-switch.custom-switch-icon.custom-switch-color.custom-control-inline
+                            .custom-switch-inner
+                                p.mb-0  Success 
+                                input#customSwitch-2.custom-control-input.bg-success(type='checkbox', checked='')
+                                label.custom-control-label(for='customSwitch-2')
+                                    span.switch-icon-left
+                                        i.fa.fa-check
+                                    span.switch-icon-right
+                                        i.fa.fa-check
+                        .custom-control.custom-switch.custom-switch-icon.custom-switch-color.custom-control-inline
+                            .custom-switch-inner
+                                p.mb-0  Danger 
+                                input#customSwitch-3.custom-control-input.bg-danger(type='checkbox', checked='')
+                                label.custom-control-label(for='customSwitch-3')
+                                    span.switch-icon-left
+                                        i.fa.fa-times
+                                    span.switch-icon-right
+                                        i.fa.fa-times
+                        .custom-control.custom-switch.custom-switch-icon.custom-switch-color.custom-control-inline
+                            .custom-switch-inner
+                                p.mb-0  Warning 
+                                input#customSwitch-4.custom-control-input.bg-warning(type='checkbox', checked='')
+                                label.custom-control-label(for='customSwitch-4')
+                                    span.switch-icon-left
+                                        i.fa.fa-exclamation-triangle
+                                    span.switch-icon-right
+                                        i.fa.fa-exclamation-triangle
+                        .custom-control.custom-switch.custom-switch-icon.custom-switch-color.custom-control-inline
+                            .custom-switch-inner
+                                p.mb-0  Dark 
+                                input#customSwitch-5.custom-control-input.bg-dark(type='checkbox', checked='')
+                                label.custom-control-label(for='customSwitch-5')
+                                    span.switch-icon-left
+                                        i.fa.fa-thumb-tack
+                                    span.switch-icon-right
+                                        i.fa.fa-thumb-tack
+                        .custom-control.custom-switch.custom-switch-icon.custom-switch-color.custom-control-inline
+                            .custom-switch-inner
+                                p.mb-0  Info 
+                                input#customSwitch-6.custom-control-input.bg-info(type='checkbox', checked='')
+                                label.custom-control-label(for='customSwitch-6')
+                                    span.switch-icon-left
+                                        i.fa.fa-info
+                                    span.switch-icon-right
+                                        i.fa.fa-info

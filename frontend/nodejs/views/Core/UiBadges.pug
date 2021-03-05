@@ -1,0 +1,179 @@
+extends ../Layouts/master
+
+block content
+    .container-fluid
+        .row
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Badge
+                    .iq-card-body
+                        p
+                            | Badges scale to match the size of the immediate parent element by using relative font sizing and
+                            code em
+                            |  units.
+                        h1.mb-3
+                            | Example heading
+                            span.badge.badge-primary New
+                        h2.mb-3
+                            | Example heading
+                            span.badge.badge-secondary New
+                        h3.mb-3
+                            | Example heading
+                            button.btn.btn-success(type='button')
+                                | Notifications
+                                span.badge.badge-light.ml-2 4
+                        h4.mb-3
+                            | Example heading
+                            span.badge.badge-danger New
+                        h5.mb-3
+                            | Example heading
+                            span.badge.badge-warning New
+                        h6.mb-0
+                            | Example heading
+                            span.badge.badge-info New
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Button Badges
+                    .iq-card-body
+                        p Badges can be used as part of buttons to provide a counter.
+                        button.btn.mb-1.btn-primary(type='button')
+                            | Notifications
+                            span.badge.badge-light.ml-2 4
+                        button.btn.mb-1.btn-success(type='button')
+                            | Notifications
+                            span.badge.badge-light.ml-2 4
+                        button.btn.mb-1.btn-danger(type='button')
+                            | Notifications
+                            span.badge.badge-light.ml-2 4
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Button Light background Badges
+                    .iq-card-body
+                        p Badges can be used as part of buttons to provide a counter.
+                        button.btn.mb-1.btn-outline-primary(type='button')
+                            | Notifications
+                            span.badge.badge-primary.ml-2 4
+                        button.btn.mb-1.btn-outline-success(type='button')
+                            | Notifications
+                            span.badge.badge-success.ml-2 4
+                        button.btn.mb-1.btn-outline-danger(type='button')
+                            | Notifications
+                            span.badge.badge-danger.ml-2 4
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Button Border Badges
+                    .iq-card-body
+                        p Badges can be used as part of buttons to provide a counter.
+                        button.btn.mb-1.iq-bg-primary(type='button')
+                            | Notifications
+                            span.badge.badge-primary.ml-2 4
+                        button.btn.mb-1.iq-bg-success(type='button')
+                            | Notifications
+                            span.badge.badge-success.ml-2 4
+                        button.btn.mb-1.iq-bg-danger(type='button')
+                            | Notifications
+                            span.badge.badge-danger.ml-2 4
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Contextual variations
+                    .iq-card-body
+                        p
+                            | Add any of the below mentioned modifier classes to change the appearance of a badge.
+                        span.badge.badge-primary Primary
+                        span.badge.badge-secondary Secondary
+                        span.badge.badge-success Success
+                        span.badge.badge-danger Danger
+                        span.badge.badge-warning Warning
+                        span.badge.badge-info Info
+                        span.badge.badge-light Light
+                        span.badge.badge-dark Dark
+                        h5.card-title.mt-4 Pill badges
+                        p
+                            | Use the
+                            code .badge-pill
+                            |  modifier class to make badges more rounded (with a larger
+                            code border-radius
+                            |  and additional horizontal
+                            code padding
+                            | ). Useful if you miss the badges from v3.
+                        span.badge.badge-pill.badge-primary Primary
+                        span.badge.badge-pill.badge-secondary Secondary
+                        span.badge.badge-pill.badge-success Success
+                        span.badge.badge-pill.badge-danger Danger
+                        span.badge.badge-pill.badge-warning Warning
+                        span.badge.badge-pill.badge-info Info
+                        span.badge.badge-pill.badge-light Light
+                        span.badge.badge-pill.badge-dark Dark
+                        h5.card-title.mt-4 Links
+                        p
+                            | Using the contextual
+                            code .badge-*
+                            |  classes on an
+                            code &lt;a&gt;
+                            |  element quickly provide
+                            em actionable
+                            |  badges with hover and focus states.
+                        a.badge.badge-primary(href='#') Primary
+                        a.badge.badge-secondary(href='#') Secondary
+                        a.badge.badge-success(href='#') Success
+                        a.badge.badge-danger(href='#') Danger
+                        a.badge.badge-warning(href='#') Warning
+                        a.badge.badge-info(href='#') Info
+                        a.badge.badge-light(href='#') Light
+                        a.badge.badge-dark(href='#') Dark
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Contextual variations Border
+                    .iq-card-body
+                        p
+                            | Add any of the below mentioned modifier classes to change the appearance of a badge.
+                        span.badge.border.border-primary.text-primary Primary
+                        span.badge.border.border-secondary.text-secondary Secondary
+                        span.badge.border.border-success.text-success Success
+                        span.badge.border.border-danger.text-danger Danger
+                        span.badge.border.border-warning.text-warning Warning
+                        span.badge.border.border-info.text-info Info
+                        span.badge.border.border-light.text-light Light
+                        span.badge.border.border-dark.text-dark Dark
+                        h5.card-title.mt-4 Pill badges
+                        p
+                            | Use the
+                            code .badge-pill
+                            |  modifier class to make badges more rounded (with a larger
+                            code border-radius
+                            |  and additional horizontal
+                            code padding
+                            | ). Useful if you miss the badges from v3.
+                        span.badge.badge-pill.border.border-primary.text-primary Primary
+                        span.badge.badge-pill.border.border-secondary.text-secondary Secondary
+                        span.badge.badge-pill.border.border-success.text-success Success
+                        span.badge.badge-pill.border.border-danger.text-danger Danger
+                        span.badge.badge-pill.border.border-warning.text-warning Warning
+                        span.badge.badge-pill.border.border-info.text-info Info
+                        span.badge.badge-pill.border.border-light.text-light Light
+                        span.badge.badge-pill.border.border-dark.text-dark Dark
+                        h5.card-title.mt-4 Links
+                        p
+                            | Using the contextual
+                            code .badge-*
+                            |  classes on an
+                            code &lt;a&gt;
+                            |  element quickly provide
+                            em actionable
+                            |  badges with hover and focus states.
+                        a.badge.border.border-primary.text-primary(href='#') Primary
+                        a.badge.border.border-secondary.text-secondary(href='#') Secondary
+                        a.badge.border.border-success.text-success(href='#') Success
+                        a.badge.border.border-danger.text-danger(href='#') Danger
+                        a.badge.border.border-warning.text-warning(href='#') Warning
+                        a.badge.border.border-info.text-info(href='#') Info
+                        a.badge.border.border-light.text-light(href='#') Light
+                        a.badge.border.border-dark.text-dark(href='#') Dark

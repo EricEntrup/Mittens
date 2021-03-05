@@ -1,0 +1,45 @@
+{
+  "name": "nodejs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "pm2": "pm2",
+    "start": "nodemon ./bin/www",
+    "start:staging": "pm2 start",
+    "dev": "concurrently \"pm2 start\" \"gulp\"",
+    "monitor": "pm2 monit",
+    "reload-env": "pm2 reload --update-env ecosystem.config.js",
+    "stop": "pm2 stop ecosystem.config.js",
+    "delete": "pm2 delete ecosystem.config.js",
+    "knex": "knex --knexfile ./db/knexfile.js --debug"
+  },
+  "dependencies": {
+    "async-middleware": "^1.2.1",
+    "bluebird": "latest",
+    "connect-redis": "^3.4.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.1",
+    "express-group-routes": "^1.1.0",
+    "express-session": "^1.17.0",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "knex": "^0.20.10",
+    "morgan": "~1.9.1",
+    "mysql": "^2.18.1",
+    "named-routes": "^2.0.7",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pm2": "^4.5.4",
+    "pug": "^2.0.4",
+    "pure-realtime-stock": "^1.0.8-2",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {
+    "bcrypt": "^5.0.0",
+    "husky": "^4.2.3",
+    "joi": "^14.3.1",
+    "nodemon": "^2.0.2"
+  }
+}

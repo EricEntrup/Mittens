@@ -1,0 +1,36 @@
+extends ../Layouts/default
+
+block content
+    section.sign-in-page
+        .container.p-0
+            .row.no-gutters
+                .col-sm-12.align-self-center
+                    .sign-in-from.bg-white
+                        h1.mb-0 Sign in
+                        p Enter your email address and password to access admin panel.
+                        if (locals.messages && messages.success)
+                            .mb-3
+                                small.text-success.font-weight-700 #{messages.success}
+                        form.mt-4(method='POST', action='/login', role='form')
+                            .form-group
+                                label(for='email') Email Address
+                                input#email.form-control.mb-0(name='username', type='email', value='demo@metorik.com', placeholder='Email Address')
+                                if (locals.messages && messages.errors)
+                                    each val, index in messages.errors
+                                        if (index !== 'password')
+                                            strong.invalid-feedback.d-block #{val}
+                            .form-group
+                                label(for='password') Password
+                                input#password.form-control(name='password', type='password', value='secret', placeholder='Password', required='', autocomplete='current-password')
+                                if (locals.messages && messages.errors && messages.errors.password)
+                                    strong.invalid-feedback.d-block #{messages.errors.password}
+                            .d-inline-block.w-100
+                                .custom-control.custom-checkbox.d-inline-block.mt-2.pt-1
+                                    input#customCheck1.custom-control-input(type='checkbox')
+                                    label.custom-control-label(for='customCheck1') Remember Me
+                                button.btn.btn-primary.float-right(type='submit') Sign in
+                            .sign-info
+                                span.dark-color.d-inline-block.line-height-2
+                                    | Don't have an account ?
+                                    a(href='register') Sign up
+

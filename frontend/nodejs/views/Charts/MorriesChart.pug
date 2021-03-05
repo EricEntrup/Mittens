@@ -1,0 +1,33 @@
+extends ../Layouts/master
+
+block content
+
+    .container-fluid
+        .row
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Line Chart
+                    .iq-card-body
+                        #morris-line-chart
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Area Chart
+                    .iq-card-body
+                        #morris-area-chart
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Bar Chart
+                    .iq-card-body
+                        #morris-bar-chart
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Donut Chart
+                    .iq-card-body
+                        #morris-donut-chart
+                        

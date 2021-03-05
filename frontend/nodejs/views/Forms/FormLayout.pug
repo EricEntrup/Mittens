@@ -1,0 +1,290 @@
+extends ../Layouts/master
+
+block content
+
+    .container-fluid
+        .row
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Basic Form
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        form
+                            .form-group
+                                label(for='email') Email address:
+                                input#email1.form-control(type='email')
+                            .form-group
+                                label(for='pwd') Password:
+                                input#pwd.form-control(type='password')
+                            .checkbox.mb-3
+                                label
+                                    input(type='checkbox')
+                                    |  Remember me
+                            button.btn.btn-primary(type='submit') Submit
+                            button.btn.iq-bg-danger(type='submit') cancle
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Form Grid
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        form
+                            .row
+                                .col
+                                    input.form-control(type='text', placeholder='First name')
+                                .col
+                                    input.form-control(type='text', placeholder='Last name')
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Input
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        form
+                            .form-group
+                                label(for='exampleInputText1') Input Text 
+                                input#exampleInputText1.form-control(type='text', value='Mark Jhon', placeholder='Enter Name')
+                            .form-group
+                                label(for='exampleInputEmail3') Email Input
+                                input#exampleInputEmail3.form-control(type='email', value='markjhon@gmail.com', placeholder='Enter Email')
+                            .form-group
+                                label(for='exampleInputurl') Url Input
+                                input#exampleInputurl.form-control(type='url', value='https://getbootstrap.com', placeholder='Enter Url')
+                            .form-group
+                                label(for='exampleInputphone') Teliphone Input
+                                input#exampleInputphone.form-control(type='tel', value='1-(555)-555-5555')
+                            .form-group
+                                label(for='exampleInputNumber1') Number Input
+                                input#exampleInputNumber1.form-control(type='number', value='2356')
+                            .form-group
+                                label(for='exampleInputPassword3') Password Input
+                                input#exampleInputPassword3.form-control(type='password', value='markjhon123', placeholder='Enter Password')
+                            .form-group
+                                label(for='exampleInputdate') Date Input
+                                input#exampleInputdate.form-control(type='date', value='2019-12-18')
+                            .form-group
+                                label(for='exampleInputmonth') Month Input
+                                input#exampleInputmonth.form-control(type='month', value='2019-12')
+                            .form-group
+                                label(for='exampleInputweek') Week Input
+                                input#exampleInputweek.form-control(type='week', value='2019-W46')
+                            .form-group
+                                label(for='exampleInputtime') Time Input
+                                input#exampleInputtime.form-control(type='time', value='13:45')
+                            .form-group
+                                label(for='exampleInputdatetime') Date and Time Input
+                                input#exampleInputdatetime.form-control(type='datetime-local', value='2019-12-19T13:45:00')
+                            .form-group
+                                label(for='exampleFormControlTextarea1') Example textarea
+                                textarea#exampleFormControlTextarea1.form-control(rows='5')
+                            button.btn.btn-primary(type='submit') Submit
+                            button.btn.iq-bg-danger(type='submit') cancle
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Input Size
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        form
+                            .form-group
+                                label(for='colFormLabelSm') Small
+                                input#colFormLabelSm.form-control.form-control-sm(type='email', placeholder='form-control-sm')
+                            .form-group
+                                label(for='colFormLabel') Default
+                                input#colFormLabel.form-control(type='email', placeholder='form-control')
+                            .form-group.mb-0
+                                label.pb-0(for='colFormLabelLg') Large
+                                input#colFormLabelLg.form-control.form-control-lg(type='email', placeholder='form-control-lg')
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Horizontal Form
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        form.form-horizontal
+                            .form-group.row
+                                label.control-label.col-sm-2.align-self-center.mb-0(for='email') Email:
+                                .col-sm-10
+                                    input#email.form-control(type='email', placeholder='Enter Your  email')
+                            .form-group.row
+                                label.control-label.col-sm-2.align-self-center.mb-0(for='pwd1') Password:
+                                .col-sm-10
+                                    input#pwd1.form-control(type='password', placeholder='Enter Your password')
+                            .form-group
+                                .checkbox
+                                    label
+                                        input(type='checkbox')
+                                        |  Remember me
+                            .form-group
+                                button.btn.btn-primary(type='submit') Submit
+                                button.btn.iq-bg-danger(type='submit') cancle
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Form row
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        form
+                            .form-row
+                                .col
+                                    input.form-control(type='text', placeholder='First name')
+                                .col
+                                    input.form-control(type='text', placeholder='Last name')
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Input
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        form
+                            .form-group
+                                label(for='exampleInputDisabled1') Disabled Input
+                                input#exampleInputDisabled1.form-control(type='text', disabled='', value='Mark Jhon')
+                            .form-group
+                                label(for='exampleInputPlaceholder') Placeholder
+                                input#exampleInputPlaceholder.form-control(type='text', placeholder='This is Placeholder')
+                            .form-group
+                                label(for='exampleInputReadonly') Readonly
+                                input#exampleInputReadonly.form-control(type='text', readonly='', value='Mark Jhon')
+                            .form-group
+                                label(for='exampleInputcolor') Input Color 
+                                input#exampleInputcolor.form-control(type='color', value='#f15773')
+                            .form-group
+                                label(for='exampleFormControlSelect1') Select Input
+                                select#exampleFormControlSelect1.form-control
+                                    option(selected='', disabled='') Select your age
+                                    option 0-18
+                                    option 18-26
+                                    option 26-46
+                                    option 46-60
+                                    option Above 60
+                            .form-group
+                                label(for='exampleFormControlSelect2') Example multiple select
+                                select#exampleFormControlSelect2.form-control(multiple='')
+                                    option select-1
+                                    option select-2
+                                    option select-3
+                                    option select-4
+                                    option select-5
+                                    option select-6
+                                    option select-7
+                                    option select-8
+                            .form-groupp
+                                label(for='customRange1') Range Input
+                                input#customRange1.custom-range(type='range')
+                            .form-group
+                                .custom-control.custom-checkbox
+                                    input#customCheck1.custom-control-input(type='checkbox')
+                                    label.custom-control-label(for='customCheck1') Default checkbox
+                                .custom-control.custom-checkbox
+                                    input#customCheck2.custom-control-input(type='checkbox', checked='')
+                                    label.custom-control-label(for='customCheck2') Checked
+                                .custom-control.custom-checkbox
+                                    input#customCheck3.custom-control-input(type='checkbox', disabled='')
+                                    label.custom-control-label(for='customCheck3') Disabled checkbox
+                                .custom-control.custom-checkbox
+                                    input#customCheck4.custom-control-input(type='checkbox', checked='', disabled='')
+                                    label.custom-control-label(for='customCheck4') Disabled checkbox
+                            .form-group
+                                .custom-control.custom-checkbox.custom-control-inline
+                                    input#customCheck5.custom-control-input(type='checkbox')
+                                    label.custom-control-label(for='customCheck5') Default checkbox
+                                .custom-control.custom-checkbox.custom-control-inline
+                                    input#customCheck6.custom-control-input(type='checkbox', checked='')
+                                    label.custom-control-label(for='customCheck6') Checked
+                                .custom-control.custom-checkbox.custom-control-inline
+                                    input#customCheck7.custom-control-input(type='checkbox', disabled='')
+                                    label.custom-control-label(for='customCheck7') Disabled checkbox
+                                .custom-control.custom-checkbox.custom-control-inline
+                                    input#customCheck8.custom-control-input(type='checkbox', checked='', disabled='')
+                                    label.custom-control-label(for='customCheck8') Disabled checkbox
+                            .form-group
+                                .form-check
+                                    .custom-control.custom-radio
+                                        input#customRadio1.custom-control-input(type='radio', name='customRadio')
+                                        label.custom-control-label(for='customRadio1')  Default radio
+                                    .custom-control.custom-radio
+                                        input#customRadio2.custom-control-input(type='radio', name='customRadio')
+                                        label.custom-control-label(for='customRadio2')  Default radio
+                                    .custom-control.custom-radio
+                                        input#customRadio3.custom-control-input(type='radio', name='customRadio3', checked='')
+                                        label.custom-control-label(for='customRadio3')  Selected radio
+                                    .custom-control.custom-radio
+                                        input#customRadio4.custom-control-input(type='radio', name='customRadio4', disabled='')
+                                        label.custom-control-label(for='customRadio4')  disabled radio
+                                    .custom-control.custom-radio
+                                        input#customRadio5.custom-control-input(type='radio', name='customRadio5', disabled='', checked='')
+                                        label.custom-control-label(for='customRadio5')  Selected and  disabled radio
+                            .form-group
+                                .custom-control.custom-radio.custom-control-inline
+                                    input#customRadio6.custom-control-input(type='radio', name='customRadio1')
+                                    label.custom-control-label(for='customRadio6')  Default radio
+                                .custom-control.custom-radio.custom-control-inline
+                                    input#customRadio7.custom-control-input(type='radio', name='customRadio1')
+                                    label.custom-control-label(for='customRadio7')  Default radio
+                                .custom-control.custom-radio.custom-control-inline
+                                    input#customRadio8.custom-control-input(type='radio', name='customRadio6', checked='')
+                                    label.custom-control-label(for='customRadio8')  Selected radio
+                                .custom-control.custom-radio.custom-control-inline
+                                    input#customRadio9.custom-control-input(type='radio', name='customRadio7', disabled='')
+                                    label.custom-control-label(for='customRadio9')  disabled radio
+                                .custom-control.custom-radio.custom-control-inline
+                                    input#customRadio10.custom-control-input(type='radio', name='customRadio8', disabled='', checked='')
+                                    label.custom-control-label(for='customRadio10')  Selected and  disabled radio
+                            .form-group
+                                .custom-control.custom-switch
+                                    input#customSwitch1.custom-control-input(type='checkbox')
+                                    label.custom-control-label(for='customSwitch1') Toggle this switch element
+                                .custom-control.custom-switch
+                                    input#customSwitch2.custom-control-input(type='checkbox', checked='')
+                                    label.custom-control-label(for='customSwitch2') Toggle this switch element
+                                .custom-control.custom-switch
+                                    input#customSwitch3.custom-control-input(type='checkbox', disabled='')
+                                    label.custom-control-label(for='customSwitch3') Disabled switch element
+                            .form-group
+                                label(for='exampleFormControlFile1') Example file input
+                                input#exampleFormControlFile1.form-control-file(type='file')
+                            .form-group
+                                .custom-file
+                                    input#customFile.custom-file-input(type='file')
+                                    label.custom-file-label(for='customFile') Choose file
+                            button.btn.btn-primary(type='submit') Submit
+                            button.btn.iq-bg-danger(type='submit') cancle
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Select Size
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        .form-group
+                            label Small
+                            select.form-control.form-control-sm.mb-3
+                                option(selected='') Open this select menu
+                                option(value='1') One
+                                option(value='2') Two
+                                option(value='3') Three
+                        .form-group
+                            label Default
+                            select.form-control.mb-3
+                                option(selected='') Open this select menu
+                                option(value='1') One
+                                option(value='2') Two
+                                option(value='3') Three
+                        .form-group
+                            label Large
+                            select.form-control.form-control-lg
+                                option(selected='') Open this select menu
+                                option(value='1') One
+                                option(value='2') Two
+                                option(value='3') Three

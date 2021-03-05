@@ -1,0 +1,59 @@
+extends ../../Layouts/master
+block content
+    .container-fluid
+        .row
+            .col-md-12
+                .ais-InstantSearch
+                    .row
+                        .col-md-3
+                            .left-panel
+                                .iq-filter-border.iq-card.py-2.px-3
+                                    #clear-refinements.float-right
+                                    h4 Filter
+                                .iq-filter-border.iq-card
+                                    h5.card-title Prices
+                                    #numeric-menu
+                                .iq-filter-border.iq-card
+                                    h5.card-title Brands
+                                    #brand-list
+                                .iq-filter-border.iq-card
+                                    h5.card-title Rating
+                                    #rating-menu
+                                .iq-filter-border.iq-card
+                                    h5.card-title Free Shipping
+                                    #toggle-refinement
+                        .col-md-9
+                            .right-panel
+                                .row
+                                    .col-md-12
+                                        .iq-card.py-2.px-3
+                                            .row
+                                                .align-self-center.d-flex.col-lg-8.col-6
+                                                    #stats
+                                                .col-lg-4.col-6
+                                                    .d-flex.justify-content-between
+                                                        #sort-by.iq-algolia-sort
+                                                        //
+                                                          <div class="d-flex">
+                                                          <button type="button" class="btn mr-2 btn-primary">
+                                                          <i class="ri-grid-fill mr-0"></i>
+                                                          </button>
+                                                          <button type="button" class="btn btn- iq-bg-primary">
+                                                          <i class="ri-list-unordered mr-0"></i>
+                                                          </button>
+                                                          </div>
+                                    .col-md-12
+                                        .iq-card
+                                            .d-flex.iq-algolia-search
+                                                #searchbox.ais-SearchBox
+                                                #powered-by.d-flex.align-content-center
+                                    .col-md-12
+                                        .iq-product-layout-grid
+                                            #hits
+                                    .col-md-12
+                                        #pagination
+
+block script
+    script(src='https://cdn.jsdelivr.net/npm/algoliasearch@3.32.0/dist/algoliasearchLite.min.js')
+    script(src='https://cdn.jsdelivr.net/npm/instantsearch.js@^4.0.0')
+    script(src='assets/js/algolia.js')

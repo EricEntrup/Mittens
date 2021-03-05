@@ -1,0 +1,53 @@
+extends ../Layouts/master
+
+block content
+    .container-fluid
+        .row
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Embeds Video
+                    .iq-card-body
+                        p
+                            | Wrap any embed like an
+                            code.highlighter-rouge &lt;iframe&gt;
+                            |  in a parent element with
+                            code.highlighter-rouge .embed-responsive
+                            |  and an aspect ratio. The
+                            code.highlighter-rouge .embed-responsive-item
+                            |  isn&rsquo;t strictly required, but we encourage it.
+                        .embed-responsive.embed-responsive-16by9
+                            iframe.embed-responsive-item(src='https://www.youtube.com/embed/zpOULjyy-n8?rel=0' allowfullscreen='')
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Responsive Aspect ratios 4:3
+                    .iq-card-body
+                        p
+                            | Progress components are built with two HTML elements, some CSS to set the width, and a few attributes.
+                        // 4:3 aspect ratio
+                        .embed-responsive.embed-responsive-4by3
+                            iframe.embed-responsive-item(src='https://www.youtube.com/embed/zpOULjyy-n8?rel=0' allowfullscreen='')
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Responsive Aspect ratios 21:9
+                    .iq-card-body
+                        p
+                            | Progress components are built with two HTML elements, some CSS to set the width, and a few attributes.
+                        // 21:9 aspect ratio
+                        .embed-responsive.embed-responsive-21by9
+                            iframe.embed-responsive-item(src='https://www.youtube.com/embed/zpOULjyy-n8?rel=0' allowfullscreen='')
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Responsive Aspect ratios 1:1
+                    .iq-card-body
+                        p
+                            | Progress components are built with two HTML elements, some CSS to set the width, and a few attributes.
+                        // 1:1 aspect ratio
+                        .embed-responsive.embed-responsive-1by1
+                            iframe.embed-responsive-item(src='https://www.youtube.com/embed/zpOULjyy-n8?rel=0' allowfullscreen='')
+

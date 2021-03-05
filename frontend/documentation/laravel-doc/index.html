@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Metorik Documentation</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="iqonic themes">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="../assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="../assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../assets/css/doc-styles.css">
+
+</head>
+
+<body class="body-default">
+<div class="page-wrapper">
+    <!-- ******Header****** -->
+    <header id="header" class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+                <div>
+                    <div class="branding">
+                        <h1 class="logo">
+                            <a href="../index.html">
+                                <img src="../assets/images/logo.png" alt="logo" class="logo-img">
+                                <span class="text-highlight"><b>Metorik </b></span><span class="text-bold">Docs</span>
+                            </a>
+                        </h1>
+                    </div><!--//branding-->
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                        <li class="breadcrumb-item active">Laravel</li>
+                    </ol>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html-doc/index.html">Html</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../laravel-doc/index.html">Laravel</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../codegniter-doc/index.html">Codegniter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../node-doc/index.html">Node</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../change-log.html">Change Logs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#src-credit">Source & Credit</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div><!--//container-->
+    </header><!--//header-->
+    <div class="doc-wrapper">
+        <div class="container">
+            <div class="doc-body row">
+                <div class="doc-content col-md-9 col-12 order-1">
+                    <div class="content-inner">
+                        <section id="installation-section" class="doc-section">
+                            <!-- <div id="doc-header" class="doc-header text-center">
+                                <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Quick Start</h1>
+                                <div class="meta"><i class="far fa-clock"></i> Last updated: Feb 5th, 2020</div>
+                            </div> --><!--//doc-header-->
+                            <h2 class="section-title">Installation</h2>
+                            <div class="section-block">
+                                <h3 class="block-title">Basic Installation</h3>
+                                <p>Steps to be followed for getting started with the template:</p>
+                                <p>Before you start the installation, please make sure you have the following components enable on your server</p>
+                                <ol>
+                                    <li>PHP 7.2 or greater</li>
+                                    <li>OpenSSL PHP Extension</li>
+                                    <li>PDO PHP Extension</li>
+                                    <li>Mbstring PHP Extension</li>
+                                    <li>Tokenizer PHP Extension</li>
+                                    <li>XML PHP Extension</li>
+                                    <li>Ctype PHP Extension</li>
+                                    <li>JSON PHP Extension</li>
+                                    <li>GD PHP Extension (or Imagick PHP Extension)</li>
+                                    <li>PHP Fileinfo extension</li>
+                                    <li>PHP Zip Archive</li>
+                                    <li>Rewrite Module (Apache or Nginx)</li>
+                                </ol>
+                                <p>PHP.INI Requirements</p>
+                                <ol>
+                                    <li>open_basedir must be disabled</li>
+                                </ol>
+                                <p>File and folder permissions</p>
+                                <ol>
+                                    <li>/bootstrap 775</li>
+                                    <li>/storage 775 (recursively)</li>
+                                </ol>
+                            </div>
+                                    <!--//section-block-->
+                            <div id="installation-instruction-section"  class="section-block">
+                                <h3 class="block-title">Installation Instructions</h3>
+
+                                <ol>
+                                    <li>Create Database</li>
+                                    <li>Upload the <b>Codes</b> in below directory based on your server
+                                        <br><b>In Linux</b> <br>Path: var/www/html/<br>
+                                        <b>In cPanel:</b><br>Inside File manager -&gt; Path: public_html/
+                                    </li>
+                                    <li>
+                                        For database settings, open the .env file with a text editor and set your database settings.
+                                        <br>
+                                        <b>Note: .env is a hidden file, you can see it by opening directory to a text editor.</b>
+                                    </li>
+                                    <li>
+                                        Link your storage folder to public
+                                        <br>
+                                        Run in terminal or CMD: <span class="text-highlight">php artisan storage:link</span>
+                                    </li>
+
+                                    <li>
+                                        Install node_modules
+                                        <br>
+                                        Run in terminal or CMD: <span class="text-highlight">npm install</span>
+                                    </li>
+                                    <li>To build css and js for Run in terminal or CMD: <span class="text-highlight">npm run dev</span> Or <span class="text-highlight">npm run prod</span> Or <span class="text-highlight">npm run watch</span></li>
+                                </ol>
+                            </div>
+                            <div id="configuration-section"  class="section-block">
+                                <h3 class="block-title">App Configuration</h3>
+
+                                <ol>
+                                    <li>Open and edit the /.env file and provide following details:</li>
+                                    <pre class="language-markup">
+APP_NAME=your app name
+APP_ENV=production
+APP_KEY=your key
+APP_DEBUG=false
+APP_URL=your app url</pre>
+                                    <li>Enter App name, App env, App debug and App url
+                                        <br>
+                                        Run in terminal or CMD: <span class="text-highlight">php artisan key:generate</span> generate App key
+                                    </li>
+                                </ol>
+                                <h3 class="block-title">Database Configuration</h3>
+                                <ol>
+                                    <li>Create the database on your server</li>
+                                    <li>Open and edit the /.env file and provide your server details:</li>
+                                    <pre class="language-markup">
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=</pre>
+                                    <li>Enter database name, database username, database password and the host details</li>
+                                    <li>Setup datebase table to Run in terminal or CMD: <span class="text-highlight">php artisan migrate --seed</span> Or <span class="text-highlight">php artisan migrate:fresh --seed</span></li>
+                                </ol>
+                                <h3 class="block-title">Mail Configuration</h3>
+                                <ol>
+                                    <li>Open and edit the /.env file and provide following details:</li>
+                                    <pre class="language-markup">
+MAIL_DRIVER=your mail driver
+MAIL_HOST=your mail host
+MAIL_PORT=your mail port
+MAIL_USERNAME=your mail id
+MAIL_PASSWORD=your mail password
+MAIL_ENCRYPTION=your mail encryption</pre>
+                                    <li>Enter mail host name, mail port, mail username( Mail ID ), mail password and mail encryption type.</li>
+                                </ol>
+
+                            </div>
+
+                            <div id="folder-stuc-section"  class="section-block">
+                                <h3 class="block-title">Folder Structure</h3>
+                                <p>Here is the <strong>general structure of Laravel application:</strong></p>
+                                <pre><code class="language-markup">
+metorik-dashboard
+| - app
+   | - console
+   | - DataTables
+   | - Exceptions
+   | - Helper
+   | - Http
+      | - Controllers
+      | - Middleware
+   | - Providers
+   | - Traits
+| - bootstrap
+   | - cache
+| - config
+| - database
+   | - factories
+   | - migrations
+   | - seeds
+| - public
+   | - assets
+      | - css
+      | - fonts
+      | - images
+      | - img
+         | - icons
+            | - common
+            | - user
+   | - css
+   | - js
+| - resources
+   | - js
+      | - components
+   | - lang
+      | - en
+   | - sass
+   | - view
+      | - appointment
+      | - auth
+      | - board
+      | - boardtask
+      | - category
+      | - Charts
+      | - dashboard
+      | - ExtraPages
+      | - Helper
+      | - Icons
+      | - layouts
+      | - Maps
+      | - partials
+      | - permission
+      | - role
+      | - service
+      | - setting
+      | - UIElements
+      | - user
+         | - profile
+| - routes
+| - tests
+   | - Feature
+   | - Unit
+
+- .editorconfig
+- .env
+- .env.example
+- .styleci.yml
+- artisan
+- composer.json
+- package.json
+- README.md
+- webpack.mix.js
+                                </code></pre>
+                            </div>
+                            <div id="user-credentials-section"  class="section-block">
+                                <h3 class="block-title">User credentials</h3>
+
+                                <pre><code class="language-markup">
+username:admin@admin.com
+password:12345678
+                                </code></pre>
+                            </div>
+
+                        </section><!--//section-block-->
+
+                            <section id="bootstrap-section" class="doc-section">
+                                <h3 class="section-title">Bootstrap Components</h3>
+
+                                <div class="section-block">
+                                    <p> Bootstrap has wonderfull documentation on the following components::</p>
+                                    <ul>
+                                        <li>
+                                            <a href="https://getbootstrap.com/docs/4.0/layout/grid/#alignment" target="black">Row Alignments</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://getbootstrap.com/docs/4.0/components/alerts/" target="black">Alerts</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://getbootstrap.com/docs/4.0/components/badge/" target="black">Badges</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://getbootstrap.com/docs/4.0/components/carousel/" target="black">Carousel</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://getbootstrap.com/docs/4.0/layout/grid/#grid-options">Columns</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://getbootstrap.com/docs/4.0/content/tables/">Tables</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://getbootstrap.com/docs/4.0/components/buttons/" target="black">Buttons</a>
+                                        </li>
+                                    </ul>
+                                    <p>Bootstrap for extra component <a href="https://getbootstrap.com/docs/4.0/components/">https://getbootstrap.com/docs/4.0/components/</a> </p>
+                                </div>
+                            </section>
+
+                            <section id="browser-support-section" class="doc-section">
+                                <h3 class="section-title">Browser Support</h3>
+
+                                <div class="section-block">
+                                    <p>Supports all major Browsers like Google Chrome, Mozilla Firefox, Safari, Opera, Internet Explorer 9 and above.</p>
+
+                                </div>
+                            </section>
+                            <section id="src-credit" class="doc-section">
+                                <h3 class="section-title">Source & Credits</h3>
+
+                                <div class="section-block">
+                                    <p>All images and videos are for preview purposes only and are not included in the download files. Images are of copyrights under Creative Commons CC0.</p>
+                                    <br>
+                                    <h4>Images</h4>
+                                    <ul>
+                                       <li>bigstockphoto <a href="https://www.bigstockphoto.com/">bigstockphoto</a></li>
+                                       <li>Pexels <a href="https://www.pexels.com/">Pexels</a></li>
+                                       <li>freepik <a href="http://www.freepik.com/">freepik</a></li>
+                                       <li>pixabay <a href="https://pixabay.com/">pixabay</a></li>
+                                    </ul>
+                                    <br>
+                                    <br>
+                                    <h4>Plugins</h4>
+                                    <ul>
+                                        <li><a href="https://jquery.com/">Jquery</a></li>
+                                        <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+                                        <li><a href="https://github.com/bas2k/jquery.appear/">Jquery appear</a></li>
+                                        <li><a href="https://github.com/glix/jQuery-Plugins/tree/master/Modern-Circular-jQuery-Countdown-Timer-Plugin-Final-Countdown">Countdown</a></li>
+                                        <li><a href="https://fullcalendar.io/docs">Full Calendar</a></li>
+                                        <li><a href="https://www.amcharts.com/docs/v4/">AmChart</a></li>
+                                        <li><a href="https://apexcharts.com/docs/installation/">ApexChart</a></li>
+                                        <li><a href="https://www.highcharts.com/blog/products/highcharts/">HighCharts</a></li>
+                                        <li><a href="http://morrisjs.github.io/morris.js/">Morris</a></li>
+                                        <li><a href="https://airbnb.io/lottie/#/">Lottie</a></li>
+                                    </ul>
+                                    <br>
+                                    <br>
+                                    <h4>CSS & Fonts</h4>
+                                    <ul>
+                                       <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+                                       <li><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a></li>
+                                       <li><a href="http://ionicons.com/#cdn">ionicons</a></li>
+                                       <li><a href="https://remixicon.com/">remixicon</a></li>
+                                       <li><a href="https://www.google.com/fonts">Google Fonts</a></li>
+                                    </ul>
+                                </div>
+                            </section>
+                    </div><!--//content-inner-->
+                </div><!--//doc-content-->
+                <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                    <div id="doc-nav" class="doc-nav">
+
+                        <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                            <a class="nav-link scrollto" href="#quick-start-section"><strong>Quick Start</strong></a>
+                            <nav class="doc-sub-menu nav flex-column">
+                                <a class="nav-link scrollto" href="#installation-section">Basic Installation</a>
+                                <a class="nav-link scrollto" href="#installation-instruction-section">Installation Instruction</a>
+                                <a class="nav-link scrollto" href="#configuration-section">Configuration Instruction</a>
+                                <a class="nav-link scrollto" href="#folder-stuc-section">Folder Structure</a>
+                                <a class="nav-link scrollto" href="#user-credentials-section">User credentials</a>
+
+                            </nav><!--//nav-->
+
+                            <a class="nav-link scrollto" href="#bootstrap-section">Bootstrap Components</a>
+                            <a class="nav-link scrollto" href="#browser-support-section">Browser Support</a>
+                            <a class="nav-link scrollto" href="#src-credit">Source & Credit</a>
+                        </nav><!--//doc-menu-->
+
+                    </div>
+                </div><!--//doc-sidebar-->
+            </div><!--//doc-body-->
+        </div><!--//container-->
+    </div><!--//doc-wrapper-->
+
+</div><!--//page-wrapper-->
+
+<footer class="footer text-center">
+    <div class="container">
+        <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+        <div class="d-flex justify-content-between">
+            <small class="copyright">Developed by <a href="https://themes.3rdwavemedia.com/" target="_blank">Iqonic Design</a></small>
+            <small class="copyright">Designed by <a href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a></small>
+        </div>
+
+    </div><!--//container-->
+</footer><!--//footer-->
+
+<!-- Main Javascript -->
+<script type="text/javascript" src="../assets/plugins/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../assets/plugins/prism/prism.js"></script>
+<script type="text/javascript" src="../assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+<script type="text/javascript" src="../assets/plugins/stickyfill/dist/stickyfill.min.js"></script>
+<script type="text/javascript" src="../assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+extends ../Layouts/master
+
+block content
+
+    .container-fluid
+        .row
+            .col-sm-12.col-lg-12
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Simple Wizard
+                    .iq-card-body
+                        form#form-wizard1.text-center.mt-4
+                            ul#top-tab-list.p-0
+                                li#account.active
+                                    a(href='javascript:void();')
+                                        i.ri-lock-unlock-line
+                                        span Account
+                                li#personal
+                                    a(href='javascript:void();')
+                                        i.ri-user-fill
+                                        span Personal
+                                li#payment
+                                    a(href='javascript:void();')
+                                        i.ri-camera-fill
+                                        span Image
+                                li#confirm
+                                    a(href='javascript:void();')
+                                        i.ri-check-fill
+                                        span Finish
+                            // fieldsets
+                            fieldset
+                                .form-card.text-left
+                                    .row
+                                        .col-7
+                                            h3.mb-4 Account Information:
+                                        .col-5
+                                            h2.steps Step 1 - 4
+                                    .row
+                                        .col-md-6
+                                            .form-group
+                                                label Email: *
+                                                input.form-control(type='email', name='email', placeholder='Email Id')
+                                        .col-md-6
+                                            .form-group
+                                                label Username: *
+                                                input.form-control(type='text', name='uname', placeholder='UserName')
+                                        .col-md-6
+                                            .form-group
+                                                label Password: *
+                                                input.form-control(type='password', name='pwd', placeholder='Password')
+                                        .col-md-6
+                                            .form-group
+                                                label Confirm Password: *
+                                                input.form-control(type='password', name='cpwd', placeholder='Confirm Password')
+                                button.btn.btn-primary.next.action-button.float-right(type='button', name='next', value='Next') Next
+                            fieldset
+                                .form-card.text-left
+                                    .row
+                                        .col-7
+                                            h3.mb-4 Personal Information:
+                                        .col-5
+                                            h2.steps Step 2 - 4
+                                    .row
+                                        .col-md-6
+                                            .form-group
+                                                label First Name: *
+                                                input.form-control(type='text', name='fname', placeholder='First Name')
+                                        .col-md-6
+                                            .form-group
+                                                label Last Name: *
+                                                input.form-control(type='text', name='lname', placeholder='Last Name')
+                                        .col-md-6
+                                            .form-group
+                                                label Contact No.: *
+                                                input.form-control(type='text', name='phno', placeholder='Contact No.')
+                                        .col-md-6
+                                            .form-group
+                                                label Alternate Contact No.: *
+                                                input.form-control(type='text', name='phno_2', placeholder='Alternate Contact No.')
+                                button.btn.btn-primary.next.action-button.float-right(type='button', name='next', value='Next') Next
+                                button.btn.btn-dark.previous.action-button-previous.float-right.mr-3(type='button', name='previous', value='Previous') Previous
+                            fieldset
+                                .form-card.text-left
+                                    .row
+                                        .col-7
+                                            h3.mb-4 Image Upload:
+                                        .col-5
+                                            h2.steps Step 3 - 4
+                                    .form-group
+                                        label Upload Your Photo:
+                                        input.form-control(type='file', name='pic', accept='image/*')
+                                    .form-group
+                                        label Upload Signature Photo:
+                                        input.form-control(type='file', name='pic-2', accept='image/*')
+                                button.btn.btn-primary.next.action-button.float-right(type='button', name='next', value='Submit') Submit
+                                button.btn.btn-dark.previous.action-button-previous.float-right.mr-3(type='button', name='previous', value='Previous') Previous
+                            fieldset
+                                .form-card
+                                    .row
+                                        .col-7
+                                            h3.mb-4.text-left Finish:
+                                        .col-5
+                                            h2.steps Step 4 - 4
+                                    br
+                                    br
+                                    h2.text-success.text-center
+                                        strong SUCCESS !
+                                    br
+                                    .row.justify-content-center
+                                        .col-3
+                                            img.fit-image(src='assets/images/page-img/img-success.png', alt='fit-image')
+                                    br
+                                    br
+                                    .row.justify-content-center
+                                        .col-7.text-center
+                                            h5.purple-text.text-center You Have Successfully Signed Up

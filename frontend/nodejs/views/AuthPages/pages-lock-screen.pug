@@ -1,0 +1,17 @@
+extends ../Layouts/default
+
+block content
+    section.sign-in-page
+        .container.p-0
+            .row.no-gutters
+                .col-sm-12.align-self-center
+                    .sign-in-from.bg-white
+                        img.rounded-circle(src='assets/images/user/1.jpg', alt='user-image')
+                        h4.mt-3.mb-0 Hi ! Michael Smith
+                        p Enter your password to access the admin.
+                        form.mt-4
+                            .form-group
+                                label(for='exampleInputEmail1') Password
+                                input#exampleInputEmail1.form-control.mb-0(type='Password', placeholder='Password')
+                            .d-inline-block.w-100
+                                button.btn.btn-primary.float-right(type='submit') Log In

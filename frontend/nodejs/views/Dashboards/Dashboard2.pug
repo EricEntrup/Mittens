@@ -1,0 +1,644 @@
+extends ../Layouts/master
+
+block content
+    .container-fluid
+        .row
+            .col-lg-7
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Task by Team
+                    |
+                    .iq-card-body
+                        #chart-task(style='height: 370px;')
+            |
+            .col-lg-5
+                .row
+                    .col-sm-6
+                        .iq-card
+                            .iq-card-body.tasks-box
+                                .d-flex.align-items-center
+                                    a.iq-icon-box.rounded-circle.iq-bg-primary.mr-3(href='#')
+                                        i.ri-file-shield-line
+                                    |
+                                    div
+                                        h6 Projects:
+                                        |
+                                        h3 2500
+                    |
+                    .col-sm-6
+                        .iq-card
+                            .iq-card-body.tasks-box
+                                .d-flex.align-items-center
+                                    a.iq-icon-box.rounded-circle.iq-bg-success.mr-3(href='#')
+                                        i.ri-check-line
+                                    |
+                                    div
+                                        h6 Complited:
+                                        |
+                                        h3 1500
+                    |
+                    .col-sm-6
+                        .iq-card
+                            .iq-card-body.tasks-box
+                                .d-flex.align-items-center
+                                    a.iq-icon-box.rounded-circle.iq-bg-info.mr-3(href='#')
+                                        i.ri-ball-pen-line
+                                    |
+                                    div
+                                        h6 In Progress:
+                                        |
+                                        h3 500
+                    |
+                    .col-sm-6
+                        .iq-card
+                            .iq-card-body.tasks-box
+                                .d-flex.align-items-center
+                                    a.iq-icon-box.rounded-circle.iq-bg-danger.mr-3(href='#')
+                                        i.ri-close-line
+                                    |
+                                    div
+                                        h6 Overdue:
+                                        |
+                                        h3 500
+                    |
+                    .col-sm-12
+                        .iq-card
+                            .iq-card-header.d-flex.justify-content-between
+                                .iq-header-title
+                                    h4.card-title Top inquiries
+                            |
+                            .iq-card-body.tasks-box
+                                .d-flex.align-items-center.judtify-content-between.mb-3
+                                    h5.col-sm-6.pl-0 UI/UX Design
+                                    |
+                                    .col-sm-6.p-0.iq-progress-bar
+                                        span.bg-primary(data-percent='65')
+                                |
+                                .d-flex.align-items-center.judtify-content-between.mb-3
+                                    h5.col-sm-6.pl-0 Product Design
+                                    |
+                                    .col-sm-6.p-0.iq-progress-bar
+                                        span.bg-info(data-percent='35')
+                                |
+                                .d-flex.align-items-center.judtify-content-between
+                                    h5.col-sm-6.pl-0 Testing
+                                    |
+                                    .col-sm-6.p-0.iq-progress-bar
+                                        span.bg-success(data-percent='80')
+        |
+        .row
+            .col-md-4
+                .iq-card
+                    .iq-card-body
+                        #chart-home3-01
+            |
+            .col-md-4
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Ongoing Tsk
+                    |
+                    .iq-card-body
+                        ul.task-lists.m-0.p-0
+                            li.d-flex.mb-4.align-items-center
+                                .user-img.img-fluid
+                                    img.rounded-circle.avatar-40(src='assets/images/user/01.jpg', alt='story-img')
+                                |
+                                .media-support-info.ml-3
+                                    h6 Make New Home Page
+                                    |
+                                    p.mb-0.font-size-12 Feb 14, 2020
+                            |
+                            |
+                            li.d-flex.mb-4.align-items-center
+                                .user-img.img-fluid
+                                    img.rounded-circle.avatar-40(src='assets/images/user/02.jpg', alt='story-img')
+                                |
+                                .media-support-info.ml-3
+                                    h6 Redesign the Dashboard
+                                    |
+                                    p.mb-0.font-size-12 Feb 12, 2020
+                            |
+                            li.d-flex.mb-4.align-items-center
+                                .user-img.img-fluid
+                                    img.rounded-circle.avatar-40(src='assets/images/user/03.jpg', alt='story-img')
+                                |
+                                .media-support-info.ml-3
+                                    h6 Analysis New Product
+                                    |
+                                    p.mb-0.font-size-12 Feb 10, 2020
+                            |
+                            li.d-flex.mb-4.align-items-center
+                                .user-img.img-fluid
+                                    img.rounded-circle.avatar-40(src='assets/images/user/04.jpg', alt='story-img')
+                                |
+                                .media-support-info.ml-3
+                                    h6 Ubdate Dashboard 3
+                                    |
+                                    p.mb-0.font-size-12 Feb 12, 2020
+                            |
+                            li.d-flex.align-items-center
+                                .user-img.img-fluid
+                                    img.rounded-circle.avatar-40(src='assets/images/user/05.jpg', alt='story-img')
+                                |
+                                .media-support-info.ml-3
+                                    h6 Salve Support Tikit
+                                    |
+                                    p.mb-0.font-size-12 Feb 14, 2020
+            |
+            .col-md-4
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Activity Feed
+                    |
+                    .iq-card-body
+                        ul.task-lists.m-0.p-0
+                            li.d-flex.mb-4.align-items-center
+                                .profile-icon.iq-bg-primary
+                                    span B
+                                |
+                                .media-support-info.ml-3
+                                    h6 Bob Frapples
+                                    |
+                                    p.mb-0.font-size-12 Designer On UX Design
+                            |
+                            |
+                            li.d-flex.mb-4.align-items-center
+                                .profile-icon.iq-bg-info
+                                    span P
+                                |
+                                .media-support-info.ml-3
+                                    h6 Paige Turner
+                                    |
+                                    p.mb-0.font-size-12 Developer on Wordpress
+                            |
+                            li.d-flex.mb-4.align-items-center
+                                .profile-icon.iq-bg-danger
+                                    span A
+                                |
+                                .media-support-info.ml-3
+                                    h6 Anna Mull
+                                    |
+                                    p.mb-0.font-size-12 Designer on UI Design
+                            |
+                            li.d-flex.mb-4.align-items-center
+                                .profile-icon.iq-bg-success
+                                    span P
+                                |
+                                .media-support-info.ml-3
+                                    h6 Paul Molive
+                                    |
+                                    p.mb-0.font-size-12 Complited On UX Design
+                            |
+                            li.d-flex.align-items-center
+                                .profile-icon.iq-bg-warning
+                                    span A
+                                |
+                                .media-support-info.ml-3
+                                    h6 Anna Sthesia
+                                    |
+                                    p.mb-0.font-size-12 Complited on UI Design
+        |
+        .row
+            .col-md-8
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Project
+                        |
+                        .iq-card-header-toolbar.d-flex.align-items-center
+                            .dropdown
+                                span#dropdownMenuButton01.dropdown-toggle.text-primary(data-toggle='dropdown')
+                                    i.ri-more-2-fill
+                                |
+                                .dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuButton01')
+                                    a.dropdown-item(href='#')
+                                        i.ri-eye-fill.mr-2
+                                        | View
+                                    |
+                                    a.dropdown-item(href='#')
+                                        i.ri-delete-bin-6-fill.mr-2
+                                        | Delete
+                                    |
+                                    a.dropdown-item(href='#')
+                                        i.ri-pencil-fill.mr-2
+                                        | Edit
+                                    |
+                                    a.dropdown-item(href='#')
+                                        i.ri-printer-fill.mr-2
+                                        | Print
+                                    |
+                                    a.dropdown-item(href='#')
+                                        i.ri-file-download-fill.mr-2
+                                        | Download
+                    |
+                    .iq-card-body
+                        .table-responsive
+                            table.table.mb-0.table-borderless
+                                thead
+                                    tr
+                                        th(scope='col') #
+                                        |
+                                        th(scope='col') Project Name
+                                        |
+                                        th(scope='col') Start Date
+                                        |
+                                        th(scope='col') Due Date
+                                        |
+                                        th(scope='col') Status
+                                        |
+                                        th(scope='col') Assign
+                                |
+                                tbody
+                                    tr
+                                        td 1
+                                        |
+                                        td NobleUI jQuery
+                                        |
+                                        td 01/01/2019
+                                        |
+                                        td 26/04/2019
+                                        |
+                                        td
+                                            span.badge.badge-danger Released
+                                        |
+                                        td Leonardo Payne
+                                    |
+                                    tr
+                                        td 2
+                                        |
+                                        td NobleUI Angular
+                                        |
+                                        td 01/01/2019
+                                        |
+                                        td 26/04/2019
+                                        |
+                                        td
+                                            span.badge.badge-success Review
+                                        |
+                                        td Carl Henson
+                                    |
+                                    tr
+                                        td 3
+                                        |
+                                        td NobleUI ReactJs
+                                        |
+                                        td 01/05/2019
+                                        |
+                                        td 10/09/2019
+                                        |
+                                        td
+                                            span.badge.badge-info Pending
+                                        |
+                                        td Jensen Combs
+                                    |
+                                    tr
+                                        td 4
+                                        |
+                                        td NobleUI VueJs
+                                        |
+                                        td 01/01/2019
+                                        |
+                                        td 31/11/2019
+                                        |
+                                        td
+                                            span.badge.badge-warning.text-white Work in Progress
+                                        |
+                                        td Amiah Burton
+                                    |
+                                    tr
+                                        td 5
+                                        |
+                                        td NobleUI Laravel
+                                        |
+                                        td 01/01/2019
+                                        |
+                                        td 31/12/2019
+                                        |
+                                        td
+                                            span.badge.badge-danger Coming soon
+                                        |
+                                        td Yaretzi Mayo
+                                    |
+                                    tr
+                                        td 6
+                                        |
+                                        td NobleUI NodeJs
+                                        |
+                                        td 01/01/2019
+                                        |
+                                        td 31/12/2019
+                                        |
+                                        td
+                                            span.badge.badge-primary Coming soon
+                                        |
+                                        td Carl Henson
+                                    |
+                                    tr
+                                        td 3
+                                        |
+                                        td NobleUI EmberJs
+                                        |
+                                        td 01/05/2019
+                                        |
+                                        td 10/11/2019
+                                        |
+                                        td
+                                            span.badge.badge-info Pending
+                                        |
+                                        td Jensen Combs
+            |
+            .col-md-4
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title User Lists
+                    |
+                    .iq-card-body
+                        ul.perfomer-lists.m-0.p-0
+                            li.d-flex.mb-4.align-items-center
+                                .user-img.img-fluid
+                                    img.rounded-circle.avatar-40(src='assets/images/user/01.jpg', alt='story-img')
+                                |
+                                .media-support-info.ml-3
+                                    h6 Paul Molive
+                                    |
+                                    p.mb-0.font-size-12 MBBS, MD
+                                |
+                                .iq-card-header-toolbar.d-flex.align-items-center
+                                    .dropdown
+                                        span#dropdownMenuButton41.dropdown-toggle.text-primary(data-toggle='dropdown', aria-expanded='false', role='button')
+                                            i.ri-more-2-line
+                                        |
+                                        .dropdown-menu.dropdown-menu-right(style='')
+                                            a.dropdown-item(href='#')
+                                                i.ri-eye-line.mr-2
+                                                | View
+                                            |
+                                            a.dropdown-item(href='#')
+                                                i.ri-bookmark-line.mr-2
+                                                | Appointment
+                            |
+                            |
+                            li.d-flex.mb-4.align-items-center
+                                .user-img.img-fluid
+                                    img.rounded-circle.avatar-40(src='assets/images/user/02.jpg', alt='story-img')
+                                |
+                                .media-support-info.ml-3
+                                    h6 Barb Dwyer
+                                    |
+                                    p.mb-0.font-size-12 MD
+                                |
+                                .iq-card-header-toolbar.d-flex.align-items-center
+                                    .dropdown.show
+                                        span#dropdownMenuButton42.dropdown-toggle.text-primary(data-toggle='dropdown', aria-expanded='true', role='button')
+                                            i.ri-more-2-line
+                                        |
+                                        .dropdown-menu.dropdown-menu-right
+                                            a.dropdown-item(href='#')
+                                                i.ri-eye-line.mr-2
+                                                | View
+                                            |
+                                            a.dropdown-item(href='#')
+                                                i.ri-bookmark-line.mr-2
+                                                | Appointment
+                            |
+                            li.d-flex.mb-4.align-items-center
+                                .user-img.img-fluid
+                                    img.rounded-circle.avatar-40(src='assets/images/user/03.jpg', alt='story-img')
+                                |
+                                .media-support-info.ml-3
+                                    h6 Terry Aki
+                                    |
+                                    p.mb-0.font-size-12 MBBS
+                                |
+                                .iq-card-header-toolbar.d-flex.align-items-center
+                                    .dropdown.show
+                                        span#dropdownMenuButton43.dropdown-toggle.text-primary(data-toggle='dropdown', aria-expanded='true', role='button')
+                                            i.ri-more-2-line
+                                        |
+                                        .dropdown-menu.dropdown-menu-right
+                                            a.dropdown-item(href='#')
+                                                i.ri-eye-line.mr-2
+                                                | View
+                                            |
+                                            a.dropdown-item(href='#')
+                                                i.ri-bookmark-line.mr-2
+                                                | Appointment
+                            |
+                            li.d-flex.mb-4.align-items-center
+                                .user-img.img-fluid
+                                    img.rounded-circle.avatar-40(src='assets/images/user/04.jpg', alt='story-img')
+                                |
+                                .media-support-info.ml-3
+                                    h6 Robin Banks
+                                    |
+                                    p.mb-0.font-size-12 MBBS, MD
+                                |
+                                .iq-card-header-toolbar.d-flex.align-items-center
+                                    .dropdown.show
+                                        span#dropdownMenuButton44.dropdown-toggle.text-primary(data-toggle='dropdown', aria-expanded='true', role='button')
+                                            i.ri-more-2-line
+                                        |
+                                        .dropdown-menu.dropdown-menu-right
+                                            a.dropdown-item(href='#')
+                                                i.ri-eye-line.mr-2
+                                                | View
+                                            |
+                                            a.dropdown-item(href='#')
+                                                i.ri-bookmark-line.mr-2
+                                                | Appointment
+                            |
+                            li.d-flex.mb-4.align-items-center
+                                .user-img.img-fluid
+                                    img.rounded-circle.avatar-40(src='assets/images/user/05.jpg', alt='story-img')
+                                |
+                                .media-support-info.ml-3
+                                    h6 Barry Wine
+                                    |
+                                    p.mb-0.font-size-12 BAMS
+                                |
+                                .iq-card-header-toolbar.d-flex.align-items-center
+                                    .dropdown.show
+                                        span#dropdownMenuButton45.dropdown-toggle.text-primary(data-toggle='dropdown', aria-expanded='true', role='button')
+                                            i.ri-more-2-line
+                                        |
+                                        .dropdown-menu.dropdown-menu-right
+                                            a.dropdown-item(href='#')
+                                                i.ri-eye-line.mr-2
+                                                | View
+                                            |
+                                            a.dropdown-item(href='#')
+                                                i.ri-bookmark-line.mr-2
+                                                | Appointment
+                            |
+                            li.d-flex.mb-4.align-items-center
+                                .user-img.img-fluid
+                                    img.rounded-circle.avatar-40(src='assets/images/user/06.jpg', alt='story-img')
+                                |
+                                .media-support-info.ml-3
+                                    h6 Zack Lee
+                                    |
+                                    p.mb-0.font-size-12 MS, MD
+                                |
+                                .iq-card-header-toolbar.d-flex.align-items-center
+                                    .dropdown.show
+                                        span#dropdownMenuButton46.dropdown-toggle.text-primary(data-toggle='dropdown', aria-expanded='true', role='button')
+                                            i.ri-more-2-line
+                                        |
+                                        .dropdown-menu.dropdown-menu-right
+                                            a.dropdown-item(href='#')
+                                                i.ri-eye-line.mr-2
+                                                | View
+                                            |
+                                            a.dropdown-item(href='#')
+                                                i.ri-bookmark-line.mr-2
+                                                | Appointment
+        |
+        .row
+            .col-sm-12
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Recent Tickets
+                        |
+                        .iq-card-header-toolbar.d-flex.align-items-center
+                            .dropdown
+                                span#dropdownMenuButton-5.dropdown-toggle.text-primary(data-toggle='dropdown')
+                                    i.ri-more-2-fill
+                                |
+                                .dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuButton-5')
+                                    a.dropdown-item(href='#')
+                                        i.ri-eye-fill.mr-2
+                                        | View
+                                    |
+                                    a.dropdown-item(href='#')
+                                        i.ri-delete-bin-6-fill.mr-2
+                                        | Delete
+                                    |
+                                    a.dropdown-item(href='#')
+                                        i.ri-pencil-fill.mr-2
+                                        | Edit
+                                    |
+                                    a.dropdown-item(href='#')
+                                        i.ri-printer-fill.mr-2
+                                        | Print
+                                    |
+                                    a.dropdown-item(href='#')
+                                        i.ri-file-download-fill.mr-2
+                                        | Download
+                    |
+                    .iq-card-body
+                        .table-responsive
+                            table.table.mb-0.table-borderless
+                                thead
+                                    tr
+                                        th(scope='col') Assignee
+                                        |
+                                        th(scope='col') Subject
+                                        |
+                                        th(scope='col') Status
+                                        |
+                                        th(scope='col') Last Update
+                                        |
+                                        th(scope='col') Tracking ID
+                                |
+                                tbody
+                                    tr
+                                        td Paul Molive
+                                        |
+                                        td Website down for one week
+                                        |
+                                        td
+                                            .badge.badge-pill.badge-success Running
+                                        |
+                                        td 30/12/2019
+                                        |
+                                        td WD-12586
+                                    |
+                                    tr
+                                        td Anna Mull
+                                        |
+                                        td Fund is not recieved
+                                        |
+                                        td
+                                            .badge.badge-pill.badge-warning.text-white Starting
+                                        |
+                                        td 27/12/2019
+                                        |
+                                        td WD-45869
+                                    |
+                                    tr
+                                        td Paige Turner
+                                        |
+                                        td High loading time
+                                        |
+                                        td
+                                            .badge.badge-pill.badge-danger Stopped
+                                        |
+                                        td 21/12/2019
+                                        |
+                                        td WD-45896
+                                    |
+                                    tr
+                                        td Bob Frapples
+                                        |
+                                        td Loosing control on server
+                                        |
+                                        td
+                                            .badge.badge-pill.badge-info Maintenance
+                                        |
+                                        td 20/12/2019
+                                        |
+                                        td WD-45689
+                                    |
+                                    tr
+                                        td Barb Ackue
+                                        |
+                                        td Fund is not recieved
+                                        |
+                                        td
+                                            .badge.badge-pill.badge-success Running
+                                        |
+                                        td 18/12/2019
+                                        |
+                                        td WD-74569
+                                    |
+                                    tr
+                                        td Greta Life
+                                        |
+                                        td Website down for one week
+                                        |
+                                        td
+                                            .badge.badge-pill.badge-primary Running
+                                        |
+                                        td 23/12/2019
+                                        |
+                                        td WD-25369
+                                    |
+                                    tr
+                                        td Ira Membrit
+                                        |
+                                        td Loosing control on server
+                                        |
+                                        td
+                                            .badge.badge-pill.badge-warning.text-white Starting
+                                        |
+                                        td 29/12/2019
+                                        |
+                                        td WD-45874
+                                    |
+                                    tr
+                                        td Pete Sariya
+                                        |
+                                        td High loading time
+                                        |
+                                        td
+                                            .badge.badge-pill.badge-danger Stopped
+                                        |
+                                        td 22/12/2019
+                                        |
+                                        td WD-56985
+

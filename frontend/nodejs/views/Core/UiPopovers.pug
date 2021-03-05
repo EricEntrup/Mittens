@@ -1,0 +1,100 @@
+extends ../Layouts/master
+
+block content
+    .container-fluid
+        .row
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Popovers
+                    .iq-card-body
+                        p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        button.btn.btn-lg.btn-danger(type='button' data-toggle='popover' title='Popover title' data-content="And here's some amazing content. It's very engaging. Right?") Click to toggle popover
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Dismiss on next click
+                    .iq-card-body
+                        p
+                            | Use the
+                            code focus
+                            |  trigger to dismiss popovers on the user&rsquo;s next click of a different element than the toggle element.
+                        a.btn.btn-danger(tabindex='0' role='button' data-toggle='popover' data-trigger='focus' title='Dismissible popover' data-content="And here's some amazing content. It's very engaging. Right?") Dismissible popover
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Disabled elements
+                    .iq-card-body
+                        p
+                            | Elements with the
+                            code disabled
+                            |  attribute aren&rsquo;t interactive, meaning users cannot hover or click them to trigger a popover (or tooltip). As a workaround, you&rsquo;ll want to trigger the popover from a wrapper
+                            code &lt;div&gt;
+                            |  or
+                            code &lt;span&gt;
+                            |  and override the
+                            code pointer-events
+                            |  on the disabled element.
+                        span.d-inline-block(data-toggle='popover' data-content='Disabled popover')
+                            button.btn.btn-primary(style='pointer-events: none;' type='button' disabled='') Disabled button
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Hover elements
+                    .iq-card-body
+                        p
+                            | For disabled popover triggers, you may also prefer
+                            code data-trigger=&quot;hover&quot;
+                            |  so that the popover appears as immediate visual feedback to your users as they may not expect to
+                            em click
+                            |  on a disabled element.
+                        span.d-inline-block(data-trigger='hover' data-toggle='popover' data-content='Disabled popover')
+                            button.btn.btn-primary(style='pointer-events: none;' type='button' disabled='') Disabled button
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Four directions
+                    .iq-card-body
+                        p Four options are available: top, right, bottom, and left aligned.
+                        button.btn.btn-secondary(type='button' data-container='body' data-toggle='popover' data-placement='top' data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.')
+                            | Popover on top
+                        button.btn.btn-secondary(type='button' data-container='body' data-toggle='popover' data-placement='right' data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.')
+                            | Popover on right
+                        button.btn.btn-secondary(type='button' data-container='body' data-toggle='popover' data-placement='bottom' data-content='Vivamus\
+              sagittis lacus vel augue laoreet rutrum faucibus.')
+                            | Popover on bottom
+                        button.btn.btn-secondary(type='button' data-container='body' data-toggle='popover' data-placement='left' data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.')
+                            | Popover on left
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Popovers With Color
+                    .iq-card-body
+                        p Four options are available: top, right, bottom, and left aligned.
+                        button.btn.btn-primary(type='button' data-container='body' data-toggle='popover' data-placement='top' data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.')
+                            | Popover on top
+                        button.btn.btn-success(type='button' data-container='body' data-toggle='popover' data-placement='right' data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.')
+                            | Popover on right
+                        button.btn.btn-danger(type='button' data-container='body' data-toggle='popover' data-placement='bottom' data-content='Vivamus\
+              sagittis lacus vel augue laoreet rutrum faucibus.')
+                            | Popover on bottom
+                        button.btn.btn-info(type='button' data-container='body' data-toggle='popover' data-placement='left' data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.')
+                            | Popover on left
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Popovers With Color
+                    .iq-card-body
+                        p Four options are available: top, right, bottom, and left aligned.
+                        button.btn.iq-bg-primary(type='button' data-container='body' data-toggle='popover' data-placement='top' data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.')
+                            | Popover on top
+                        button.btn.iq-bg-success(type='button' data-container='body' data-toggle='popover' data-placement='right' data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.')
+                            | Popover on right
+                        button.btn.iq-bg-danger(type='button' data-container='body' data-toggle='popover' data-placement='bottom' data-content='Vivamus\
+              sagittis lacus vel augue laoreet rutrum faucibus.')
+                            | Popover on bottom
+                        button.btn.iq-bg-info(type='button' data-container='body' data-toggle='popover' data-placement='left' data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.')
+                            | Popover on left
+

@@ -1,0 +1,91 @@
+extends ../Layouts/master
+
+block content
+    .container-fluid
+        .row
+            .col-sm-12
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Editable Table
+                    .iq-card-body
+                        #table.table-editable
+                            span.table-add.float-right.mb-3.mr-2
+                                button.btn.btn-sm.iq-bg-success
+                                    i.ri-add-fill
+                                        span.pl-1 Add New
+                            table.table.table-bordered.table-responsive-md.table-striped.text-center
+                                thead
+                                    tr
+                                        th Name
+                                        th Age
+                                        th Company Name
+                                        th Country
+                                        th City
+                                        th Sort
+                                        th Remove
+                                tbody
+                                    tr
+                                        td(contenteditable='true') Gio Metric
+                                        td(contenteditable='true') 25
+                                        td(contenteditable='true') Deepends
+                                        td(contenteditable='true') Spain
+                                        td(contenteditable='true') Madrid
+                                        td
+                                            span.table-up
+                                                a.indigo-text(href='#!')
+                                                    i.fa.fa-long-arrow-up(aria-hidden='true')
+                                            span.table-down
+                                                a.indigo-text(href='#!')
+                                                    i.fa.fa-long-arrow-down(aria-hidden='true')
+                                        td
+                                            span.table-remove
+                                                button.btn.iq-bg-danger.btn-rounded.btn-sm.my-0(type='button') Remove
+                                    tr
+                                        td(contenteditable='true') Manny Petty
+                                        td(contenteditable='true') 45
+                                        td(contenteditable='true') Insectus
+                                        td(contenteditable='true') France
+                                        td(contenteditable='true') San Francisco
+                                        td
+                                            span.table-up
+                                                a.indigo-text(href='#!')
+                                                    i.fa.fa-long-arrow-up(aria-hidden='true')
+                                            span.table-down
+                                                a.indigo-text(href='#!')
+                                                    i.fa.fa-long-arrow-down(aria-hidden='true')
+                                        td
+                                            span.table-remove
+                                                button.btn.iq-bg-danger.btn-rounded.btn-sm.my-0(type='button') Remove
+                                    tr
+                                        td(contenteditable='true') Lucy Tania
+                                        td(contenteditable='true') 26
+                                        td(contenteditable='true') Isotronic
+                                        td(contenteditable='true') Germany
+                                        td(contenteditable='true') Frankfurt am Main
+                                        td
+                                            span.table-up
+                                                a.indigo-text(href='#!')
+                                                    i.fa.fa-long-arrow-up(aria-hidden='true')
+                                            span.table-down
+                                                a.indigo-text(href='#!')
+                                                    i.fa.fa-long-arrow-down(aria-hidden='true')
+                                        td
+                                            span.table-remove
+                                                button.btn.iq-bg-danger.btn-rounded.btn-sm.my-0(type='button') Remove
+                                    tr.hide
+                                        td(contenteditable='true') Anna Mull
+                                        td(contenteditable='true') 35
+                                        td(contenteditable='true') Portica
+                                        td(contenteditable='true') USA
+                                        td(contenteditable='true') Oregon
+                                        td
+                                            span.table-up
+                                                a.indigo-text(href='#!')
+                                                    i.fa.fa-long-arrow-up(aria-hidden='true')
+                                            span.table-down
+                                                a.indigo-text(href='#!')
+                                                    i.fa.fa-long-arrow-down(aria-hidden='true')
+                                        td
+                                            span.table-remove
+                                                button.btn.iq-bg-danger.btn-rounded.btn-sm.my-0(type='button') Remove

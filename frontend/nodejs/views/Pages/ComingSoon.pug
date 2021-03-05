@@ -1,0 +1,34 @@
+extends ../Layouts/default
+
+block content
+    .wrapper
+        .iq-comingsoon.pt-5
+            .container-fluid
+                .row.justify-content-center
+                    .col-sm-8.text-center
+                        .iq-comingsoon-info
+                            a(href='#')
+                                img.img-fluid.w-25(src='assets/images/logo-full2.png' alt='')
+                            h2.mt-4.mb-1 Stay tunned, we&apos;re launching very soon
+                            p We are working very hard to give you the best experience possible!
+                            ul.countdown(data-date='Feb 02 2022 20:20:22')
+                                li
+                                    span(data-days='') 0
+                                    | Days
+                                li
+                                    span(data-hours='') 0
+                                    | Hours
+                                li
+                                    span(data-minutes='') 0
+                                    | Minutes
+                                li
+                                    span(data-seconds='') 0
+                                    | Seconds
+                .row.justify-content-center
+                    .col-lg-4
+                        form.iq-comingsoon-form.mt-5
+                            .form-group
+                                input#exampleInputEmail1.form-control.mb-0(type='email' placeholder='Enter email address')
+                                button.btn.btn-primary(type='submit') Subscribe
+
+

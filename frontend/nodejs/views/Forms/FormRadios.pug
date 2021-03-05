@@ -1,0 +1,102 @@
+extends ../Layouts/master
+
+block content
+
+    .container-fluid
+        .row
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Default Radio Buttons
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        .radio.d-inline-block.mr-2
+                            input#radio1(type='radio', name='bsradio', checked='')
+                            label(for='radio1') Active
+                        .radio.d-inline-block.mr-2
+                            input#radio2(type='radio', name='bsradio')
+                            label(for='radio2') Inactive
+                        .radio.d-inline-block.mr-2
+                            input#radio3(type='radio', name='bsradio1', disabled='', checked='')
+                            label(for='radio3') Active - Disabled
+                        .radio.d-inline-block.mr-2
+                            input#radio4(type='radio', name='bsradio1', disabled='')
+                            label(for='radio3') Inactive - Disabled
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Custom Colored Radio Buttons
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        .custom-control.custom-radio.custom-radio-color.custom-control-inline
+                            input#customRadio01.custom-control-input.bg-primary(type='radio', name='customRadio-11')
+                            label.custom-control-label(for='customRadio01')  Primary 
+                        .custom-control.custom-radio.custom-radio-color.custom-control-inline
+                            input#customRadio02.custom-control-input.bg-success(type='radio', name='customRadio-11')
+                            label.custom-control-label(for='customRadio02')  Success 
+                        .custom-control.custom-radio.custom-radio-color.custom-control-inline
+                            input#customRadio03.custom-control-input.bg-danger(type='radio', name='customRadio-11')
+                            label.custom-control-label(for='customRadio03')  Danger 
+                        .custom-control.custom-radio.custom-radio-color.custom-control-inline
+                            input#customRadio04.custom-control-input.bg-warning(type='radio', name='customRadio-11')
+                            label.custom-control-label(for='customRadio04')  Warning 
+                        .custom-control.custom-radio.custom-radio-color.custom-control-inline
+                            input#customRadio05.custom-control-input.bg-dark(type='radio', name='customRadio-11')
+                            label.custom-control-label(for='customRadio05')  Dark 
+                        .custom-control.custom-radio.custom-radio-color.custom-control-inline
+                            input#customRadio06.custom-control-input.bg-info(type='radio', name='customRadio-11')
+                            label.custom-control-label(for='customRadio06')  Info 
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Custom Radio Buttons
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        .custom-control.custom-radio.custom-control-inline
+                            input#customRadio6.custom-control-input(type='radio', name='customRadio-1')
+                            label.custom-control-label(for='customRadio6')  One 
+                        .custom-control.custom-radio.custom-control-inline
+                            input#customRadio7.custom-control-input(type='radio', name='customRadio-1')
+                            label.custom-control-label(for='customRadio7')  Two 
+                        .custom-control.custom-radio.custom-control-inline
+                            input#customRadio8.custom-control-input(type='radio', name='customRadio-1', checked='')
+                            label.custom-control-label(for='customRadio8')  Three 
+                        .custom-control.custom-radio.custom-control-inline
+                            input#customRadio-8.custom-control-input(type='radio', name='customRadio-2', checked='')
+                            label.custom-control-label(for='customRadio-8')  Four Checked 
+                        .custom-control.custom-radio.custom-control-inline
+                            input#customRadio9.custom-control-input(type='radio', name='customRadio-3', disabled='')
+                            label.custom-control-label(for='customRadio9')  Five disabled
+                        .custom-control.custom-radio.custom-control-inline
+                            input#customRadio10.custom-control-input(type='radio', name='customRadio-4', disabled='', checked='')
+                            label.custom-control-label(for='customRadio10')  Six Selected and  disabled
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Colored Radio Buttons
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        .custom-control.custom-radio.custom-radio-color-checked.custom-control-inline
+                            input#customRadio-1.custom-control-input.bg-primary(type='radio', name='customRadio-10')
+                            label.custom-control-label(for='customRadio-1')  Primary 
+                        .custom-control.custom-radio.custom-radio-color-checked.custom-control-inline
+                            input#customRadio-2.custom-control-input.bg-success(type='radio', name='customRadio-10')
+                            label.custom-control-label(for='customRadio-2')  Success 
+                        .custom-control.custom-radio.custom-radio-color-checked.custom-control-inline
+                            input#customRadio-3.custom-control-input.bg-danger(type='radio', name='customRadio-10')
+                            label.custom-control-label(for='customRadio-3')  Danger 
+                        .custom-control.custom-radio.custom-radio-color-checked.custom-control-inline
+                            input#customRadio-4.custom-control-input.bg-warning(type='radio', name='customRadio-10')
+                            label.custom-control-label(for='customRadio-4')  Warning 
+                        .custom-control.custom-radio.custom-radio-color-checked.custom-control-inline
+                            input#customRadio-5.custom-control-input.bg-dark(type='radio', name='customRadio-10')
+                            label.custom-control-label(for='customRadio-5')  Dark 
+                        .custom-control.custom-radio.custom-radio-color-checked.custom-control-inline
+                            input#customRadio-6.custom-control-input.bg-info(type='radio', name='customRadio-10')
+                            label.custom-control-label(for='customRadio-6')  Info 

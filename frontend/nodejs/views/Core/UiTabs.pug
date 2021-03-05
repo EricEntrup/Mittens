@@ -1,0 +1,225 @@
+extends ../Layouts/master
+
+block content
+    .container-fluid
+        .row
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Basic Tabs
+                    .iq-card-body
+                        p
+                            | The base
+                            code .nav
+                            |  component does not include any
+                            code .active
+                            |  state. The following examples include the class, mainly to demonstrate that this particular class does not trigger any special styling.
+                        ul#myTab-1.nav.nav-tabs(role='tablist')
+                            li.nav-item
+                                a#home-tab.nav-link.active(data-toggle='tab' href='#home' role='tab' aria-controls='home' aria-selected='true') Home
+                            li.nav-item
+                                a#profile-tab.nav-link(data-toggle='tab' href='#profile' role='tab' aria-controls='profile' aria-selected='false') Profile
+                            li.nav-item
+                                a#contact-tab.nav-link(data-toggle='tab' href='#contact' role='tab' aria-controls='contact' aria-selected='false') Contact
+                        #myTabContent-2.tab-content
+                            #home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='home-tab')
+                                p
+                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            #profile.tab-pane.fade(role='tabpanel' aria-labelledby='profile-tab')
+                                p
+                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            #contact.tab-pane.fade(role='tabpanel' aria-labelledby='contact-tab')
+                                p
+                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Basic Tabs Style 3
+                    .iq-card-body
+                        p
+                            | Takes the basic nav from above and adds the
+                            code .nav-tabs
+                            |  class to generate a tabbed interface.
+                        ul#myTab-two.nav.nav-tabs(role='tablist')
+                            li.nav-item
+                                a#home-tab-two.nav-link.active(data-toggle='tab' href='#home-two' role='tab' aria-controls='home' aria-selected='true') Home
+                            li.nav-item
+                                a#profile-tab-two.nav-link(data-toggle='tab' href='#profile-two' role='tab' aria-controls='profile' aria-selected='false') Profile
+                            li.nav-item
+                                a#contact-tab-two.nav-link(data-toggle='tab' href='#contact-two' role='tab' aria-controls='contact' aria-selected='false') Contact
+                        #myTabContent-1.tab-content
+                            #home-two.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='home-tab-two')
+                                p
+                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            #profile-two.tab-pane.fade(role='tabpanel' aria-labelledby='profile-tab-two')
+                                p
+                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            #contact-two.tab-pane.fade(role='tabpanel' aria-labelledby='contact-tab-two')
+                                p
+                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Tabs Vertical Pills
+                    .iq-card-body
+                        p
+                            | Stack your navigation by changing the flex item direction with the
+                            code .flex-column
+                            |  utility.
+                        .row
+                            .col-sm-3
+                                #v-pills-tab.nav.flex-column.nav-pills.text-center(role='tablist' aria-orientation='vertical')
+                                    a#v-pills-home-tab.nav-link.active(data-toggle='pill' href='#v-pills-home' role='tab' aria-controls='v-pills-home' aria-selected='true') Home
+                                    a#v-pills-profile-tab.nav-link(data-toggle='pill' href='#v-pills-profile' role='tab' aria-controls='v-pills-profile' aria-selected='false') Profile
+                                    a#v-pills-messages-tab.nav-link(data-toggle='pill' href='#v-pills-messages' role='tab' aria-controls='v-pills-messages' aria-selected='false') Messages
+                                    a#v-pills-settings-tab.nav-link(data-toggle='pill' href='#v-pills-settings' role='tab' aria-controls='v-pills-settings' aria-selected='false') Settings
+                            .col-sm-9
+                                #v-pills-tabContent.tab-content.mt-0
+                                    #v-pills-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='v-pills-home-tab')
+                                        p
+                                            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                    #v-pills-profile.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-profile-tab')
+                                        p
+                                            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                    #v-pills-messages.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-messages-tab')
+                                        p
+                                            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                    #v-pills-settings.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-settings-tab')
+                                        p
+                                            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Tabs Justify Center
+                    .iq-card-body
+                        p
+                            | Centered with
+                            code .justify-content-center
+                        ul#myTab-2.nav.nav-tabs.justify-content-center(role='tablist')
+                            li.nav-item
+                                a#home-tab-justify.nav-link.active(data-toggle='tab' href='#home-justify' role='tab' aria-controls='home' aria-selected='true') Home
+                            li.nav-item
+                                a#profile-tab-justify.nav-link(data-toggle='tab' href='#profile-justify' role='tab' aria-controls='profile' aria-selected='false') Profile
+                            li.nav-item
+                                a#contact-tab-justify.nav-link(data-toggle='tab' href='#contact-justify' role='tab' aria-controls='contact' aria-selected='false') Contact
+                        #myTabContent-3.tab-content
+                            #home-justify.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='home-tab-justify')
+                                p
+                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            #profile-justify.tab-pane.fade(role='tabpanel' aria-labelledby='profile-tab-justify')
+                                p
+                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            #contact-justify.tab-pane.fade(role='tabpanel' aria-labelledby='contact-tab-justify')
+                                p
+                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Basic Tabs Style 2
+                    .iq-card-body
+                        p
+                            | Take that same HTML, but use
+                            code .nav-pills
+                            |  instead:
+                        ul#pills-tab.nav.nav-pills.mb-3(role='tablist')
+                            li.nav-item
+                                a#pills-home-tab.nav-link.active(data-toggle='pill' href='#pills-home' role='tab' aria-controls='pills-home' aria-selected='true') Home
+                            li.nav-item
+                                a#pills-profile-tab.nav-link(data-toggle='pill' href='#pills-profile' role='tab' aria-controls='pills-profile' aria-selected='false') Profile
+                            li.nav-item
+                                a#pills-contact-tab.nav-link(data-toggle='pill' href='#pills-contact' role='tab' aria-controls='pills-contact' aria-selected='false') Contact
+                        #pills-tabContent-2.tab-content
+                            #pills-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-home-tab')
+                                p
+                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            #pills-profile.tab-pane.fade(role='tabpanel' aria-labelledby='pills-profile-tab')
+                                p
+                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            #pills-contact.tab-pane.fade(role='tabpanel' aria-labelledby='pills-contact-tab')
+                                p
+                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Basic Tabs Style 4
+                    .iq-card-body
+                        p
+                            | Takes the basic nav from above and adds the
+                            code .nav-tabs
+                            |  class to generate a tabbed interface.
+                        ul#myTab-three.nav.nav-tabs(role='tablist')
+                            li.nav-item
+                                a#home-tab-three.nav-link.active(data-toggle='tab' href='#home-three' role='tab' aria-controls='home' aria-selected='true') Home
+                            li.nav-item
+                                a#profile-tab-three.nav-link(data-toggle='tab' href='#profile-three' role='tab' aria-controls='profile' aria-selected='false') Profile
+                            li.nav-item
+                                a#contact-tab-three.nav-link(data-toggle='tab' href='#contact-three' role='tab' aria-controls='contact' aria-selected='false') Contact
+                        #myTabContent-4.tab-content
+                            #home-three.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='home-tab-three')
+                                p
+                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            #profile-three.tab-pane.fade(role='tabpanel' aria-labelledby='profile-tab-three')
+                                p
+                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            #contact-three.tab-pane.fade(role='tabpanel' aria-labelledby='contact-tab-three')
+                                p
+                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Tabs Fill and justify
+                    .iq-card-body
+                        p
+                            | Force your
+                            code .nav
+                            | &rsquo;s contents to extend the full available width one of two modifier classes. To proportionately fill all available space with your
+                            code .nav-item
+                            | s, use
+                            code .nav-fill
+                            | . Notice that all horizontal space is occupied, but not every nav item has the same width.
+                        ul#pills-tab-1.nav.nav-pills.mb-3.nav-fill(role='tablist')
+                            li.nav-item
+                                a#pills-home-tab-fill.nav-link.active(data-toggle='pill' href='#pills-home-fill' role='tab' aria-controls='pills-home' aria-selected='true') Home
+                            li.nav-item
+                                a#pills-profile-tab-fill.nav-link(data-toggle='pill' href='#pills-profile-fill' role='tab' aria-controls='pills-profile' aria-selected='false') Profile
+                            li.nav-item
+                                a#pills-contact-tab-fill.nav-link(data-toggle='pill' href='#pills-contact-fill' role='tab' aria-controls='pills-contact' aria-selected='false') Contact
+                        #pills-tabContent-1.tab-content
+                            #pills-home-fill.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-home-tab-fill')
+                                p
+                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            #pills-profile-fill.tab-pane.fade(role='tabpanel' aria-labelledby='pills-profile-tab-fill')
+                                p
+                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            #pills-contact-fill.tab-pane.fade(role='tabpanel' aria-labelledby='pills-contact-tab-fill')
+                                p
+                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Tabs Justify Right
+                    .iq-card-body
+                        p
+                            | Right-aligned with
+                            code .justify-content-end
+                            | .
+                        ul#myTab-4.nav.nav-tabs.justify-content-end(role='tablist')
+                            li.nav-item
+                                a#home-tab-end.nav-link.active(data-toggle='tab' href='#home-end' role='tab' aria-controls='home' aria-selected='true') Home
+                            li.nav-item
+                                a#profile-tab-end.nav-link(data-toggle='tab' href='#profile-end' role='tab' aria-controls='profile' aria-selected='false') Profile
+                            li.nav-item
+                                a#contact-tab-end.nav-link(data-toggle='tab' href='#contact-end' role='tab' aria-controls='contact' aria-selected='false') Contact
+                        #myTabContent-5.tab-content
+                            #home-end.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='home-tab-end')
+                                p
+                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            #profile-end.tab-pane.fade(role='tabpanel' aria-labelledby='profile-tab-end')
+                                p
+                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            #contact-end.tab-pane.fade(role='tabpanel' aria-labelledby='contact-tab-end')
+                                p
+                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+

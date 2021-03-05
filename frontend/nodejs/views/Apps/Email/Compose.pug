@@ -1,0 +1,69 @@
+extends ../../Layouts/master
+
+block content
+    .container-fluid
+        .row.row-eq-height
+            .col-md-12
+                .row
+                    .col-md-12
+                        .iq-card.iq-border-radius-20
+                            .iq-card-body
+                                .row
+                                    .col-md-12.mb-3
+                                        h5.text-primary.card-title
+                                            i.ri-pencil-fill
+                                            |  Compose Message
+                                form.email-form
+                                    .form-group.row
+                                        label.col-sm-2.col-form-label(for='inputEmail3') To:
+                                        .col-sm-10
+                                            select#inputEmail3.select2jsMultiSelect.form-control(multiple='multiple')
+                                                option(value='Petey Cruiser') Petey Cruiser
+                                                option(value='Bob Frapples') Bob Frapples
+                                                option(value='Barb Ackue') Barb Ackue
+                                                option(value='Greta Life') Greta Life
+                                    .form-group.row
+                                        label.col-sm-2.col-form-label(for='cc') Cc:
+                                        .col-sm-10
+                                            select#cc.select2jsMultiSelect.form-control(multiple='multiple')
+                                                option(value='Brock Lee') Brock Lee
+                                                option(value="Rick O'Shea") Rick O'Shea
+                                                option(value='Cliff Hanger') Cliff Hanger
+                                                option(value='Barb Dwyer') Barb Dwyer
+                                    .form-group.row
+                                        label.col-sm-2.col-form-label(for='subject') Subject:
+                                        .col-sm-10
+                                            input#subject.form-control(type='text')
+                                    .form-group.row
+                                        label.col-sm-2.col-form-label(for='subject') Your Message:
+                                        .col-md-10
+                                            textarea.textarea.form-control(rows='5') Next, use our Get Started docs to setup Tiny!
+                                    .form-group.row.align-items-center
+                                        .d-flex.flex-grow-1.align-items-center
+                                            .send-btn.pl-3
+                                                button.btn.btn-primary(type='submit') Send
+                                            .send-panel
+                                                label.ml-2.mb-0.iq-bg-primary.rounded(for='file')
+                                                    input#file(type='file', style='display: none')
+                                                    a
+                                                        i.ri-attachment-line
+                                                label.ml-2.mb-0.iq-bg-primary.rounded
+                                                    a(href='javascript:void();')
+                                                        i.ri-map-pin-user-line.text-primary
+                                                label.ml-2.mb-0.iq-bg-primary.rounded
+                                                    a(href='javascript:void();')
+                                                        i.ri-drive-line.text-primary
+                                                label.ml-2.mb-0.iq-bg-primary.rounded
+                                                    a(href='javascript:void();')
+                                                        i.ri-camera-line.text-primary
+                                                label.ml-2.mb-0.iq-bg-primary.rounded
+                                                    a(href='javascript:void();')
+                                                        i.ri-user-smile-line.text-primary
+                                        .d-flex.mr-3.align-items-center
+                                            .send-panel.float-right
+                                                label.ml-2.mb-0.iq-bg-primary.rounded
+                                                    a(href='javascript:void();')
+                                                        i.ri-settings-2-line.text-primary
+                                                label.ml-2.mb-0.iq-bg-primary.rounded
+                                                    a(href='javascript:void();')
+                                                        i.ri-delete-bin-line.text-primary

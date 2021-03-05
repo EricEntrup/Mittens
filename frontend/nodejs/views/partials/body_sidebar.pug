@@ -1,0 +1,295 @@
+.iq-sidebar
+    .iq-sidebar-logo.d-flex.justify-content-between
+        a(href='index')
+            img.img-fluid(src='assets/images/logo.gif' alt='')
+            span EricE
+        .iq-menu-bt.align-self-center
+            .wrapper-menu
+                .line-menu.half.start
+                .line-menu
+                .line-menu.half.end
+    #sidebar-scrollbar
+        nav.iq-sidebar-menu
+            ul#iq-sidebar-toggle.iq-menu
+                li.iq-menu-title
+                    i.ri-separator
+                    span Main
+                li
+                    a.iq-waves-effect.collapsed(href='#dashboard' data-toggle='collapse' aria-expanded='false')
+                        i.las.la-home
+                        span Dashboard
+                        i.ri-arrow-right-s-line.iq-arrow-right
+                    ul#dashboard.iq-submenu.collapse(data-parent='#iq-sidebar-toggle')
+                        li
+                            a(href='/') Dashboard 1
+                        li
+                            a(href='home-2') Dashboard 2
+                li
+                    a.iq-waves-effect.collapsed(href='#mailbox' data-toggle='collapse' aria-expanded='false')
+                        i.las.la-envelope-open
+                        span Email
+                        i.ri-arrow-right-s-line.iq-arrow-right
+                    ul#mailbox.iq-submenu.collapse(data-parent='#iq-sidebar-toggle')
+                        li
+                            a(href='email') Inbox
+                        |
+                        li
+                            a(href='email-compose') Email Compose
+                |
+                li
+                    a.iq-waves-effect(href='todo')
+                        i.las.la-check-square
+                        span Todo
+                li
+                    a.iq-waves-effect.collapsed(href='#user-info' data-toggle='collapse' aria-expanded='false')
+                        i.las.la-user-tie
+                        span User
+                        i.ri-arrow-right-s-line.iq-arrow-right
+                    ul#user-info.iq-submenu.collapse(data-parent='#iq-sidebar-toggle')
+                        li
+                            a(href='profile') User Profile
+                        |
+                        li
+                            a(href='profile-edit') User Edit
+                        |
+                        li
+                            a(href='add-user') User Add
+                        |
+                        li
+                            a(href='user-list') User List
+                |
+                li
+                    a.iq-waves-effect(href='calendar')
+                        i.las.la-calendar
+                        span Calendar
+                li
+                    a.iq-waves-effect(href='chat')
+                        i.las.la-sms
+                        span Chat
+                li
+                    a.iq-waves-effect.collapsed(href='#ecommerce' data-toggle='collapse' aria-expanded='false')
+                        i.ri-shopping-cart-line
+                        span E-commerce
+                        i.ri-arrow-right-s-line.iq-arrow-right
+                    ul#ecommerce.iq-submenu.collapse(data-parent='#iq-sidebar-toggle')
+                        li
+                            a(href='e-commerce-product-list') Product Listing
+                        li
+                            a(href='e-commerce-product-detail') Product Details
+                        li
+                            a(href='e-commerce-checkout') Checkout
+                li.iq-menu-title
+                    i.ri-separator
+                    span Components
+                li
+                    a.iq-waves-effect.collapsed(href='#ui-elements' data-toggle='collapse' aria-expanded='false')
+                        i.lab.la-elementor
+                        span UI Elements
+                        i.ri-arrow-right-s-line.iq-arrow-right
+                    ul#ui-elements.iq-submenu.collapse(data-parent='#iq-sidebar-toggle')
+                        li
+                            a(href='ui-colors') colors
+                        li
+                            a(href='ui-typography') Typography
+                        li
+                            a(href='ui-alerts') Alerts
+                        li
+                            a(href='ui-badges') Badges
+                        li
+                            a(href='ui-breadcrumb') Breadcrumb
+                        li
+                            a(href='ui-buttons') Buttons
+                        li
+                            a(href='ui-cards') Cards
+                        li
+                            a(href='ui-carousel') Carousel
+                        li
+                            a(href='ui-embed-video') Video
+                        li
+                            a(href='ui-grid') Grid
+                        li
+                            a(href='ui-images') Images
+                        li
+                            a(href='ui-list-group') list Group
+                        li
+                            a(href='ui-media-object') Media
+                        li
+                            a(href='ui-modal') Modal
+                        li
+                            a(href='ui-notifications') Notifications
+                        li
+                            a(href='ui-pagination') Pagination
+                        li
+                            a(href='ui-popovers') Popovers
+                        li
+                            a(href='ui-progressbars') Progressbars
+                        li
+                            a(href='ui-tabs') Tabs
+                        li
+                            a(href='ui-tooltips') Tooltips
+                li
+                    a.iq-waves-effect.collapsed(href='#forms' data-toggle='collapse' aria-expanded='false')
+                        i.las.la-file-alt
+                        span Forms
+                        i.ri-arrow-right-s-line.iq-arrow-right
+                    ul#forms.iq-submenu.collapse(data-parent='#iq-sidebar-toggle')
+                        li
+                            a(href='form-layout') Form Elements
+                        li
+                            a(href='form-validation') Form Validation
+                        li
+                            a(href='form-switch') Form Switch
+                        li
+                            a(href='form-chechbox') Form Checkbox
+                        li
+                            a(href='form-radio') Form Radio
+                li
+                    a.iq-waves-effect.collapsed(href='#forms-wizard' data-toggle='collapse' aria-expanded='false')
+                        i.las.la-database
+                        span Forms Wizard
+                        i.ri-arrow-right-s-line.iq-arrow-right
+                    ul#forms-wizard.iq-submenu.collapse(data-parent='#iq-sidebar-toggle')
+                        li
+                            a(href='form-wizard') Simple Wizard
+                        li
+                            a(href='form-wizard-validate') Validate Wizard
+                        li
+                            a(href='form-wizard-vertical') Vertical Wizard
+                li
+                    a.iq-waves-effect.collapsed(href='#tables' data-toggle='collapse' aria-expanded='false')
+                        i.las.la-table
+                        span Table
+                        i.ri-arrow-right-s-line.iq-arrow-right
+                    ul#tables.iq-submenu.collapse(data-parent='#iq-sidebar-toggle')
+                        li
+                            a(href='tables-basic') Basic Tables
+                        li
+                            a(href='data-table') Data Table
+                        li
+                            a(href='table-editable') Editable Table
+                li
+                    a.iq-waves-effect.collapsed(href='#charts' data-toggle='collapse' aria-expanded='false')
+                        i.las.la-chart-bar
+                        span Charts
+                        i.ri-arrow-right-s-line.iq-arrow-right
+                    ul#charts.iq-submenu.collapse(data-parent='#iq-sidebar-toggle')
+                        li
+                            a(href='chart-morris') Morris Chart
+                        li
+                            a(href='chart-high') High Charts
+                        li
+                            a(href='chart-am') Am Charts
+                        li
+                            a(href='chart-apex') Apex Chart
+                li
+                    a.iq-waves-effect.collapsed(href='#icons' data-toggle='collapse' aria-expanded='false')
+                        i.las.la-icons
+                        span Icons
+                        i.ri-arrow-right-s-line.iq-arrow-right
+                    ul#icons.iq-submenu.collapse(data-parent='#iq-sidebar-toggle')
+                        li
+                            a(href='icon-dripicons') Dripicons
+                        li
+                            a(href='icon-fontawesome-5') Font Awesome 5
+                        li
+                            a(href='icon-lineawesome') line Awesome
+                        li
+                            a(href='icon-remixicon') Remixicon
+                        li
+                            a(href='icon-unicons') unicons
+                li.iq-menu-title
+                    i.ri-separator
+                    span Pages
+                li
+                    a.iq-waves-effect.collapsed(href='#authentication' data-toggle='collapse' aria-expanded='false')
+                        i.las.la-file-contract
+                        span Authentication
+                        i.ri-arrow-right-s-line.iq-arrow-right
+                    ul#authentication.iq-submenu.collapse(data-parent='#iq-sidebar-toggle')
+                        li
+                            a(href='sign-in') Login
+                        li
+                            a(href='sign-up') Register
+                        li
+                            a(href='pages-recoverpw') Recover Password
+                        li
+                            a(href='pages-confirm-mail') Confirm Mail
+                        li
+                            a(href='pages-lock-screen') Lock Screen
+                li
+                    a.iq-waves-effect.collapsed(href='#map' data-toggle='collapse' aria-expanded='false')
+                        i.las.la-map-marker
+                        span Maps
+                        i.ri-arrow-right-s-line.iq-arrow-right
+                    ul#map.iq-submenu.collapse(data-parent='#iq-sidebar-toggle')
+                        li
+                            a(href='pages-map') Google Map
+                        li
+                            a(href='#') Vector Map
+                li.active
+                    a.iq-waves-effect.collapsed(href='#extra-pages' data-toggle='collapse' aria-expanded='true')
+                        i.lab.la-codepen
+                        span Extra Pages
+                        i.ri-arrow-right-s-line.iq-arrow-right
+                    ul#extra-pages.iq-submenu.collapse(data-parent='#iq-sidebar-toggle')
+                        li
+                            a(href='pages-timeline') Timeline
+                        li
+                            a(href='pages-invoice') Invoice
+                        li.active
+                            a(href='blank-page') Blank Page
+                        li
+                            a(href='pages-error') Error 404
+                        li
+                            a(href='pages-error-500') Error 500
+                        li
+                            a(href='pages-pricing') Pricing
+                        li
+                            a(href='pages-pricing-one') Pricing 1
+                        li
+                            a(href='pages-maintenance') Maintenance
+                        li
+                            a(href='pages-comingsoon') Coming Soon
+                        li
+                            a(href='pages-faq') Faq
+                li
+                    a.iq-waves-effect.collapsed(href='#menu-level' data-toggle='collapse' aria-expanded='false')
+                        i.ri-record-circle-line
+                        span Menu Level
+                        i.ri-arrow-right-s-line.iq-arrow-right
+                    ul#menu-level.iq-submenu.collapse(data-parent='#iq-sidebar-toggle')
+                        li
+                            a(href='#')
+                                i.ri-record-circle-line
+                                | Menu 1
+                        li
+                            a(href='#')
+                                i.ri-record-circle-line
+                                | Menu 2
+                        li
+                            a.iq-waves-effect.collapsed(href='#sub-menu' data-toggle='collapse' aria-expanded='false')
+                                i.ri-play-circle-line
+                                span Sub-menu
+                                i.ri-arrow-right-s-line.iq-arrow-right
+                            ul#sub-menu.iq-submenu.iq-submenu-data.collapse
+                                li
+                                    a(href='#')
+                                        i.ri-record-circle-line
+                                        | Sub-menu 1
+                                li
+                                    a(href='#')
+                                        i.ri-record-circle-line
+                                        | Sub-menu 2
+                                li
+                                    a(href='#')
+                                        i.ri-record-circle-line
+                                        | Sub-menu 3
+                li
+                    a(href='#')
+                        i.ri-record-circle-line
+                        | Menu 3
+                li
+                    a(href='#')
+                        i.ri-record-circle-line
+                        | Menu 4
+        .p-3

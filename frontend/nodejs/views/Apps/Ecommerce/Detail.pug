@@ -1,0 +1,386 @@
+extends ../../Layouts/master
+block content
+    .container-fluid
+        .row
+            .col-lg-12
+                .iq-card
+                    .iq-card-body
+                        .row
+                            .col-md-6.iq-item-product-left
+                                .iq-image-container
+                                    .iq-product-cover.d-flex.justify-content-center
+                                        img.img-fluid(src='assets/images/index.jpeg' alt='product-image')
+                                    .iq-additional_slider
+                                        ul#product-additional-slider.d-flex.m-0.p-0
+                                            li
+                                                img.img-fluid(src='assets/images/index.jpeg' alt='product-image')
+                                            li
+                                                img.img-fluid(src='assets/images/index.jpeg' alt='product-image')
+                                            li
+                                                img.img-fluid(src='assets/images/index.jpeg' alt='product-image')
+                                            li
+                                                img.img-fluid(src='assets/images/index.jpeg' alt='product-image')
+                                            li
+                                                img.img-fluid(src='assets/images/index.jpeg' alt='product-image')
+                                            li
+                                                img.img-fluid(src='assets/images/index.jpeg' alt='product-image')
+                                            li
+                                                img.img-fluid(src='assets/images/index.jpeg' alt='product-image')
+                            .col-md-6.iq-item-product-right
+                                .product-additional-details
+                                    h3.productpage_title Curabitur Dolor Nunc consectetur adipiscing
+                                    p consectetur adipiscing
+                                    .ratting
+                                        ul.ratting-item.d-flex.p-0.m-0
+                                            li.full
+                                                i.ri-star-fill
+                                            li.full
+                                                i.ri-star-fill
+                                            li.full
+                                                i.ri-star-fill
+                                            li.half
+                                                i.ri-star-half-line
+                                            li.blank
+                                                i.ri-star-line
+                                    .product-descriptio
+                                        p
+                                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget vulputate orci purus ut lorem. In fringilla mi in ligula.
+                                    .product-price
+                                        .regular-price
+                                            b  $100.00
+                                            span.offer-price.ml-2 $150.00
+                                    .shipping
+                                        p.mb-0
+                                            | Shipping Free:
+                                            span $50
+                                    .stock
+                                        p
+                                            | Stock:
+                                            span Available
+                                    .additional-product-action.d-flex.align-items-center
+                                        .inline-flex.btn-increment
+                                            button.btn-less(type='button')
+                                                i.ri-subtract-fill
+                                            input.increment(type='number' min='1' max='10' value='1')
+                                            button.btn-plus(type='button')
+                                                i.ri-add-fill
+                                        .product-action.ml-2
+                                            .add-to-cart
+                                                a(href='#')  Add to Cart
+                                            .wishlist
+                                                a(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Wishlist')
+                                                    i.ri-heart-line
+                            .col-sm-12.product-description-details
+                                .description-tabs
+                                    ul#myTab-2.nav.nav-tabs.justify-content-center(role='tablist')
+                                        li.nav-item
+                                            a#description-tab-justify.nav-link.active(data-toggle='tab' href='#description' role='tab' aria-controls='home' aria-selected='true') Description
+                                        li.nav-item
+                                            a#specifications-tab-justify.nav-link(data-toggle='tab' href='#specifications' role='tab' aria-controls='profile' aria-selected='false') Specifications
+                                        li.nav-item
+                                            a#review-tab-justify.nav-link(data-toggle='tab' href='#review' role='tab' aria-controls='contact' aria-selected='false') Review
+                                    #myTabContent-3.tab-content
+                                        #description.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='description-tab-justify')
+                                            p
+                                                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra nibh et urna tempus, id feugiat sapien iaculis. Morbi aliquam et nisl ut varius. Vivamus fringilla, nisl ac lacinia fermentum, nisl felis facilisis lectus, id condimentum turpis quam ac ipsum. Vivamus purus nisi, condimentum eget felis vel, finibus interdum odio. Pellentesque lacinia aliquam ipsum. Donec euismod ex in sodales faucibus. Proin eget lacus vitae eros vestibulum vehicula. Mauris tortor massa, fringilla ut metus quis, malesuada semper diam. Phasellus et iaculis ex, vitae maximus odio.
+                                        #specifications.tab-pane.fade(role='tabpanel' aria-labelledby='specifications-tab-justify')
+                                            p
+                                                | Mauris laoreet tempor orci, quis rhoncus urna porttitor ut. Quisque volutpat ultrices elit, ut scelerisque lacus mattis id. Quisque non euismod leo. Aenean turpis orci, dictum id luctus ac, pretium pulvinar enim. Phasellus quam eros, porttitor sed iaculis at, lacinia at augue. Aenean vel lacinia eros. Curabitur ac feugiat libero. Praesent malesuada mauris arcu, sed mollis leo efficitur pretium. Nunc ornare tempor nulla.
+                                        #review.tab-pane.fade(role='tabpanel' aria-labelledby='review-tab-justify')
+                                            p
+                                                | In in mauris a sem ullamcorper maximus. In facilisis sapien vel consequat laoreet. Ut convallis elit vitae augue interdum dapibus. Vivamus nec urna quis ex congue consectetur. Sed egestas dapibus neque eu finibus. Fusce mollis congue augue, commodo ornare ante hendrerit vitae. Nunc luctus ac nunc quis facilisis. Nullam vitae gravida elit. Pellentesque maximus auctor gravida. Nulla imperdiet odio neque, non porta lacus feugiat sed. Curabitur eu lectus ut lectus convallis mattis sit amet sit amet lectus. Curabitur elit lorem, commodo a neque ac, feugiat tempor felis.
+                            .col-sm-12.mt-5.related-product
+                                .related-heading.text-center.mb-5
+                                    h2 Related Products
+                                .related-product-block
+                                    ul#related-slider.product_list.row.p-0
+                                        li.product_item.col-xs-12.col-sm-6.col-md-6.col-lg-4
+                                            .product-miniature
+                                                .thumbnail-container
+                                                    a(href='#')
+                                                        img.img-fluid.m-auto(src='assets/images/index.jpeg' alt='product-image')
+                                                .product-description
+                                                    h4 Lorem ipsum dolor sit
+                                                    p.mb-0 Proin sed risus mattis
+                                                    .ratting
+                                                        ul.ratting-item.d-flex.p-0.m-0
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.half
+                                                                i.ri-star-half-line
+                                                            li.blank
+                                                                i.ri-star-line
+                                                    .d-flex.flex-wrap.justify-content-between.align-items-center
+                                                        .product-action
+                                                            .add-to-cart
+                                                                a(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Add to Cart')
+                                                                    i.ri-shopping-cart-2-line
+                                                            .wishlist
+                                                                a(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Wishlist')
+                                                                    i.ri-heart-line
+                                                        .product-price
+                                                            .regular-price
+                                                                b  $100.00
+                                                                span.offer-price.ml-2 $150.00
+                                        li.product_item.col-xs-12.col-sm-6.col-md-6.col-lg-4
+                                            .product-miniature
+                                                .thumbnail-container
+                                                    a(href='#')
+                                                        img.img-fluid.m-auto(src='assets/images/index.jpeg' alt='product-image')
+                                                    a.new(href='javascript:void();') New
+                                                .product-description
+                                                    h4 consectetur adipiscing elit
+                                                    p.mb-0 Proin sed risus mattis
+                                                    .ratting
+                                                        ul.ratting-item.d-flex.p-0.m-0
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.blank
+                                                                i.ri-star-line
+                                                    .d-flex.flex-wrap.justify-content-between.align-items-center
+                                                        .product-action
+                                                            .add-to-cart
+                                                                a(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Add to Cart')
+                                                                    i.ri-shopping-cart-2-line
+                                                            .wishlist
+                                                                a(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Wishlist')
+                                                                    i.ri-heart-line
+                                                        .product-price
+                                                            .regular-price
+                                                                b  $99.00
+                                                                span.offer-price.ml-2 $50.00
+                                        li.product_item.col-xs-12.col-sm-6.col-md-6.col-lg-4
+                                            .product-miniature
+                                                .thumbnail-container
+                                                    a(href='#')
+                                                        img.img-fluid.m-auto(src='assets/images/index.jpeg' alt='product-image')
+                                                .product-description
+                                                    h4 Sed dictum orci vel
+                                                    p.mb-0 Proin sed risus mattis
+                                                    .ratting
+                                                        ul.ratting-item.d-flex.p-0.m-0
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.half
+                                                                i.ri-star-half-line
+                                                    .d-flex.flex-wrap.justify-content-between.align-items-center
+                                                        .product-action
+                                                            .add-to-cart
+                                                                a(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Add to Cart')
+                                                                    i.ri-shopping-cart-2-line
+                                                            .wishlist
+                                                                a(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Wishlist')
+                                                                    i.ri-heart-line
+                                                        .product-price
+                                                            .regular-price
+                                                                b  $199.00
+                                                                span.offer-price.ml-2 $15.00
+                                        li.product_item.col-xs-12.col-sm-6.col-md-6.col-lg-4
+                                            .product-miniature
+                                                .thumbnail-container
+                                                    a(href='#')
+                                                        img.img-fluid.m-auto(src='assets/images/index.jpeg' alt='product-image')
+                                                .product-description
+                                                    h4 neque venenatis
+                                                    p.mb-0 Proin sed risus mattis
+                                                    .ratting
+                                                        ul.ratting-item.d-flex.p-0.m-0
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.half
+                                                                i.ri-star-half-line
+                                                            li.blank
+                                                                i.ri-star-line
+                                                    .d-flex.flex-wrap.justify-content-between.align-items-center
+                                                        .product-action
+                                                            .add-to-cart
+                                                                a(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Add to Cart')
+                                                                    i.ri-shopping-cart-2-line
+                                                            .wishlist
+                                                                a(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Wishlist')
+                                                                    i.ri-heart-line
+                                                        .product-price
+                                                            .regular-price
+                                                                b  $1000.00
+                                                                span.offer-price.ml-2 $500.00
+                                        li.product_item.col-xs-12.col-sm-6.col-md-6.col-lg-4
+                                            .product-miniature
+                                                .thumbnail-container
+                                                    a(href='#')
+                                                        img.img-fluid.m-auto(src='assets/images/index.jpeg' alt='product-image')
+                                                    a.new(href='javascript:void();') New
+                                                .product-description
+                                                    h4 Proin at diam sit amet
+                                                    p.mb-0 Proin sed risus mattis
+                                                    .ratting
+                                                        ul.ratting-item.d-flex.p-0.m-0
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.blank
+                                                                i.ri-star-line
+                                                            li.blank
+                                                                i.ri-star-line
+                                                    .d-flex.flex-wrap.justify-content-between.align-items-center
+                                                        .product-action
+                                                            .add-to-cart
+                                                                a(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Add to Cart')
+                                                                    i.ri-shopping-cart-2-line
+                                                            .wishlist
+                                                                a(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Wishlist')
+                                                                    i.ri-heart-line
+                                                        .product-price
+                                                            .regular-price
+                                                                b  $150.00
+                                                                span.offer-price.ml-2 $50.00
+                                        li.product_item.col-xs-12.col-sm-6.col-md-6.col-lg-4
+                                            .product-miniature
+                                                .thumbnail-container
+                                                    a(href='#')
+                                                        img.img-fluid.m-auto(src='assets/images/index.jpeg' alt='product-image')
+                                                .product-description
+                                                    h4 augue rhoncus ornare
+                                                    p.mb-0 Proin sed risus mattis
+                                                    .ratting
+                                                        ul.ratting-item.d-flex.p-0.m-0
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.half
+                                                                i.ri-star-half-line
+                                                            li.blank
+                                                                i.ri-star-line
+                                                    .d-flex.flex-wrap.justify-content-between.align-items-center
+                                                        .product-action
+                                                            .add-to-cart
+                                                                a(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Add to Cart')
+                                                                    i.ri-shopping-cart-2-line
+                                                            .wishlist
+                                                                a(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Wishlist')
+                                                                    i.ri-heart-line
+                                                        .product-price
+                                                            .regular-price
+                                                                b  $599.00
+                                                                span.offer-price.ml-2 $99.00
+                                        li.product_item.col-xs-12.col-sm-6.col-md-6.col-lg-4
+                                            .product-miniature
+                                                .thumbnail-container
+                                                    a(href='#')
+                                                        img.img-fluid.m-auto(src='assets/images/index.jpeg' alt='product-image')
+                                                .product-description
+                                                    h4 Nulla venenatis mi sed
+                                                    p.mb-0 Proin sed risus mattis
+                                                    .ratting
+                                                        ul.ratting-item.d-flex.p-0.m-0
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                    .d-flex.flex-wrap.justify-content-between.align-items-center
+                                                        .product-action
+                                                            .add-to-cart
+                                                                a(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Add to Cart')
+                                                                    i.ri-shopping-cart-2-line
+                                                            .wishlist
+                                                                a(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Wishlist')
+                                                                    i.ri-heart-line
+                                                        .product-price
+                                                            .regular-price
+                                                                b  $199.00
+                                                                span.offer-price.ml-2 $50.00
+                                        li.product_item.col-xs-12.col-sm-6.col-md-6.col-lg-4
+                                            .product-miniature
+                                                .thumbnail-container
+                                                    a(href='#')
+                                                        img.img-fluid.m-auto(src='assets/images/index.jpeg' alt='product-image')
+                                                .product-description
+                                                    h4 Etiam interdum nisi et
+                                                    p.mb-0 Proin sed risus mattis
+                                                    .ratting
+                                                        ul.ratting-item.d-flex.p-0.m-0
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.half
+                                                                i.ri-star-half-line
+                                                    .d-flex.flex-wrap.justify-content-between.align-items-center
+                                                        .product-action
+                                                            .add-to-cart
+                                                                a(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Add to Cart')
+                                                                    i.ri-shopping-cart-2-line
+                                                            .wishlist
+                                                                a(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Wishlist')
+                                                                    i.ri-heart-line
+                                                        .product-price
+                                                            .regular-price
+                                                                b  $100.00
+                                                                span.offer-price.ml-2 $150.00
+                                        li.product_item.col-xs-12.col-sm-6.col-md-6.col-lg-4
+                                            .product-miniature
+                                                .thumbnail-container
+                                                    a(href='#')
+                                                        img.img-fluid.m-auto(src='assets/images/index.jpeg' alt='product-image')
+                                                .product-description
+                                                    h4 dignissim orci quis
+                                                    p.mb-0 Proin sed risus mattis
+                                                    .ratting
+                                                        ul.ratting-item.d-flex.p-0.m-0
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.full
+                                                                i.ri-star-fill
+                                                            li.half
+                                                                i.ri-star-half-line
+                                                            li.blank
+                                                                i.ri-star-line
+                                                    .d-flex.flex-wrap.justify-content-between.align-items-center
+                                                        .product-action
+                                                            .add-to-cart
+                                                                a(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Add to Cart')
+                                                                    i.ri-shopping-cart-2-line
+                                                            .wishlist
+                                                                a(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Wishlist')
+                                                                    i.ri-heart-line
+                                                        .product-price
+                                                            .regular-price
+                                                                b  $100.00
+                                                                span.offer-price.ml-2 $150.00

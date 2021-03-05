@@ -1,0 +1,635 @@
+extends Layouts/master
+
+block content
+  .container-fluid
+    .row
+      .col-md-6.col-lg-3
+        .iq-card.overflow-hidden
+          .iq-card-body
+            .text-center.mb-2
+              .rounded-circle.iq-card-icon.iq-bg-primary
+                i.ri-user-line
+            |
+            .clearfix
+            |
+            .text-center
+              h2.mb-0
+                span.counter 74.5
+                span K
+              |
+              h6.mb-2 Users
+              |
+              p.mb-0.text-secondary.line-height
+                i.ri-arrow-up-line.text-success.mr-1
+                span.text-success 10%
+                |  Increased
+      |
+      .col-md-6.col-lg-3
+        .iq-card.overflow-hidden
+          .iq-card-body
+            .text-center.mb-2
+              .rounded-circle.iq-card-icon.iq-bg-danger
+                i.ri-search-2-line
+            |
+            .clearfix
+            |
+            .text-center
+              h2.mb-0
+                span.counter 95.5
+                span K
+              |
+              h6.mb-2 Sessions
+              |
+              p.mb-0.text-secondary.line-height
+                i.ri-arrow-up-line.text-success.mr-1
+                span.text-success 22%
+                |  Increased
+      |
+      .col-md-6.col-lg-3
+        .iq-card.overflow-hidden
+          .iq-card-body
+            .text-center.mb-2
+              .rounded-circle.iq-card-icon.iq-bg-success
+                i.ri-drizzle-line
+            |
+            .clearfix
+            |
+            .text-center
+              h2.mb-0
+                span.counter 5.2
+                span K
+              |
+              h6.mb-2 Bounce Rate
+              |
+              p.mb-0.text-secondary.line-height
+                i.ri-arrow-up-line.text-success.mr-1
+                span.text-success 8%
+                |  Increased
+      |
+      .col-md-6.col-lg-3
+        .iq-card.overflow-hidden
+          .iq-card-body.p-0(style='background: url(assets/images/page-img/01.png) no-repeat scroll center center; background-size: contain; min-height: 202px;')
+      |
+      |
+      .col-lg-6
+        .iq-card.overflow-hidden
+          .iq-card-header.d-flex.justify-content-between
+            .iq-header-title
+              h4.card-title Expenses
+            |
+            .iq-card-header-toolbar.d-flex.align-items-center
+              .dropdown
+                span#dropdownMenuButton01.dropdown-toggle(data-toggle='dropdown', aria-expanded='false', role='button')
+                  i.ri-more-2-fill
+                |
+                .dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuButton01', style='')
+                  a.dropdown-item(href='#')
+                    i.ri-eye-fill.mr-2
+                    | View
+                  |
+                  a.dropdown-item(href='#')
+                    i.ri-delete-bin-6-fill.mr-2
+                    | Delete
+                  |
+                  a.dropdown-item(href='#')
+                    i.ri-pencil-fill.mr-2
+                    | Edit
+                  |
+                  a.dropdown-item(href='#')
+                    i.ri-printer-fill.mr-2
+                    | Print
+                  |
+                  a.dropdown-item(href='#')
+                    i.ri-file-download-fill.mr-2
+                    | Download
+          |
+          .iq-card-body.pl-0
+            #home-chart-1(style='height: 380px;')
+      |
+      .col-md-6.col-lg-3
+        .iq-card
+          .iq-card-header.d-flex.justify-content-between
+            .iq-header-title
+              h4.card-title Device
+            |
+            .iq-card-header-toolbar.d-flex.align-items-center
+              .dropdown
+                span#dropdownMenuButton02.dropdown-toggle(data-toggle='dropdown', aria-expanded='false', role='button')
+                  i.ri-more-2-fill
+                |
+                .dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuButton02', style='')
+                  a.dropdown-item(href='#')
+                    i.ri-eye-fill.mr-2
+                    | View
+                  |
+                  a.dropdown-item(href='#')
+                    i.ri-delete-bin-6-fill.mr-2
+                    | Delete
+                  |
+                  a.dropdown-item(href='#')
+                    i.ri-pencil-fill.mr-2
+                    | Edit
+                  |
+                  a.dropdown-item(href='#')
+                    i.ri-printer-fill.mr-2
+                    | Print
+                  |
+                  a.dropdown-item(href='#')
+                    i.ri-file-download-fill.mr-2
+                    | Download
+          |
+          .iq-card-body.p-0
+            #bar-chart-6(style='min-height: 304px;')
+      |
+      .col-md-6.col-lg-3
+        .iq-card
+          .iq-card-header.d-flex.justify-content-between
+            .iq-header-title
+              h4.card-title Server History
+            |
+            .iq-card-header-toolbar.d-flex.align-items-center
+              .dropdown
+                span#dropdownMenuButton03.dropdown-toggle.text-primary(data-toggle='dropdown')
+                  i.ri-more-2-fill
+                |
+                .dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuButton03')
+                  a.dropdown-item(href='#')
+                    i.ri-eye-fill.mr-2
+                    | View
+                  |
+                  a.dropdown-item(href='#')
+                    i.ri-delete-bin-6-fill.mr-2
+                    | Delete
+                  |
+                  a.dropdown-item(href='#')
+                    i.ri-pencil-fill.mr-2
+                    | Edit
+                  |
+                  a.dropdown-item(href='#')
+                    i.ri-printer-fill.mr-2
+                    | Print
+                  |
+                  a.dropdown-item(href='#')
+                    i.ri-file-download-fill.mr-2
+                    | Download
+          |
+          .iq-card-body
+            #home-pie-chart(style='height: 105px;')
+            |
+            .d-flex.align-items-center.justify-content-between.mt-4.mb-4
+              .student-data
+                h6 US Data
+                |
+                div 45,000
+              |
+              .student-data
+                h6 ASIA Data
+                |
+                div 60,000
+          |
+          #bar-chart-12
+    |
+    .row
+      .col-lg-4
+        .iq-card
+          .iq-card-header.d-flex.justify-content-between
+            .iq-header-title
+              h4.card-title Maintenance Tasks
+          |
+          .iq-card-body
+            ul.tasks-lists.m-0.p-0
+              li.d-flex.justify-content-between.mb-3.align-items-center
+                .custom-control.custom-checkbox
+                  input#task-1.custom-control-input(type='checkbox')
+                  |
+                  label.custom-control-label(for='task-1') Prepare for presentation
+                |
+                .font-size-18
+                  i.ri-close-circle-line
+              |
+              li.d-flex.justify-content-between.mb-3.align-items-center
+                .custom-control.custom-checkbox
+                  input#task-2.custom-control-input(type='checkbox', checked='')
+                  |
+                  label.custom-control-label(for='task-2')
+                    del Create invoice
+                |
+                .font-size-18
+                  i.ri-close-circle-line
+              |
+              li.d-flex.justify-content-between.mb-3.align-items-center
+                .custom-control.custom-checkbox
+                  input#task-3.custom-control-input(type='checkbox')
+                  |
+                  label.custom-control-label(for='task-3') Print Documents
+                |
+                .font-size-18
+                  i.ri-close-circle-line
+              |
+              li.d-flex.justify-content-between.mb-3.align-items-center
+                .custom-control.custom-checkbox
+                  input#task-4.custom-control-input(type='checkbox')
+                  |
+                  label.custom-control-label(for='task-4') Team Meeting on Satuarday
+                |
+                .font-size-18
+                  i.ri-close-circle-line
+              |
+              li.d-flex.justify-content-between.mb-3.align-items-center
+                .custom-control.custom-checkbox
+                  input#task-5.custom-control-input(type='checkbox', checked='')
+                  |
+                  label.custom-control-label(for='task-5')
+                    del  Lunch our New Product
+                |
+                .font-size-18
+                  i.ri-close-circle-line
+              |
+              li.d-flex.justify-content-between.mb-2.align-items-center
+                .custom-control.custom-checkbox
+                  input#task-6.custom-control-input(type='checkbox')
+                  |
+                  label.custom-control-label(for='task-6') Sent Email for Meeting
+                |
+                .font-size-18
+                  i.ri-close-circle-line
+      |
+      .col-lg-4
+        .iq-card
+          .iq-card-header.d-flex.justify-content-between
+            .iq-header-title
+              h4.card-title Schedules
+          |
+          .iq-card-body
+            ul.schedule-lists.m-0.p-0
+              li.d-flex.justify-content-between.mb-4.align-items-center
+                .media-support-info
+                  h6.mb-2 Skype call with Ruby
+                  |
+                  p.mb-0
+                    span.badge.badge-primary 11:45 am
+                    |  USA
+                |
+                .team-group
+                  .iq-media-group
+                    a.iq-media(href='#')
+                      img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/05.jpg', alt='')
+                    |
+                    a.iq-media(href='#')
+                      img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/06.jpg', alt='')
+              |
+              li.d-flex.justify-content-between.mb-4.align-items-center
+                .media-support-info
+                  h6.mb-2 Meeting with Team
+                  |
+                  p.mb-0
+                    span.badge.badge-info 10:30 am
+                    |  Caneda
+                |
+                .team-group
+                  .iq-media-group
+                    a.iq-media(href='#')
+                      img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/05.jpg', alt='')
+                    |
+                    a.iq-media(href='#')
+                      img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/06.jpg', alt='')
+                    |
+                    a.iq-media(href='#')
+                      img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/07.jpg', alt='')
+                    |
+                    a.iq-media(href='#')
+                      img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/08.jpg', alt='')
+              |
+              li.d-flex.justify-content-between.mb-4.align-items-center
+                .media-support-info
+                  h6.mb-2 Data Analysing with Client
+                  |
+                  p.mb-0
+                    span.badge.badge-warning.text-white 02:00 pm
+                    |  Africa
+                |
+                .team-group
+                  .iq-media-group
+                    a.iq-media(href='#')
+                      img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/05.jpg', alt='')
+                    |
+                    a.iq-media(href='#')
+                      img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/06.jpg', alt='')
+              |
+              li.d-flex.justify-content-between.mb-4.align-items-center
+                .media-support-info
+                  h6.mb-2 conference with Team
+                  |
+                  p.mb-0
+                    span.badge.badge-success 03:30 am
+                    |  Australia
+                |
+                .team-group
+                  .iq-media-group
+                    a.iq-media(href='#')
+                      img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/05.jpg', alt='')
+                    |
+                    a.iq-media(href='#')
+                      img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/06.jpg', alt='')
+                    |
+                    a.iq-media(href='#')
+                      img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/07.jpg', alt='')
+      |
+      .col-lg-4
+        .iq-card
+          .iq-card-body.bg-primary.rounded
+            .d-flex.align-items-center
+              .col-md-8
+                p.text-white Amount Due
+                |
+                h2.text-white  $5450.90
+                |
+                |
+                h6.text-white  Milestone Completed
+                |
+                |
+                .text-white  Payment for next week
+              |
+              |
+              .col-md-4.chart-icon.text-center
+                i.ri-bar-chart-grouped-line.font-size-40.text-white
+        |
+        .iq-card
+          .iq-card-body
+            .d-flex.align-items-center.justify-content-between.mb-3
+              .revenue-desc
+                h6 Member Profit
+                |
+                |
+                p.font-weight-light.mb-0  Average Weekly Profit
+              |
+              |
+              .revenue-amount
+                p.text-primary.mb-0  +168.900
+            |
+            hr
+            |
+            .d-flex.align-items-center.justify-content-between.mb-3
+              .revenue-desc
+                h6 Total Profit
+                |
+                |
+                p.font-weight-light.mb-0  Weekly Customer Orders
+              |
+              |
+              .revenue-amount
+                p.text-primary.mb-0  +168.900
+    |
+    .row
+      .col-lg-4
+        .iq-card
+          .iq-card-header.d-flex.justify-content-between
+            .iq-header-title
+              h4.card-title Activity
+            |
+            .iq-card-header-toolbar.d-flex.align-items-center
+              .dropdown
+                span#dropdownMenuButton04.dropdown-toggle.text-primary(data-toggle='dropdown')
+                  | View All
+                |
+                .dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuButton04')
+                  a.dropdown-item(href='#')
+                    i.ri-eye-fill.mr-2
+                    | View
+                  |
+                  a.dropdown-item(href='#')
+                    i.ri-delete-bin-6-fill.mr-2
+                    | Delete
+                  |
+                  a.dropdown-item(href='#')
+                    i.ri-pencil-fill.mr-2
+                    | Edit
+                  |
+                  a.dropdown-item(href='#')
+                    i.ri-printer-fill.mr-2
+                    | Print
+                  |
+                  a.dropdown-item(href='#')
+                    i.ri-file-download-fill.mr-2
+                    | Download
+          |
+          .iq-card-body
+            ul.iq-timeline
+              li
+                .timeline-dots
+                |
+                h6.float-left.mb-1 Client Login
+                |
+                small.float-right.mt-1 24 November 2019
+                |
+                .d-inline-block.w-100
+                  p Bonbon macaroon jelly beans gummi bears jelly lollipop apple
+              |
+              li
+                .timeline-dots.border-success
+                |
+                h6.float-left.mb-1 Scheduled Maintenance
+                |
+                small.float-right.mt-1 23 November 2019
+                |
+                .d-inline-block.w-100
+                  p Bonbon macaroon jelly beans gummi bears jelly lollipop apple
+              |
+              li
+                .timeline-dots.border-primary
+                |
+                h6.float-left.mb-1 Client Call
+                |
+                small.float-right.mt-1 19 November 2019
+                |
+                .d-inline-block.w-100
+                  p Bonbon macaroon jelly beans gummi bears jelly lollipop apple
+              |
+              li
+                .timeline-dots.border-warning
+                |
+                h6.float-left.mb-1 Mega event
+                |
+                small.float-right.mt-1 15 November 2019
+                |
+                .d-inline-block.w-100
+                  p Bonbon macaroon jelly beans gummi bears jelly lollipop apple
+      |
+      .col-lg-8
+        .iq-card
+          .iq-card-header.d-flex.justify-content-between
+            .iq-header-title
+              h4.card-title Server History
+            |
+            .iq-card-header-toolbar.d-flex.align-items-center
+              .dropdown
+                span#dropdownMenuButton05.dropdown-toggle.text-primary(data-toggle='dropdown')
+                  i.ri-more-2-fill
+                |
+                .dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuButton05')
+                  a.dropdown-item(href='#')
+                    i.ri-eye-fill.mr-2
+                    | View
+                  |
+                  a.dropdown-item(href='#')
+                    i.ri-delete-bin-6-fill.mr-2
+                    | Delete
+                  |
+                  a.dropdown-item(href='#')
+                    i.ri-pencil-fill.mr-2
+                    | Edit
+                  |
+                  a.dropdown-item(href='#')
+                    i.ri-printer-fill.mr-2
+                    | Print
+                  |
+                  a.dropdown-item(href='#')
+                    i.ri-file-download-fill.mr-2
+                    | Download
+          |
+          .iq-card-body.pb-0
+            .table-responsive
+              table.table.mb-0.table-borderless
+                thead
+                  tr
+                    th(scope='col') Server ID
+                    |
+                    th(scope='col') Up Since
+                    |
+                    th(scope='col') Last Reboot
+                    |
+                    th(scope='col') Status
+                    |
+                    th(scope='col') Host
+                    |
+                    th(scope='col') Utilization
+                |
+                tbody
+                  tr
+                    td #0879985
+                    |
+                    td 26/12/2019
+                    |
+                    td 30/12/2019
+                    |
+                    td
+                      .badge.badge-pill.badge-success Running
+                    |
+                    td Victoria 8007 Australia
+                    |
+                    td
+                      .iq-progress-bar
+                        span.bg-success(data-percent='90')
+                  |
+                  tr
+                    td #0879984
+                    |
+                    td 23/12/2019
+                    |
+                    td 27/12/2019
+                    |
+                    td
+                      .badge.badge-pill.badge-warning.text-white Starting
+                    |
+                    td Athens 2745 Greece
+                    |
+                    td
+                      .iq-progress-bar
+                        span.bg-warning(data-percent='70')
+                  |
+                  tr
+                    td #0879983
+                    |
+                    td 18/12/2019
+                    |
+                    td 21/12/2019
+                    |
+                    td
+                      .badge.badge-pill.badge-danger Stopped
+                    |
+                    td Victoria 8007 Australia
+                    |
+                    td
+                      .iq-progress-bar
+                        span.bg-danger(data-percent='48')
+                  |
+                  tr
+                    td #0879982
+                    |
+                    td 14/12/2019
+                    |
+                    td 20/12/2019
+                    |
+                    td
+                      .badge.badge-pill.badge-info Maintenance
+                    |
+                    td Delhi 0014 India
+                    |
+                    td
+                      .iq-progress-bar
+                        span.bg-info(data-percent='90')
+                  |
+                  tr
+                    td #0879981
+                    |
+                    td 10/12/2019
+                    |
+                    td 18/12/2019
+                    |
+                    td
+                      .badge.badge-pill.badge-success Running
+                    |
+                    td Alabama 2741 USA
+                    |
+                    td
+                      .iq-progress-bar
+                        span.bg-success(data-percent='45')
+                  |
+                  tr
+                    td #0879981
+                    |
+                    td 13/12/2019
+                    |
+                    td 23/12/2019
+                    |
+                    td
+                      .badge.badge-pill.badge-primary Running
+                    |
+                    td Victoria 8007 Australia
+                    |
+                    td
+                      .iq-progress-bar
+                        span.bg-primary(data-percent='80')
+                  |
+                  tr
+                    td #01258569
+                    |
+                    td 20/12/2019
+                    |
+                    td 29/12/2019
+                    |
+                    td
+                      .badge.badge-pill.badge-warning.text-white Starting
+                    |
+                    td Athens 2745 Greece
+                    |
+                    td
+                      .iq-progress-bar
+                        span.bg-warning(data-percent='55')
+                  |
+                  tr
+                    td #0825685
+                    |
+                    td 12/12/2019
+                    |
+                    td 22/12/2019
+                    |
+                    td
+                      .badge.badge-pill.badge-danger Stoppen
+                    |
+                    td Victoria 8007 Australia
+                    |
+                    td
+                      .iq-progress-bar
+                        span.bg-danger(data-percent='60')
+

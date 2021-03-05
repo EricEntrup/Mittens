@@ -1,0 +1,96 @@
+.iq-top-navbar
+    .iq-navbar-custom
+        .iq-sidebar-logo
+            .top-logo
+                a.logo(href='index.html')
+                    img.img-fluid(src='assets/images/logo.gif', alt='')
+                    |
+                    span MoonShots
+        |
+        .navbar-breadcrumb
+            h5.mb-0 Dashboard
+            |
+            nav(aria-label='breadcrumb')
+                ul.breadcrumb
+                    li.breadcrumb-item
+                        a(href='index.html') Home
+                    |
+                    li.breadcrumb-item.active(aria-current='page') Home
+        |
+        nav.navbar.navbar-expand-lg.navbar-light.p-0
+            //- button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+            //-     i.ri-menu-3-line
+            //- |
+            //- .iq-menu-bt.align-self-center
+            //-     .wrapper-menu
+            //-         .line-menu.half.start
+            //-         |
+            //-         .line-menu
+            //-         |
+            //-         .line-menu.half.end
+            //- |
+            #navbarSupportedContent.collapse.navbar-collapse
+                ul.navbar-nav.ml-auto.navbar-list
+                    li.nav-item
+                        a.search-toggle.iq-waves-effect(href='#')
+                            i.ri-search-line
+                        |
+                        form.search-box(action='#')
+                            input.text.search-input(type='text', placeholder='Type here to search...')
+                    |
+                    li.nav-item.dropdown
+                        a.search-toggle.iq-waves-effect(href='#')
+                            i.ri-mail-line
+                            |
+                            span.badge.badge-pill.badge-dark.badge-up.count-mail 5
+                        |
+                        .iq-sub-dropdown
+                            .iq-card.shadow-none.m-0
+                                .iq-card-body.p-0
+                                    .bg-primary.p-3
+                                        h5.mb-0.text-white
+                                            | All Messages
+                                            small.badge.badge-light.float-right.pt-1 5
+ 
+                    |
+                    li.nav-item
+                        a.iq-waves-effect(href='#')
+                            i.ri-shopping-cart-2-line
+                    |
+                    li.nav-item
+                        a.search-toggle.iq-waves-effect(href='#')
+                            i.ri-notification-2-line
+                            |
+                            span.bg-danger.dots
+                        |
+                        .iq-sub-dropdown
+                            .iq-card.shadow-none.m-0
+                                .iq-card-body.p-0
+                                    .bg-danger.p-3
+                                        h5.mb-0.text-white
+                                            | All Notifications
+                                            small.badge.badge-light.float-right.pt-1 4
+
+                    |
+                    li.nav-item.iq-full-screen
+                        a#btnFullscreen.iq-waves-effect(href='#')
+                            i.ri-fullscreen-line
+            |
+            ul.navbar-list
+                li
+                    a.search-toggle.iq-waves-effect.text-white(href='#')
+                        img.img-fluid.rounded(src='assets/images/logo.jpg', alt='user')
+                    |
+                    .iq-sub-dropdown.iq-user-dropdown
+                        .iq-card.shadow-none.m-0
+                            .iq-card-body.p-0
+                                .bg-primary.p-3
+                                    h5.mb-0.text-white.line-height #{locals.userInfo && locals.userInfo.name || 'Hello Nik'}
+                                    |
+
+                                |
+                                .d-inline-block.w-100.text-center.p-3
+                                    a.iq-bg-danger.iq-sign-btn.logout(href='/login', role='button')
+                                        | Sign out
+                                        i.ri-login-box-line.ml-2
+

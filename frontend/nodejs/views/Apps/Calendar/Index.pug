@@ -1,0 +1,68 @@
+extends ../../Layouts/master
+block head
+    link(rel='stylesheet', href='assets/css/responsive.css')
+    link(rel='stylesheet', href='vendors/fullcalendar/core/main.css')
+    link(rel='stylesheet', href='vendors/fullcalendar/daygrid/main.css')
+    link(rel='stylesheet', href='vendors/fullcalendar/timegrid/main.css')
+    link(rel='stylesheet', href='vendors/fullcalendar/list/main.css')
+block content
+
+    .container-fluid
+        .row.row-eq-height
+            .col-md-3
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Classification
+                        .iq-card-header-toolbar.d-flex.align-items-center
+                            a(href='#')
+                                i.fa.fa-plus.mr-0(aria-hidden='true')
+                    .iq-card-body
+                        ul.m-0.p-0.job-classification
+                            li
+                                i.ri-check-line.bg-danger
+                                | Meeting
+                            li
+                                i.ri-check-line.bg-success
+                                | Business travel
+                            li
+                                i.ri-check-line.bg-warning
+                                | Personal Work
+                            li
+                                i.ri-check-line.bg-info
+                                | Team Project
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Today's Schedule
+                    .iq-card-body
+                        ul.m-0.p-0.today-schedule
+                            li.d-flex
+                                .schedule-icon
+                                    i.ri-checkbox-blank-circle-fill.text-primary
+                                .schedule-text
+                                    span Web Design
+                                    span 09:00 to 12:00
+                            li.d-flex
+                                .schedule-icon
+                                    i.ri-checkbox-blank-circle-fill.text-success
+                                .schedule-text
+                                    span Participate in Design
+                                    span 09:00 to 12:00
+            .col-md-9
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Book Appointment
+                        .iq-card-header-toolbar.d-flex.align-items-center
+                            a.btn.btn-primary(href='#')
+                                i.ri-add-line.mr-2
+                                | Book Appointment
+                    .iq-card-body
+                        #calendar1
+
+block script
+    script(src='vendors/fullcalendar/core/main.js')
+    script(src='vendors/fullcalendar/daygrid/main.js')
+    script(src='vendors/fullcalendar/timegrid/main.js')
+    script(src='vendors/fullcalendar/list/main.js')

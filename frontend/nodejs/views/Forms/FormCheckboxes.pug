@@ -1,0 +1,151 @@
+extends ../Layouts/master
+
+block content
+
+    .container-fluid
+        .row
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Basic Checkbox
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        .checkbox.d-inline-block.mr-2
+                            input#checkbox1.checkbox-input(type='checkbox')
+                            label(for='checkbox1') Primary / Inactive
+                        .checkbox.d-inline-block.mr-2
+                            input#checkbox2.checkbox-input(type='checkbox', checked='')
+                            label(for='checkbox2') Primary / Active
+                        .checkbox.d-inline-block.mr-2
+                            input#checkbox3.checkbox-input(type='checkbox', disabled='')
+                            label(for='checkbox3') Disable / Inactive
+                        .checkbox.d-inline-block.mr-2
+                            input#checkbox4.checkbox-input(type='checkbox', checked='', disabled='')
+                            label(for='checkbox4') Active / Disable
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Custom Color
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        .custom-control.custom-checkbox.custom-checkbox-color.custom-control-inline
+                            input#customCheck-11.custom-control-input.bg-primary(type='checkbox')
+                            label.custom-control-label(for='customCheck-11') Primary 
+                        .custom-control.custom-checkbox.custom-checkbox-color.custom-control-inline
+                            input#customCheck-22.custom-control-input.bg-success(type='checkbox')
+                            label.custom-control-label(for='customCheck-22') Success
+                        .custom-control.custom-checkbox.custom-checkbox-color.custom-control-inline
+                            input#customCheck-33.custom-control-input.bg-danger(type='checkbox')
+                            label.custom-control-label(for='customCheck-33') Danger
+                        .custom-control.custom-checkbox.custom-checkbox-color.custom-control-inline
+                            input#customCheck-44.custom-control-input.bg-warning(type='checkbox')
+                            label.custom-control-label(for='customCheck-44') Warning
+                        .custom-control.custom-checkbox.custom-checkbox-color.custom-control-inline
+                            input#customCheck-55.custom-control-input.bg-dark(type='checkbox')
+                            label.custom-control-label(for='customCheck-55') Dark
+                        .custom-control.custom-checkbox.custom-checkbox-color.custom-control-inline
+                            input#customCheck-66.custom-control-input.bg-info(type='checkbox')
+                            label.custom-control-label(for='customCheck-66')  Info
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Boolean Checkbox
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        .custom-control.custom-checkbox.custom-control-inline
+                            input#customCheck-t.custom-control-input(type='checkbox', checked='')
+                            label.custom-control-label(for='customCheck-t') True
+                        .custom-control.custom-checkbox.custom-control-inline
+                            input#customCheck-f.custom-control-input(type='checkbox')
+                            label.custom-control-label(for='customCheck-f') False
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Custom Checkbox
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        .custom-control.custom-checkbox.custom-control-inline
+                            input#customCheck5.custom-control-input(type='checkbox')
+                            label.custom-control-label(for='customCheck5') Primary / Inactive
+                        .custom-control.custom-checkbox.custom-control-inline
+                            input#customCheck6.custom-control-input(type='checkbox', checked='')
+                            label.custom-control-label(for='customCheck6') Primary - active
+                        .custom-control.custom-checkbox.custom-control-inline
+                            input#customCheck7.custom-control-input(type='checkbox', disabled='')
+                            label.custom-control-label(for='customCheck7') Primary - inactive - disabled
+                        .custom-control.custom-checkbox.custom-control-inline
+                            input#customCheck8.custom-control-input(type='checkbox', checked='', disabled='')
+                            label.custom-control-label(for='customCheck8') Primary - active - disabled
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Color
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        .custom-control.custom-checkbox.custom-checkbox-color-check.custom-control-inline
+                            input#customCheck-1.custom-control-input.bg-primary(type='checkbox', checked='')
+                            label.custom-control-label(for='customCheck-1')  Primary
+                        .custom-control.custom-checkbox.custom-checkbox-color-check.custom-control-inline
+                            input#customCheck-2.custom-control-input.bg-success(type='checkbox', checked='')
+                            label.custom-control-label(for='customCheck-2') Success
+                        .custom-control.custom-checkbox.custom-checkbox-color-check.custom-control-inline
+                            input#customCheck-3.custom-control-input.bg-danger(type='checkbox', checked='')
+                            label.custom-control-label(for='customCheck-3') Danger
+                        .custom-control.custom-checkbox.custom-checkbox-color-check.custom-control-inline
+                            input#customCheck-4.custom-control-input.bg-warning(type='checkbox', checked='')
+                            label.custom-control-label(for='customCheck-4') Warning
+                        .custom-control.custom-checkbox.custom-checkbox-color-check.custom-control-inline
+                            input#customCheck-5.custom-control-input.bg-dark(type='checkbox', checked='')
+                            label.custom-control-label(for='customCheck-5') Dark
+                        .custom-control.custom-checkbox.custom-checkbox-color-check.custom-control-inline
+                            input#customCheck-6.custom-control-input.bg-info(type='checkbox', checked='')
+                            label.custom-control-label(for='customCheck-6') Info
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Change Icon
+                    .iq-card-body
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo
+                        .custom-control.custom-checkbox.checkbox-icon.custom-control-inline
+                            input#customCheck-10.custom-control-input(type='checkbox', checked='')
+                            label.custom-control-label(for='customCheck-10')
+                                i.fa.fa-music
+                                | Music
+                        .custom-control.custom-checkbox.checkbox-icon.custom-control-inline
+                            input#customCheck-20.custom-control-input(type='checkbox', checked='')
+                            label.custom-control-label(for='customCheck-20')
+                                i.fa.fa-commenting-o
+                                | SMS
+                        .custom-control.custom-checkbox.checkbox-icon.custom-control-inline
+                            input#customCheck-30.custom-control-input(type='checkbox', checked='')
+                            label.custom-control-label(for='customCheck-30')
+                                i.fa.fa-times
+                                | Cancle
+                        .custom-control.custom-checkbox.checkbox-icon.custom-control-inline
+                            input#customCheck-40.custom-control-input(type='checkbox', checked='')
+                            label.custom-control-label(for='customCheck-40')
+                                i.fa.fa-file
+                                | File
+                        .custom-control.custom-checkbox.checkbox-icon.custom-control-inline
+                            input#customCheck-50.custom-control-input(type='checkbox', checked='')
+                            label.custom-control-label(for='customCheck-50')
+                                i.fa.fa-bold
+                                | Bold
+                        .custom-control.custom-checkbox.checkbox-icon.custom-control-inline
+                            input#customCheck-60.custom-control-input(type='checkbox', checked='')
+                            label.custom-control-label(for='customCheck-60')
+                                i.fa.fa-map-marker
+                                | Location
+                        .custom-control.custom-checkbox.checkbox-icon.custom-control-inline
+                            input#customCheck-70.custom-control-input(type='checkbox', checked='')
+                            label.custom-control-label(for='customCheck-70')
+                                i.fa.fa-camera
+                                | Camera

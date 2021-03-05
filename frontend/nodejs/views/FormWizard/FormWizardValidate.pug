@@ -1,0 +1,120 @@
+extends ../Layouts/master
+
+block content
+
+    .container-fluid
+        .row
+            .col-sm-12.col-lg-12
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Validate Wizard
+                    .iq-card-body
+                        .stepwizard.mt-4
+                            .stepwizard-row.setup-panel
+                                #user.wizard-step.active
+                                    a.active.btn(href='#user-detail')
+                                        i.ri-lock-unlock-line.text-primary
+                                        span User Detail
+                                #document.wizard-step
+                                    a.btn.btn-default.disabled(href='#document-detail')
+                                        i.ri-user-fill.text-danger
+                                        span Document Detail
+                                #bank.wizard-step
+                                    a.btn.btn-default.disabled(href='#bank-detail')
+                                        i.ri-camera-fill.text-success
+                                        span Bank Detail
+                                #confirm.wizard-step
+                                    a.btn.btn-default.disabled(href='#cpnfirm-data')
+                                        i.ri-check-fill.text-warning
+                                        span Confirm
+                        form.form
+                            #user-detail.row.setup-content
+                                .col-sm-12
+                                    .col-md-12.p-0
+                                        h3.mb-4 User Information:
+                                        .row
+                                            .form-group.col-md-6
+                                                label.control-label First Name
+                                                input.form-control(maxlength='100', type='text', required='required', placeholder='Enter First Name')
+                                            .form-group.col-md-6
+                                                label.control-label Last Name
+                                                input.form-control(maxlength='100', type='text', required='required', placeholder='Enter Last Name')
+                                            .col-md-6.form-group
+                                                label.control-label(for='uname') User Name: *
+                                                input#uname.form-control(type='text', required='required', name='uname', placeholder='Enter User Name')
+                                            .col-md-6.form-group
+                                                label.control-label(for='emailid') Email Id: *
+                                                input#emailid.form-control(type='email', required='required', name='emailid', placeholder='Email ID')
+                                            .col-md-6.form-group
+                                                label.control-label(for='pwd') Password: *
+                                                input#pwd.form-control(type='password', required='required', name='pwd', placeholder='Password')
+                                            .col-md-6.form-group
+                                                label.control-label(for='cpwd') Confirm Password: *
+                                                input#cpwd.form-control(type='password', required='required', name='cpwd', placeholder='Confirm Password')
+                                            .col-md-6.form-group
+                                                label.control-label(for='cno') Contact Number: *
+                                                input#cno.form-control(type='text', required='required', name='cno', placeholder='Contact Number')
+                                            .col-md-6.form-group
+                                                label.control-label(for='acno') Alternate Contact Number: *
+                                                input#acno.form-control(type='text', required='required', name='acno', placeholder='Alternate Contact Number')
+                                            .col-md-12.mb-3.form-group
+                                                label.control-label(for='address') Address: *
+                                                textarea#address.form-control(name='address', rows='5', required='required')
+                                        button.btn.btn-primary.nextBtn.btn-lg.pull-right(type='button') Next
+                            #document-detail.row.setup-content
+                                .col-sm-12
+                                    .col-md-12.p-0
+                                        h3.mb-4 Document Details:
+                                        .row
+                                            .col-md-6.form-group
+                                                label.control-label(for='fname') Company Name: *
+                                                input#fname.form-control(type='text', required='required', name='fname', placeholder='Company Name')
+                                            .col-md-6.form-group
+                                                .form-group
+                                                    label.control-label(for='ccno') Contact Number: *
+                                                    input#ccno.form-control(type='text', required='required', name='ccno', placeholder='Contact Number')
+                                            .col-md-6.form-group
+                                                .form-group
+                                                    label.control-label(for='url') Company Url: *
+                                                    input#url.form-control(type='text', required='required', name='url', placeholder='Company Url.')
+                                            .col-md-6.form-group
+                                                .form-group
+                                                    label.control-label(for='cemail') Company Mail Id: *
+                                                    input#cemail.form-control(type='email', required='required', name='cemail', placeholder='Company Mail Id.')
+                                            .col-md-12
+                                                .form-group
+                                                    label.control-label(for='cadd') Company Address: *
+                                                    textarea#cadd.form-control(name='cadd', required='required', rows='5')
+                                        button.btn.btn-primary.nextBtn.btn-lg.pull-right(type='button') Next
+                            #bank-detail.row.setup-content
+                                .col-sm-12
+                                    .col-md-12.p-0
+                                        h3.mb-4 Bank Detail:
+                                        .row
+                                            .col-md-6.form-group
+                                                label.control-label(for='panno') Pan No: *
+                                                input#panno.form-control(type='text', required='required', name='panno', placeholder='Pan No.')
+                                            .col-md-6.form-group
+                                                label.control-label(for='accno') Account No: *
+                                                input#accno.form-control(type='text', required='required', name='accno', placeholder='Account No.')
+                                            .col-md-6.form-group
+                                                label.control-label(for='accname') Account Holder Name: *
+                                                input#accname.form-control(type='text', required='required', name='accname', placeholder='Account Holder Name.')
+                                            .col-md-6.form-group
+                                                label.control-label(for='ifsc') IFSC Code: *
+                                                input#ifsc.form-control(type='text', required='required', name='ifsc', placeholder='IFSC Code.')
+                                            .col-md-6.form-group
+                                                label.control-label(for='bankname') Bank Name: *
+                                                input#bankname.form-control(type='text', required='required', name='bankname', placeholder='Bank Name.')
+                                            .col-md-6.form-group
+                                                label.control-label(for='branch') Bank Branch Name: *
+                                                input#branch.form-control(type='text', required='required', name='branch', placeholder='Bank Branch Name.')
+                                        button.btn.btn-primary.nextBtn.btn-lg.pull-right(type='button') Next
+                            #cpnfirm-data.row.setup-content
+                                .col-sm-12
+                                    .col-md-12.p-0
+                                        h3.mb-4.text-left Finish:
+                                        .row.justify-content-center
+                                            .col-3
+                                                img.fit-image(src='assets/images/page-img/img-success.png', alt='img-success')

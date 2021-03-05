@@ -1,0 +1,112 @@
+extends ../../Layouts/master
+
+block content
+    .container-fluid
+        .row
+            .col-lg-3
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Add New User
+                    .iq-card-body
+                        form
+                            .form-group
+                                .add-img-user.profile-img-edit
+                                    img.profile-pic.img-fluid(src='assets/images/user/11.png', alt='profile-pic')
+                                    .p-image
+                                        // <h5 class="upload-button">file upload</h5>
+                                        a.upload-button.btn.iq-bg-primary(href='javascript:void();') File Upload
+                                        input.file-upload(type='file', accept='image/*')
+                                .img-extension.mt-3
+                                    .d-inline-block.align-items-center
+                                        span Only
+                                        a(href='javascript:void();') .jpg
+                                        a(href='javascript:void();') .png
+                                        a(href='javascript:void();') .jpeg
+                                        span allowed
+                            .form-group
+                                label User Role:
+                                select#selectuserrole.form-control
+                                    option Select
+                                    option Web Designer
+                                    option Web Developer
+                                    option Tester
+                                    option Php Developer
+                                    option Ios Developer 
+                            .form-group
+                                label(for='furl') Facebook Url:
+                                input#furl.form-control(type='text', placeholder='Facebook Url')
+                            .form-group
+                                label(for='turl') Twitter Url:
+                                input#turl.form-control(type='text', placeholder='Twitter Url')
+                            .form-group
+                                label(for='instaurl') Instagram Url:
+                                input#instaurl.form-control(type='text', placeholder='Instagram Url')
+                            .form-group
+                                label(for='lurl') Linkedin Url:
+                                input#lurl.form-control(type='text', placeholder='Linkedin Url')
+            .col-lg-9
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title New User Information
+                    .iq-card-body
+                        .new-user-info
+                            form
+                                .row
+                                    .form-group.col-md-6
+                                        label(for='fname') First Name:
+                                        input#fname.form-control(type='text', placeholder='First Name')
+                                    .form-group.col-md-6
+                                        label(for='lname') Last Name:
+                                        input#lname.form-control(type='text', placeholder='Last Name')
+                                    .form-group.col-md-6
+                                        label(for='add1') Street Address 1:
+                                        input#add1.form-control(type='text', placeholder='Street Address 1')
+                                    .form-group.col-md-6
+                                        label(for='add2') Street Address 2:
+                                        input#add2.form-control(type='text', placeholder='Street Address 2')
+                                    .form-group.col-md-12
+                                        label(for='cname') Company Name:
+                                        input#cname.form-control(type='text', placeholder='Company Name')
+                                    .form-group.col-sm-12
+                                        label Country:
+                                        select#selectcountry.form-control
+                                            option Select Country
+                                            option Caneda
+                                            option Noida
+                                            option USA
+                                            option India
+                                            option Africa
+                                    .form-group.col-md-6
+                                        label(for='mobno') Mobile Number:
+                                        input#mobno.form-control(type='text', placeholder='Mobile Number')
+                                    .form-group.col-md-6
+                                        label(for='altconno') Alternate Contact:
+                                        input#altconno.form-control(type='text', placeholder='Alternate Contact')
+                                    .form-group.col-md-6
+                                        label(for='email') Email:
+                                        input#email.form-control(type='email', placeholder='Email')
+                                    .form-group.col-md-6
+                                        label(for='pno') Pin Code:
+                                        input#pno.form-control(type='text', placeholder='Pin Code')
+                                    .form-group.col-md-12
+                                        label(for='city') Town/City:
+                                        input#city.form-control(type='text', placeholder='Town/City')
+                                hr
+                                h5.mb-3 Security
+                                .row
+                                    .form-group.col-md-12
+                                        label(for='uname') User Name:
+                                        input#uname.form-control(type='text', placeholder='User Name')
+                                    .form-group.col-md-6
+                                        label(for='pass') Password:
+                                        input#pass.form-control(type='password', placeholder='Password')
+                                    .form-group.col-md-6
+                                        label(for='rpass') Repeat Password:
+                                        input#rpass.form-control(type='password', placeholder='Repeat Password ')
+                                .checkbox
+                                    label
+                                        input.mr-2(type='checkbox')
+                                        | Enable Two-Factor-Authentication
+                                button.btn.btn-primary(type='submit') Add New User

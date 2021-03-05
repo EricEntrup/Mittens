@@ -1,0 +1,362 @@
+extends ../../Layouts/master
+
+block content
+
+    .container-fluid.relative
+        .row
+            .col-lg-3
+                .iq-card
+                    .iq-card-body
+                        .iq-todo-page
+                            form.position-relative
+                                .form-group.mb-0
+                                    input#exampleInputEmail002.form-control.todo-search(type='text', placeholder='Search')
+                                    a.search-link(href='#')
+                                        i.ri-search-line
+                            .add-new-project.mt-3.mb-3
+                                a.d-block.nrw-project(href='javascript:void();')
+                                    i.ri-add-line.mr-2
+                                    | add Project
+                            ul.todo-task-list.p-0.m-0
+                                li
+                                    a(href='javascript:void();')
+                                        i.ri-stack-fill.mr-2
+                                        |  Secrat Project
+                                    ul#todo-task1.sub-task.show.mt-2.p-0
+                                        li.active
+                                            a(href='javascript:void();')
+                                                i.ri-checkbox-blank-circle-fill.text-success
+                                                |  All Task
+                                        li
+                                            a(href='javascript:void();')
+                                                i.ri-checkbox-blank-circle-fill.text-warning
+                                                |  People
+                                        li
+                                            a(href='javascript:void();')
+                                                i.ri-checkbox-blank-circle-fill.text-danger
+                                                |  Files 
+                                                span.badge.badge-danger.ml-2.float-right 44
+                                        li
+                                            a(href='javascript:void();')
+                                                i.ri-checkbox-blank-circle-fill.text-primary
+                                                |  Statistics
+                                li
+                                    a(href='javascript:void();')
+                                        i.ri-stack-fill.mr-2
+                                        |  Nike Mobile App
+                                    ul#todo-task2.sub-task.mt-2.p-0
+                                        li
+                                            a(href='javascript:void();')
+                                                i.ri-checkbox-blank-circle-fill.text-success
+                                                |  All Task
+                                        li
+                                            a(href='javascript:void();')
+                                                i.ri-checkbox-blank-circle-fill.text-warning
+                                                |  People
+                                        li
+                                            a(href='javascript:void();')
+                                                i.ri-checkbox-blank-circle-fill.text-danger
+                                                |  Files 
+                                                span.badge.badge-danger.ml-2.float-right 20
+                                        li
+                                            a(href='javascript:void();')
+                                                i.ri-checkbox-blank-circle-fill.text-primary
+                                                |  Statistics
+                                li
+                                    a(href='javascript:void();')
+                                        i.ri-stack-fill.mr-2
+                                        |  New Portfolio Site
+                                    ul#todo-task3.sub-task.mt-2.p-0
+                                        li
+                                            a(href='javascript:void();')
+                                                i.ri-checkbox-blank-circle-fill.text-success
+                                                |  All Task
+                                        li
+                                            a(href='javascript:void();')
+                                                i.ri-checkbox-blank-circle-fill.text-warning
+                                                |  People
+                                        li
+                                            a(href='javascript:void();')
+                                                i.ri-checkbox-blank-circle-fill.text-danger
+                                                |  Files 
+                                                span.badge.badge-danger.ml-2.float-right 10
+                                        li
+                                            a(href='javascript:void();')
+                                                i.ri-checkbox-blank-circle-fill.text-primary
+                                                |  Statistics
+            .col-lg-9
+                .row
+                    .col-sm-12
+                        .iq-card
+                            .iq-card-body
+                                .d-flex.justify-content-between.align-items-center
+                                    .todo-date.d-flex.mr-3
+                                        i.ri-calendar-2-line.text-success.mr-2
+                                        span Wednesday, 08th January, 2020
+                                    .todo-notification.d-flex.align-items-center
+                                        .notification-icon.position-relative.d-flex.align-items-center.mr-3
+                                            a(href='#')
+                                                i.ri-notification-3-line.font-size-16
+                                            span.bg-danger.text-white 5
+                                        button.btn.iq-bg-success(type='submit') Add Task
+                    .col-md-8
+                        .iq-card
+                            .iq-card-body.p-0
+                                ul.todo-task-lists.m-0.p-0
+                                    li.d-flex.align-items-center.p-3
+                                        .user-img.img-fluid
+                                            img.rounded-circle.avatar-40(src='assets/images/user/01.jpg', alt='story-img')
+                                        .media-support-info.ml-3
+                                            h6.d-inline-block Landing page for secret Project
+                                            span.badge.badge-warning.ml-3.text-white expirinq
+                                            p.mb-0 by Danlel Cllfferton
+                                        .iq-card-header-toolbar.d-flex.align-items-center
+                                            .custom-control.custom-checkbox
+                                                input#check1.custom-control-input(type='checkbox', name='todo-check')
+                                                label.custom-control-label(for='check1')
+                                    li.d-flex.align-items-center.p-3.active-task
+                                        .user-img.img-fluid
+                                            img.rounded-circle.avatar-40(src='assets/images/user/01.jpg', alt='story-img')
+                                        .media-support-info.ml-3
+                                            h6 Fix Critical Crashes
+                                            p.mb-0 by Cralg Danles
+                                        .iq-card-header-toolbar.d-flex.align-items-center
+                                            .custom-control.custom-checkbox
+                                                input#check2.custom-control-input(type='checkbox', name='todo-check', checked='checked')
+                                                label.custom-control-label(for='check2')
+                                    li.d-flex.align-items-center.p-3
+                                        .user-img.img-fluid
+                                            img.rounded-circle.avatar-40(src='assets/images/user/02.jpg', alt='story-img')
+                                        .media-support-info.ml-3
+                                            h6.d-inline-block IOS App - Redesign the contact form screen
+                                            span.badge.badge-success.ml-3 ending
+                                            p.mb-0 by Simona Gomez 
+                                        .iq-card-header-toolbar.d-flex.align-items-center
+                                            .custom-control.custom-checkbox
+                                                input#check3.custom-control-input(type='checkbox', name='todo-check')
+                                                label.custom-control-label(for='check3')
+                                    li.d-flex.align-items-center.p-3
+                                        .user-img.img-fluid
+                                            img.rounded-circle.avatar-40(src='assets/images/user/03.jpg', alt='story-img')
+                                        .media-support-info.ml-3
+                                            h6 Final Meetup for the Secrat Project Client
+                                            p.mb-0 bt Serena Gemoz
+                                        .iq-card-header-toolbar.d-flex.align-items-center
+                                            .custom-control.custom-checkbox
+                                                input#check4.custom-control-input(type='checkbox', name='todo-check')
+                                                label.custom-control-label(for='check4')
+                                    li.d-flex.align-items-center.p-3
+                                        .user-img.img-fluid
+                                            img.rounded-circle.avatar-40(src='assets/images/user/04.jpg', alt='story-img')
+                                        .media-support-info.ml-3
+                                            h6 Code the Parsing Element
+                                            p.mb-0 by Jeena Gaze
+                                        .iq-card-header-toolbar.d-flex.align-items-center
+                                            .custom-control.custom-checkbox
+                                                input#check5.custom-control-input(type='checkbox', name='todo-check')
+                                                label.custom-control-label(for='check5')
+                                    li.d-flex.align-items-center.p-3
+                                        .user-img.img-fluid
+                                            img.rounded-circle.avatar-40(src='assets/images/user/05.jpg', alt='story-img')
+                                        .media-support-info.ml-3
+                                            h6.d-inline-block Test the Bug, that causes design troubleshooting
+                                            span.badge.badge-danger.ml-3 urgent
+                                            p.mb-0 by migule Slimmonas
+                                        .iq-card-header-toolbar.d-flex.align-items-center
+                                            .custom-control.custom-checkbox
+                                                input#check6.custom-control-input(type='checkbox', name='todo-check')
+                                                label.custom-control-label(for='check6')
+                                    li.d-flex.align-items-center.p-3
+                                        .user-img.img-fluid
+                                            img.rounded-circle.avatar-40(src='assets/images/user/06.jpg', alt='story-img')
+                                        .media-support-info.ml-3
+                                            h6 Android App Design
+                                            p.mb-0 by Becky Dimes
+                                        .iq-card-header-toolbar.d-flex.align-items-center
+                                            .custom-control.custom-checkbox
+                                                input#check7.custom-control-input(type='checkbox', name='todo-check')
+                                                label.custom-control-label(for='check7')
+                                    li.d-flex.align-items-center.p-3
+                                        .user-img.img-fluid
+                                            img.rounded-circle.avatar-40(src='assets/images/user/07.jpg', alt='story-img')
+                                        .media-support-info.ml-3
+                                            h6 Skype Meetup with clients
+                                            p.mb-0 by James Romero
+                                        .iq-card-header-toolbar.d-flex.align-items-center
+                                            .custom-control.custom-checkbox
+                                                input#check8.custom-control-input(type='checkbox', name='todo-check')
+                                                label.custom-control-label(for='check8')
+                    .col-md-4
+                        .iq-card
+                            .iq-card-body
+                                .iq-todo-right
+                                    form.position-relative
+                                        .form-group.mb-0
+                                            input#exampleInputEmail001.form-control.todo-search(type='text', placeholder='Search')
+                                            a.search-link(href='#')
+                                                i.ri-search-line
+                                    .iq-todo-friendlist.mt-3
+                                        ul.suggestions-lists.m-0.p-0
+                                            li.d-flex.mb-4.align-items-center
+                                                .user-img.img-fluid
+                                                    img.rounded-circle.avatar-40(src='assets/images/user/01.jpg', alt='story-img')
+                                                .media-support-info.ml-3
+                                                    h6 Paul Molive
+                                                    p.mb-0 Web Designer
+                                                .iq-card-header-toolbar.d-flex.align-items-center
+                                                    .dropdown
+                                                        span#dropdownMenuButton40.dropdown-toggle.text-primary(data-toggle='dropdown')
+                                                            i.ri-more-2-line
+                                                        .dropdown-menu.dropdown-menu-right(style='')
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-user-unfollow-line.mr-2
+                                                                | Unfollow
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-close-circle-line.mr-2
+                                                                | Unfriend
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-lock-line.mr-2
+                                                                | block
+                                            li.d-flex.mb-4.align-items-center
+                                                .user-img.img-fluid
+                                                    img.rounded-circle.avatar-40(src='assets/images/user/01.jpg', alt='story-img')
+                                                .media-support-info.ml-3
+                                                    h6 Paul Molive
+                                                    p.mb-0 trainee
+                                                .iq-card-header-toolbar.d-flex.align-items-center
+                                                    .dropdown
+                                                        span#dropdownMenuButton41.dropdown-toggle.text-primary(data-toggle='dropdown')
+                                                            i.ri-more-2-line
+                                                        .dropdown-menu.dropdown-menu-right(style='')
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-user-unfollow-line.mr-2
+                                                                | Unfollow
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-close-circle-line.mr-2
+                                                                | Unfriend
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-lock-line.mr-2
+                                                                | block
+                                            li.d-flex.mb-4.align-items-center
+                                                .user-img.img-fluid
+                                                    img.rounded-circle.avatar-40(src='assets/images/user/02.jpg', alt='story-img')
+                                                .media-support-info.ml-3
+                                                    h6 Anna Mull
+                                                    p.mb-0 Web Developer
+                                                .iq-card-header-toolbar.d-flex.align-items-center
+                                                    .dropdown
+                                                        span#dropdownMenuButton42.dropdown-toggle.text-primary(data-toggle='dropdown')
+                                                            i.ri-more-2-line
+                                                        .dropdown-menu.dropdown-menu-right(style='')
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-user-unfollow-line.mr-2
+                                                                | Unfollow
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-close-circle-line.mr-2
+                                                                | Unfriend
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-lock-line.mr-2
+                                                                | block
+                                            li.d-flex.mb-4.align-items-center
+                                                .user-img.img-fluid
+                                                    img.rounded-circle.avatar-40(src='assets/images/user/03.jpg', alt='story-img')
+                                                .media-support-info.ml-3
+                                                    h6 Paige Turner
+                                                    p.mb-0 trainee
+                                                .iq-card-header-toolbar.d-flex.align-items-center
+                                                    .dropdown
+                                                        span#dropdownMenuButton43.dropdown-toggle.text-primary(data-toggle='dropdown')
+                                                            i.ri-more-2-line
+                                                        .dropdown-menu.dropdown-menu-right(style='')
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-user-unfollow-line.mr-2
+                                                                | Unfollow
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-close-circle-line.mr-2
+                                                                | Unfriend
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-lock-line.mr-2
+                                                                | block
+                                            li.d-flex.mb-4.align-items-center
+                                                .user-img.img-fluid
+                                                    img.rounded-circle.avatar-40(src='assets/images/user/04.jpg', alt='story-img')
+                                                .media-support-info.ml-3
+                                                    h6 Barb Ackue
+                                                    p.mb-0 Web Designer
+                                                .iq-card-header-toolbar.d-flex.align-items-center
+                                                    .dropdown
+                                                        span#dropdownMenuButton44.dropdown-toggle.text-primary(data-toggle='dropdown')
+                                                            i.ri-more-2-line
+                                                        .dropdown-menu.dropdown-menu-right(style='')
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-user-unfollow-line.mr-2
+                                                                | Unfollow
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-close-circle-line.mr-2
+                                                                | Unfriend
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-lock-line.mr-2
+                                                                | block
+                                            li.d-flex.mb-4.align-items-center
+                                                .user-img.img-fluid
+                                                    img.rounded-circle.avatar-40(src='assets/images/user/05.jpg', alt='story-img')
+                                                .media-support-info.ml-3
+                                                    h6 Greta Life
+                                                    p.mb-0 Tester
+                                                .iq-card-header-toolbar.d-flex.align-items-center
+                                                    .dropdown
+                                                        span#dropdownMenuButton45.dropdown-toggle.text-primary(data-toggle='dropdown')
+                                                            i.ri-more-2-line
+                                                        .dropdown-menu.dropdown-menu-right(style='')
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-user-unfollow-line.mr-2
+                                                                | Unfollow
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-close-circle-line.mr-2
+                                                                | Unfriend
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-lock-line.mr-2
+                                                                | block
+                                            li.d-flex.mb-4.align-items-center
+                                                .user-img.img-fluid
+                                                    img.rounded-circle.avatar-40(src='assets/images/user/06.jpg', alt='story-img')
+                                                .media-support-info.ml-3
+                                                    h6 Ira Membrit
+                                                    p.mb-0 Android Developer
+                                                .iq-card-header-toolbar.d-flex.align-items-center
+                                                    .dropdown
+                                                        span#dropdownMenuButton46.dropdown-toggle.text-primary(data-toggle='dropdown')
+                                                            i.ri-more-2-line
+                                                        .dropdown-menu.dropdown-menu-right(style='')
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-user-unfollow-line.mr-2
+                                                                | Unfollow
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-close-circle-line.mr-2
+                                                                | Unfriend
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-lock-line.mr-2
+                                                                | block
+                                            li.d-flex.mb-4.align-items-center
+                                                .user-img.img-fluid
+                                                    img.rounded-circle.avatar-40(src='assets/images/user/07.jpg', alt='story-img')
+                                                .media-support-info.ml-3
+                                                    h6 Pete Sariya
+                                                    p.mb-0 Web Designer
+                                                .iq-card-header-toolbar.d-flex.align-items-center
+                                                    .dropdown
+                                                        span#dropdownMenuButton47.dropdown-toggle.text-primary(data-toggle='dropdown')
+                                                            i.ri-more-2-line
+                                                        .dropdown-menu.dropdown-menu-right(style='')
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-user-unfollow-line.mr-2
+                                                                | Unfollow
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-close-circle-line.mr-2
+                                                                | Unfriend
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-lock-line.mr-2
+                                                                | block
+                                        a.btn.btn-primary.d-block(href='javascript:void();')
+                                            i.ri-add-line
+                                            |  Load More

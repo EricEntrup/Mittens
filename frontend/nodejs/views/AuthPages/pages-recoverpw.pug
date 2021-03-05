@@ -1,0 +1,17 @@
+extends ../Layouts/default
+
+block content
+    section.sign-in-page
+        .container.p-0
+            .row.no-gutters
+                .col-sm-12.align-self-center
+                    .sign-in-from.bg-white
+                        h1.mb-0 Reset Password
+                        p
+                            | Enter your email address and we'll send you an email with instructions to reset your password.
+                        form.mt-4
+                            .form-group
+                                label(for='exampleInputEmail1') Email address
+                                input#exampleInputEmail1.form-control.mb-0(type='email', placeholder='Enter email')
+                            .d-inline-block.w-100
+                                button.btn.btn-primary.float-right(type='submit') Reset Password

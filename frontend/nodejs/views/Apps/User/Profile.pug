@@ -1,0 +1,712 @@
+extends ../../Layouts/master
+
+block content
+    .container-fluid
+        .row
+            .col-sm-12
+                .iq-card
+                    .iq-card-body.profile-page.p-0
+                        .profile-header
+                            .cover-container
+                                img.rounded.img-fluid(src='assets/images/page-img/profile-bg.jpg', alt='profile-bg')
+                                ul.header-nav.d-flex.flex-wrap.justify-end.p-0.m-0
+                                    li
+                                        a(href='javascript:void();')
+                                            i.ri-pencil-line
+                                    li
+                                        a(href='javascript:void();')
+                                            i.ri-settings-4-line
+                            .profile-info.p-4
+                                .row
+                                    .col-sm-12.col-md-6
+                                        .user-detail.pl-5
+                                            .d-flex.flex-wrap.align-items-center
+                                                .profile-img.pr-4
+                                                    img.avatar-130.img-fluid(src='assets/images/user/11.png', alt='profile-img')
+                                                .profile-detail.d-flex.align-items-center
+                                                    h3 Nik Jone
+                                                    p.m-0.pl-3  - Web designer
+                                    .col-sm-12.col-md-6
+                                        ul.nav.nav-pills.d-flex.align-items-end.float-right.profile-feed-items.p-0.m-0
+                                            li
+                                                a.nav-link.active(data-toggle='pill', href='#profile-feed') feed
+                                            li
+                                                a.nav-link(data-toggle='pill', href='#profile-activity') Activity
+                                            li
+                                                a.nav-link(data-toggle='pill', href='#profile-friends') friends
+                                            li
+                                                a.nav-link(data-toggle='pill', href='#profile-profile') profile
+            .col-sm-12
+                .row
+                    .col-lg-3.profile-left
+                        .iq-card
+                            .iq-card-header.d-flex.justify-content-between
+                                .iq-header-title
+                                    h4.card-title News
+                            .iq-card-body
+                                ul.m-0.p-0
+                                    li.d-flex.mb-2
+                                        .news-icon
+                                            i.ri-chat-4-fill
+                                        p.news-detail.mb-0
+                                            | there is a meetup in your city on fryday at 19:00. 
+                                            a(href='#') see details
+                                    li.d-flex
+                                        .news-icon.mb-0
+                                            i.ri-chat-4-fill
+                                        p.news-detail.mb-0 20% off coupon on selected items at pharmaprix 
+                        .iq-card
+                            .iq-card-header.d-flex.justify-content-between
+                                .iq-header-title
+                                    h4.card-title Gallery
+                                .iq-card-header-toolbar.d-flex.align-items-center
+                                    p.m-0 132 pics
+                            .iq-card-body.p-0
+                                ul.profile-img-gallary.d-flex.flex-wrap.p-0.m-0
+                                    li.col-md-4.col-6.pl-1.pr-0.pb-1
+                                        a(href='javascript:void();')
+                                            img.img-fluid(src='assets/images/page-img/g1.jpg', alt='gallary-image')
+                                    li.col-md-4.col-6.pl-1.pr-0.pb-1
+                                        a(href='javascript:void();')
+                                            img.img-fluid(src='assets/images/page-img/g2.jpg', alt='gallary-image')
+                                    li.col-md-4.col-6.pl-1.pr-0.pb-1
+                                        a(href='javascript:void();')
+                                            img.img-fluid(src='assets/images/page-img/g3.jpg', alt='gallary-image')
+                                    li.col-md-4.col-6.pl-1.pr-0.pb-1
+                                        a(href='javascript:void();')
+                                            img.img-fluid(src='assets/images/page-img/g4.jpg', alt='gallary-image')
+                                    li.col-md-4.col-6.pl-1.pr-0.pb-1
+                                        a(href='javascript:void();')
+                                            img.img-fluid(src='assets/images/page-img/g5.jpg', alt='gallary-image')
+                                    li.col-md-4.col-6.pl-1.pr-0.pb-1
+                                        a(href='javascript:void();')
+                                            img.img-fluid(src='assets/images/page-img/g6.jpg', alt='gallary-image')
+                                    li.col-md-4.col-6.pl-1.pr-0.pb-0
+                                        a(href='javascript:void();')
+                                            img.img-fluid(src='assets/images/page-img/g7.jpg', alt='gallary-image')
+                                    li.col-md-4.col-6.pl-1.pr-0.pb-0
+                                        a(href='javascript:void();')
+                                            img.img-fluid(src='assets/images/page-img/g8.jpg', alt='gallary-image')
+                                    li.col-md-4.col-6.pl-1.pr-0.pb-0
+                                        a(href='javascript:void();')
+                                            img.img-fluid(src='assets/images/page-img/g9.jpg', alt='gallary-image')
+                        .iq-card
+                            .iq-card-header.d-flex.justify-content-between
+                                .iq-header-title
+                                    h4.card-title Twitter Feeds
+                            .iq-card-body
+                                .twit-feed
+                                    .media-support-header.mb-2
+                                        .media-support-user-img.mr-3
+                                            img.rounded-circle.img-fluid(src='assets/images/user/01.jpg', alt='')
+                                        .media-support-info
+                                            h6.mb-0
+                                                a(href='#') Anna Sthesia
+                                            p
+                                                | @anna59 
+                                                span
+                                                    i.ri-check-fill
+                                    .media-support-body
+                                        p.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                                        .d-flex.flex-wrap
+                                            a.twit-meta-tag.pr-2(href='#') #Html
+                                            a.twit-meta-tag.pr-2(href='#') #Bootstrap
+                                        .twit-date
+                                            a(href='#')  07 Jan 2020 
+                                hr.mt-4.mb-4
+                                .twit-feed
+                                    .media-support-header.mb-2
+                                        .media-support-user-img.mr-3
+                                            img.rounded-circle.img-fluid(src='assets/images/user/02.jpg', alt='')
+                                        .media-support-info
+                                            h6.mb-0
+                                                a(href='#') Paige Turner
+                                            p
+                                                | @paige30 
+                                                span
+                                                    i.ri-check-fill
+                                    .media-support-body
+                                        p.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                                        .d-flex.flex-wrap
+                                            a.twit-meta-tag.pr-2(href='#') #Js
+                                            a.twit-meta-tag.pr-2(href='#') #Bootstrap
+                                        .twit-date
+                                            a(href='#')  07 Jan 2020 
+                                hr.mt-4.mb-4
+                                .twit-feed
+                                    .media-support-header
+                                        .media-support-user-img.mr-3
+                                            img.rounded-circle.img-fluid(src='assets/images/user/03.jpg', alt='')
+                                        .media-support-info.mt-2
+                                            h5.mb-0
+                                                a(href='#') Greta Life
+                                            p
+                                                | @greta07 
+                                                span
+                                                    i.ri-check-fill
+                                    .media-support-body
+                                        p.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                                        .d-flex.flex-wrap
+                                            a.twit-meta-tag.pr-2(href='#') #Html
+                                            a.twit-meta-tag.pr-2(href='#') #CSS
+                                        .twit-date
+                                            a(href='#')  07 Jan 2020 
+                    .col-lg-6.profile-center
+                        .tab-content
+                            #profile-feed.tab-pane.fade.active.show(role='tabpanel')
+                                .iq-card
+                                    .iq-card-body.p-0
+                                        .user-post-data.p-3
+                                            .d-flex.flex-wrap
+                                                .media-support-user-img.mr-3
+                                                    img.rounded-circle.img-fluid(src='assets/images/user/01.jpg', alt='')
+                                                .media-support-info.mt-2
+                                                    h5.mb-0
+                                                        a(href='#') Anna Sthesia
+                                                    p.mb-0.text-primary colleages
+                                                .iq-card-header-toolbar.d-flex.align-items-center
+                                                    .dropdown
+                                                        span#dropdownMenuButton40.dropdown-toggle.text-primary(data-toggle='dropdown')
+                                                            a.text-secondary(href='#')
+                                                                | 29 mins 
+                                                                i.ri-more-2-line.ml-3
+                                                        .dropdown-menu.dropdown-menu-right.p-0
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-user-unfollow-line.mr-2
+                                                                | Unfollow
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-share-forward-line.mr-2
+                                                                | Share
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-file-copy-line.mr-2
+                                                                | Copy Link
+                                        .user-post
+                                            a(href='javascript:void();')
+                                                img.img-fluid(src='assets/images/page-img/p1.jpg', alt='post-image')
+                                        .comment-area.p-3
+                                            .d-flex.justify-content-between.align-items-center
+                                                .d-flex.align-items-center
+                                                    .d-flex.align-items-center.feather-icon.mr-3
+                                                        a(href='javascript:void();')
+                                                            i.ri-heart-line
+                                                        span.ml-1 140
+                                                    .d-flex.align-items-center.message-icon
+                                                        a(href='javascript:void();')
+                                                            i.ri-chat-4-line
+                                                        span.ml-1 140
+                                                .d-flex.align-items-center
+                                                    .iq-media-group
+                                                        a.iq-media(href='#')
+                                                            img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/05.jpg', alt='')
+                                                        a.iq-media(href='#')
+                                                            img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/06.jpg', alt='')
+                                                        a.iq-media(href='#')
+                                                            img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/07.jpg', alt='')
+                                                        a.iq-media(href='#')
+                                                            img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/08.jpg', alt='')
+                                                        a.iq-media(href='#')
+                                                            img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/09.jpg', alt='')
+                                                    span.ml-2 +140 more
+                                            hr
+                                            p
+                                                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla dolor, ornare at commodo non, feugiat non nisi. Phasellus faucibus mollis pharetra. Proin blandit ac massa sed rhoncus
+                                            hr
+                                            ul.post-comments.p-0.m-0
+                                                li.mb-2
+                                                    .d-flex.flex-wrap
+                                                        .user-img
+                                                            img.avatar-35.rounded-circle.img-fluid(src='assets/images/user/02.jpg', alt='userimg')
+                                                        .comment-data-block.ml-3
+                                                            h6 Monty Carlo
+                                                            p.mb-0 Lorem ipsum dolor sit amet
+                                                            .d-flex.flex-wrap.align-items-center.comment-activity
+                                                                a(href='javascript:void();') like
+                                                                a(href='javascript:void();') reply
+                                                                a(href='javascript:void();') translate
+                                                                span  5 minit 
+                                                li
+                                                    .d-flex.flex-wrap
+                                                        .user-img
+                                                            img.avatar-35.rounded-circle.img-fluid(src='assets/images/user/03.jpg', alt='userimg')
+                                                        .comment-data-block.ml-3
+                                                            h6 Paul Molive
+                                                            p.mb-0 Lorem ipsum dolor sit amet
+                                                            .d-flex.flex-wrap.align-items-center.comment-activity
+                                                                a(href='javascript:void();') like
+                                                                a(href='javascript:void();') reply
+                                                                a(href='javascript:void();') translate
+                                                                span  5 minit 
+                                            form.comment-text.d-flex.align-items-center.mt-3(action='javascript:void(0);')
+                                                input.form-control.rounded(type='text', placeholder='Lovely!')
+                                                .comment-attagement.d-flex
+                                                    a(href='javascript:void();')
+                                                        i.ri-user-smile-line.mr-2
+                                                    a(href='javascript:void();')
+                                                        i.ri-camera-line.mr-2
+                                .iq-card
+                                    .iq-card-body.p-0
+                                        .user-post-data.p-3
+                                            .d-flex.flex-wrap
+                                                .media-support-user-img.mr-3
+                                                    img.rounded-circle.img-fluid(src='assets/images/user/02.jpg', alt='')
+                                                .media-support-info.mt-2
+                                                    h5.mb-0
+                                                        a(href='#') jenny issad
+                                                    p.mb-0.text-primary colleages
+                                                .iq-card-header-toolbar.d-flex.align-items-center
+                                                    .dropdown
+                                                        span#dropdownMenuButton-40.dropdown-toggle.text-primary(data-toggle='dropdown')
+                                                            a.text-secondary(href='#')
+                                                                | 1 hr 
+                                                                i.ri-more-2-line.ml-3
+                                                        .dropdown-menu.dropdown-menu-right.p-0
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-user-unfollow-line.mr-2
+                                                                | Unfollow
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-share-forward-line.mr-2
+                                                                | Share
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-file-copy-line.mr-2
+                                                                | Copy Link
+                                        hr.mt-0
+                                        p.p-3.mb-0
+                                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla dolor, ornare at commodo non, feugiat non nisi. Phasellus faucibus mollis pharetra. Proin blandit ac massa sed rhoncus
+                                        .comment-area.p-3
+                                            hr.mt-0
+                                            .d-flex.justify-content-between.align-items-center
+                                                .d-flex.align-items-center
+                                                    .d-flex.align-items-center.feather-icon.mr-3
+                                                        a#clickme(href='javascript:void();')
+                                                            i.ri-heart-line
+                                                        span.ml-1 140
+                                                    .d-flex.align-items-center.message-icon
+                                                        a(href='javascript:void();')
+                                                            i.ri-chat-4-line
+                                                        span.ml-1 140
+                                                .d-flex.align-items-center
+                                                    .iq-media-group
+                                                        a.iq-media(href='#')
+                                                            img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/05.jpg', alt='')
+                                                        a.iq-media(href='#')
+                                                            img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/06.jpg', alt='')
+                                                        a.iq-media(href='#')
+                                                            img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/07.jpg', alt='')
+                                                        a.iq-media(href='#')
+                                                            img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/08.jpg', alt='')
+                                                        a.iq-media(href='#')
+                                                            img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/09.jpg', alt='')
+                                                    span.ml-2 +140 more
+                                            form.comment-text.d-flex.align-items-center.mt-3(action='javascript:void(0);')
+                                                input.form-control.rounded(type='text', placeholder='Lovely!')
+                                                .comment-attagement.d-flex
+                                                    a(href='javascript:void();')
+                                                        i.ri-user-smile-line.mr-2
+                                                    a(href='javascript:void();')
+                                                        i.ri-camera-line.mr-2
+                            #profile-activity.tab-pane.fade(role='tabpanel')
+                                .iq-card
+                                    .iq-card-header.d-flex.justify-content-between
+                                        .iq-header-title
+                                            h4.card-title Activity timeline
+                                        .iq-card-header-toolbar.d-flex.align-items-center
+                                            .dropdown
+                                                span#dropdownMenuButton5.dropdown-toggle.text-primary(data-toggle='dropdown')
+                                                    | View All
+                                                .dropdown-menu.dropdown-menu-right.p-0
+                                                    a.dropdown-item(href='#')
+                                                        i.ri-user-unfollow-line.mr-2
+                                                        | View
+                                                    a.dropdown-item(href='#')
+                                                        i.ri-close-circle-line.mr-2
+                                                        | Delete
+                                                    a.dropdown-item(href='#')
+                                                        i.ri-pencil-fill.mr-2
+                                                        | Edit
+                                                    a.dropdown-item(href='#')
+                                                        i.ri-printer-fill.mr-2
+                                                        | Print
+                                                    a.dropdown-item(href='#')
+                                                        i.ri-file-download-fill.mr-2
+                                                        | Download
+                                    .iq-card-body
+                                        ul.iq-timeline
+                                            li
+                                                .timeline-dots
+                                                h6.float-left.mb-1 Client Login
+                                                small.float-right.mt-1 24 November 2019
+                                                .d-inline-block.w-100
+                                                    p Bonbon macaroon jelly beans gummi bears jelly lollipop apple
+                                            li
+                                                .timeline-dots.border-success
+                                                h6.float-left.mb-1 Scheduled Maintenance
+                                                small.float-right.mt-1 23 November 2019
+                                                .d-inline-block.w-100
+                                                    p Bonbon macaroon jelly beans gummi bears jelly lollipop apple
+                                            li
+                                                .timeline-dots.border-danger
+                                                h6.float-left.mb-1 Dev Meetup
+                                                small.float-right.mt-1 20 November 2019
+                                                .d-inline-block.w-100
+                                                    p
+                                                        | Bonbon macaroon jelly beans 
+                                                        a(href='#') gummi bears
+                                                        | gummi bears jelly lollipop apple
+                                                    .iq-media-group
+                                                        a.iq-media(href='#')
+                                                            img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/05.jpg', alt='')
+                                                        a.iq-media(href='#')
+                                                            img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/06.jpg', alt='')
+                                                        a.iq-media(href='#')
+                                                            img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/07.jpg', alt='')
+                                                        a.iq-media(href='#')
+                                                            img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/08.jpg', alt='')
+                                                        a.iq-media(href='#')
+                                                            img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/09.jpg', alt='')
+                                                        a.iq-media(href='#')
+                                                            img.img-fluid.avatar-40.rounded-circle(src='assets/images/user/10.jpg', alt='')
+                                            li
+                                                .timeline-dots.border-primary
+                                                h6.float-left.mb-1 Client Call
+                                                small.float-right.mt-1 19 November 2019
+                                                .d-inline-block.w-100
+                                                    p Bonbon macaroon jelly beans gummi bears jelly lollipop apple
+                                            li
+                                                .timeline-dots.border-warning
+                                                h6.float-left.mb-1 Mega event
+                                                small.float-right.mt-1 15 November 2019
+                                                .d-inline-block.w-100
+                                                    p Bonbon macaroon jelly beans gummi bears jelly lollipop apple
+                            #profile-friends.tab-pane.fade(role='tabpanel')
+                                .iq-card
+                                    .iq-card-header.d-flex.justify-content-between
+                                        .iq-header-title
+                                            h4.card-title Friends
+                                    .iq-card-body
+                                        ul.suggestions-lists.m-0.p-0
+                                            li.d-flex.mb-4.align-items-center
+                                                .user-img.img-fluid
+                                                    img.rounded-circle.avatar-40(src='assets/images/user/01.jpg', alt='story-img')
+                                                .media-support-info.ml-3
+                                                    h6 Paul Molive
+                                                    p.mb-0 Web Designer
+                                                .iq-card-header-toolbar.d-flex.align-items-center
+                                                    .dropdown
+                                                        span#dropdownMenuButton-50.dropdown-toggle.text-primary(data-toggle='dropdown')
+                                                            i.ri-more-2-line
+                                                        .dropdown-menu.dropdown-menu-right.p-0
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-user-unfollow-line.mr-2
+                                                                | Unfollow
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-close-circle-line.mr-2
+                                                                | Unfriend
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-lock-line.mr-2
+                                                                | block
+                                            li.d-flex.mb-4.align-items-center
+                                                .user-img.img-fluid
+                                                    img.rounded-circle.avatar-40(src='assets/images/user/01.jpg', alt='story-img')
+                                                .media-support-info.ml-3
+                                                    h6 Paul Molive
+                                                    p.mb-0 trainee
+                                                .iq-card-header-toolbar.d-flex.align-items-center
+                                                    .dropdown
+                                                        span#dropdownMenuButton41.dropdown-toggle.text-primary(data-toggle='dropdown')
+                                                            i.ri-more-2-line
+                                                        .dropdown-menu.dropdown-menu-right.p-0
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-user-unfollow-line.mr-2
+                                                                | Unfollow
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-close-circle-line.mr-2
+                                                                | Unfriend
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-lock-line.mr-2
+                                                                | block
+                                            li.d-flex.mb-4.align-items-center
+                                                .user-img.img-fluid
+                                                    img.rounded-circle.avatar-40(src='assets/images/user/02.jpg', alt='story-img')
+                                                .media-support-info.ml-3
+                                                    h6 Anna Mull
+                                                    p.mb-0 Web Developer
+                                                .iq-card-header-toolbar.d-flex.align-items-center
+                                                    .dropdown
+                                                        span#dropdownMenuButton42.dropdown-toggle.text-primary(data-toggle='dropdown')
+                                                            i.ri-more-2-line
+                                                        .dropdown-menu.dropdown-menu-right.p-0
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-user-unfollow-line.mr-2
+                                                                | Unfollow
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-close-circle-line.mr-2
+                                                                | Unfriend
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-lock-line.mr-2
+                                                                | block
+                                            li.d-flex.mb-4.align-items-center
+                                                .user-img.img-fluid
+                                                    img.rounded-circle.avatar-40(src='assets/images/user/03.jpg', alt='story-img')
+                                                .media-support-info.ml-3
+                                                    h6 Paige Turner
+                                                    p.mb-0 trainee
+                                                .iq-card-header-toolbar.d-flex.align-items-center
+                                                    .dropdown
+                                                        span#dropdownMenuButton43.dropdown-toggle.text-primary(data-toggle='dropdown')
+                                                            i.ri-more-2-line
+                                                        .dropdown-menu.dropdown-menu-right.p-0
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-user-unfollow-line.mr-2
+                                                                | Unfollow
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-close-circle-line.mr-2
+                                                                | Unfriend
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-lock-line.mr-2
+                                                                | block
+                                            li.d-flex.mb-4.align-items-center
+                                                .user-img.img-fluid
+                                                    img.rounded-circle.avatar-40(src='assets/images/user/04.jpg', alt='story-img')
+                                                .media-support-info.ml-3
+                                                    h6 Barb Ackue
+                                                    p.mb-0 Web Designer
+                                                .iq-card-header-toolbar.d-flex.align-items-center
+                                                    .dropdown
+                                                        span#dropdownMenuButton44.dropdown-toggle.text-primary(data-toggle='dropdown')
+                                                            i.ri-more-2-line
+                                                        .dropdown-menu.dropdown-menu-right.p-0
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-user-unfollow-line.mr-2
+                                                                | Unfollow
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-close-circle-line.mr-2
+                                                                | Unfriend
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-lock-line.mr-2
+                                                                | block
+                                            li.d-flex.mb-4.align-items-center
+                                                .user-img.img-fluid
+                                                    img.rounded-circle.avatar-40(src='assets/images/user/05.jpg', alt='story-img')
+                                                .media-support-info.ml-3
+                                                    h6 Greta Life
+                                                    p.mb-0 Tester
+                                                .iq-card-header-toolbar.d-flex.align-items-center
+                                                    .dropdown
+                                                        span#dropdownMenuButton45.dropdown-toggle.text-primary(data-toggle='dropdown')
+                                                            i.ri-more-2-line
+                                                        .dropdown-menu.dropdown-menu-right.p-0
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-user-unfollow-line.mr-2
+                                                                | Unfollow
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-close-circle-line.mr-2
+                                                                | Unfriend
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-lock-line.mr-2
+                                                                | block
+                                            li.d-flex.mb-4.align-items-center
+                                                .user-img.img-fluid
+                                                    img.rounded-circle.avatar-40(src='assets/images/user/06.jpg', alt='story-img')
+                                                .media-support-info.ml-3
+                                                    h6 Ira Membrit
+                                                    p.mb-0 Android Developer
+                                                .iq-card-header-toolbar.d-flex.align-items-center
+                                                    .dropdown
+                                                        span#dropdownMenuButton46.dropdown-toggle.text-primary(data-toggle='dropdown')
+                                                            i.ri-more-2-line
+                                                        .dropdown-menu.dropdown-menu-right.p-0
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-user-unfollow-line.mr-2
+                                                                | Unfollow
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-close-circle-line.mr-2
+                                                                | Unfriend
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-lock-line.mr-2
+                                                                | block
+                                            li.d-flex.mb-4.align-items-center
+                                                .user-img.img-fluid
+                                                    img.rounded-circle.avatar-40(src='assets/images/user/07.jpg', alt='story-img')
+                                                .media-support-info.ml-3
+                                                    h6 Pete Sariya
+                                                    p.mb-0 Web Designer
+                                                .iq-card-header-toolbar.d-flex.align-items-center
+                                                    .dropdown
+                                                        span#dropdownMenuButton47.dropdown-toggle.text-primary(data-toggle='dropdown')
+                                                            i.ri-more-2-line
+                                                        .dropdown-menu.dropdown-menu-right.p-0
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-user-unfollow-line.mr-2
+                                                                | Unfollow
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-close-circle-line.mr-2
+                                                                | Unfriend
+                                                            a.dropdown-item(href='#')
+                                                                i.ri-lock-line.mr-2
+                                                                | block
+                                        a.btn.btn-primary.d-block(href='javascript:void();')
+                                            i.ri-add-line
+                                            |  Load More
+                            #profile-profile.tab-pane.fade(role='tabpanel')
+                                .iq-card
+                                    .iq-card-header.d-flex.justify-content-between
+                                        .iq-header-title
+                                            h4.card-title Profile
+                                    .iq-card-body
+                                        .user-detail.text-center
+                                            .user-profile
+                                                img.avatar-130.img-fluid(src='assets/images/user/11.png', alt='profile-img')
+                                            .profile-detail.mt-3
+                                                h3.d-inline-block Nik Jone
+                                                p.d-inline-block.pl-3  - Web designer
+                                                p.mb-0
+                                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                .iq-card
+                                    .iq-card-header.d-flex.justify-content-between
+                                        .iq-header-title
+                                            h4.card-title About User
+                                    .iq-card-body
+                                        .user-bio
+                                            p
+                                                | Tart I love sugar plum I love oat cake. Sweet roll caramels I love jujubes. Topping cake wafer.
+                                        .mt-2
+                                            h6 Joined:
+                                            p November 15, 2012
+                                        .mt-2
+                                            h6 Lives:
+                                            p United States of America
+                                        .mt-2
+                                            h6 Email:
+                                            p
+                                                a(href='mailto:nikjone@gmail.com')  nikjone@gmail.com
+                                        .mt-2
+                                            h6 Url:
+                                            p
+                                                a(href='https://getbootstrap.com/docs/4.0/getting-started/introduction/', target='_blank')  www.bootstrap.com 
+                                        .mt-2
+                                            h6 Contact:
+                                            p
+                                                a(href='tel:0014544565456') (001) 4544 565 456
+                    .col-lg-3.profile-right
+                        .iq-card
+                            .iq-card-header.d-flex.justify-content-between
+                                .iq-header-title
+                                    h4.card-title About
+                            .iq-card-body
+                                .about-info.m-0.p-0
+                                    .row
+                                        .col-12
+                                            p Lorem ipsum dolor sit amet, contur adipiscing elit.
+                                        .col-3 Email:
+                                        .col-9
+                                            a(href='mailto:nikjone@demoo.com')  nikjone@demoo.com 
+                                        .col-3 Phone:
+                                        .col-9
+                                            a(href='tel:001235125612') 001 2351 256 12
+                                        .col-3 Location:
+                                        .col-9 USA
+                        .iq-card
+                            .iq-card-header.d-flex.justify-content-between
+                                .iq-header-title
+                                    h4.card-title stories
+                            .iq-card-body
+                                ul.media-story.m-0.p-0
+                                    li.d-flex.mb-4.align-items-center.active
+                                        img.rounded-circle.img-fluid(src='assets/images/page-img/s1.jpg', alt='story-img')
+                                        .stories-data.ml-3
+                                            h5 Web Design
+                                            p.mb-0 1 hour ago
+                                    li.d-flex.mb-4.align-items-center
+                                        img.rounded-circle.img-fluid(src='assets/images/page-img/s2.jpg', alt='story-img')
+                                        .stories-data.ml-3
+                                            h5 App Design
+                                            p.mb-0 4 hour ago
+                                    li.d-flex.align-items-center
+                                        img.rounded-circle.img-fluid(src='assets/images/page-img/s3.jpg', alt='story-img')
+                                        .stories-data.ml-3
+                                            h5 Abstract Design
+                                            p.mb-0 9 hour ago
+                        .iq-card
+                            .iq-card-header.d-flex.justify-content-between
+                                .iq-header-title
+                                    h4.card-title Suggestions
+                                .iq-card-header-toolbar.d-flex.align-items-center
+                                    a(href='#')
+                                        i.ri-more-fill
+                            .iq-card-body
+                                ul.suggestions-lists.m-0.p-0
+                                    li.d-flex.mb-4.align-items-center
+                                        .user-img.img-fluid
+                                            img.rounded-circle.avatar-40(src='assets/images/user/01.jpg', alt='story-img')
+                                        .media-support-info.ml-3
+                                            h6 Paul Molive
+                                            p.mb-0 4 mutual friends
+                                        .add-suggestion
+                                            a(href='javascript:void();')
+                                                i.ri-user-add-line
+                                    li.d-flex.mb-4.align-items-center
+                                        .user-img.img-fluid
+                                            img.rounded-circle.avatar-40(src='assets/images/user/01.jpg', alt='story-img')
+                                        .media-support-info.ml-3
+                                            h6 Paul Molive
+                                            p.mb-0 4 mutual friends
+                                        .add-suggestion
+                                            a(href='javascript:void();')
+                                                i.ri-user-add-line
+                                    li.d-flex.mb-4.align-items-center
+                                        .user-img.img-fluid
+                                            img.rounded-circle.avatar-40(src='assets/images/user/02.jpg', alt='story-img')
+                                        .media-support-info.ml-3
+                                            h6 Anna Mull
+                                            p.mb-0 6 mutual friends
+                                        .add-suggestion
+                                            a(href='javascript:void();')
+                                                i.ri-user-add-line
+                                    li.d-flex.mb-4.align-items-center
+                                        .user-img.img-fluid
+                                            img.rounded-circle.avatar-40(src='assets/images/user/03.jpg', alt='story-img')
+                                        .media-support-info.ml-3
+                                            h6 Paige Turner
+                                            p.mb-0 8 mutual friends
+                                        .add-suggestion
+                                            a(href='javascript:void();')
+                                                i.ri-user-add-line
+                                    li.d-flex.mb-4.align-items-center
+                                        .user-img.img-fluid
+                                            img.rounded-circle.avatar-40(src='assets/images/user/04.jpg', alt='story-img')
+                                        .media-support-info.ml-3
+                                            h6 Barb Ackue
+                                            p.mb-0 1 mutual friends
+                                        .add-suggestion
+                                            a(href='javascript:void();')
+                                                i.ri-user-add-line
+                                    li.d-flex.mb-4.align-items-center
+                                        .user-img.img-fluid
+                                            img.rounded-circle.avatar-40(src='assets/images/user/05.jpg', alt='story-img')
+                                        .media-support-info.ml-3
+                                            h6 Greta Life
+                                            p.mb-0 3 mutual friends
+                                        .add-suggestion
+                                            a(href='javascript:void();')
+                                                i.ri-user-add-line
+                                    li.d-flex.mb-4.align-items-center
+                                        .user-img.img-fluid
+                                            img.rounded-circle.avatar-40(src='assets/images/user/06.jpg', alt='story-img')
+                                        .media-support-info.ml-3
+                                            h6 Ira Membrit
+                                            p.mb-0 12 mutual friends
+                                        .add-suggestion
+                                            a(href='javascript:void();')
+                                                i.ri-user-add-line
+                                    li.d-flex.mb-4.align-items-center
+                                        .user-img.img-fluid
+                                            img.rounded-circle.avatar-40(src='assets/images/user/07.jpg', alt='story-img')
+                                        .media-support-info.ml-3
+                                            h6 Pete Sariya
+                                            p.mb-0 2 mutual friends
+                                        .add-suggestion
+                                            a(href='javascript:void();')
+                                                i.ri-user-add-line
+                                a.btn.btn-primary.d-block(href='javascript:void();')
+                                    i.ri-add-line
+                                    |  Load More

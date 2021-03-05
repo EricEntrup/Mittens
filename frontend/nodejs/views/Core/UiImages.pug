@@ -1,0 +1,159 @@
+extends ../Layouts/master
+
+block content
+    .container-fluid
+        .row
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Responsive assets
+                    .iq-card-body
+                        p
+                            | Images in Bootstrap are made responsive with
+                            code .img-fluid
+                            | .
+                            code max-width: 100%;
+                            |  and
+                            code height: auto;
+                            |  are applied to the image so that it scales with the parent element.
+                        img.img-fluid(src='assets/small/img-1.jpg' alt='Responsive image')
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Equal-width multi-row
+                    .iq-card-body
+                        p
+                            | Create equal-width columns that span multiple rows by inserting a
+                            code .w-100
+                            |  where you want the columns to break to a new line. Make the breaks responsive by mixing the
+                            code .w-100
+                            |  with some
+                            a(href='/docs/4.3/utilities/display/') responsive display utilities
+                            | .
+                        .media
+                            img.mr-3(src='assets/page-img/15.jpg' alt='#')
+                            .media-body
+                                h5.mt-0 Media heading
+                                |                                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        .media
+                            img.mr-3(src='assets/page-img/16.jpg' alt='#')
+                            .media-body
+                                h5.mt-0 Media heading
+                                |                                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                .media.mt-3
+                                    a.mr-3(href='#')
+                                        img(src='assets/page-img/17.jpg' alt='#')
+                                    .media-body
+                                        h5.mt-0 Media heading
+                                        |                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Order
+                    .iq-card-body
+                        p
+                            | Change the order of content in media objects by modifying the HTML itself, or by adding some custom flexbox CSS to set the
+                            code order
+                            |  property (to an integer of your choosing).
+                        .media.mb-5
+                            .media-body
+                                h5.mt-0.mb-1 Media object
+                                |                                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            img.ml-3(src='assets/page-img/18.jpg' alt='#')
+                        .media.mb-5
+                            .media-body
+                                h5.mt-0.mb-1 Center-aligned media
+                                |                                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            img.align-self-center.mr-3(src='assets/page-img/19.jpg' alt='#')
+                        .media
+                            .media-body
+                                h5.mt-0.mb-1 Bottom-aligned media
+                                |                                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            img.align-self-end.mr-3(src='assets/page-img/20.jpg' alt='#')
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Image thumbnails
+                    .iq-card-body
+                        p
+                            | In addition to our
+                            a(href='/docs/4.3/utilities/borders/') border-radius utilities
+                            | , you can use
+                            code .img-thumbnail
+                            |  to give an image a rounded 1px border appearance.
+                        img.img-thumbnail(src='assets/page-img/10.jpg' alt='Responsive image')
+                        img.rounded.ml-3(src='assets/page-img/11.jpg' alt='Responsive image')
+                        img.rounded-circle.ml-3(src='assets/page-img/12.jpg' alt='Responsive image')
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Image thumbnails
+                    .iq-card-body
+                        p
+                            | In addition to our
+                            a(href='/docs/4.3/utilities/borders/') border-radius utilities
+                            | , you can use
+                            code .img-thumbnail
+                            |  to give an image a rounded 1px border appearance.
+                        img(src='assets/page-img/13.jpg' alt='Responsive image')
+                        img.float-right(src='assets/page-img/14.jpg' alt='Responsive image')
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Media object
+                    .iq-card-body
+                        p
+                            | The assets or other media can be aligned top, middle, or bottom. The default is top aligned.
+                        .media.mb-4
+                            img.align-self-start.mr-3(src='assets/page-img/21.jpg' alt='#')
+                            .media-body
+                                h5.mt-0 Top-aligned media
+                                p
+                                    | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        .media.mb-4
+                            img.align-self-center.mr-3(src='assets/page-img/22.jpg' alt='#')
+                            .media-body
+                                h5.mt-0 Center-aligned media
+                                p
+                                    | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        .media
+                            img.align-self-end.mr-3(src='assets/page-img/23.jpg' alt='#')
+                            .media-body
+                                h5.mt-0 Bottom-aligned media
+                                p
+                                    | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Media list
+                    .iq-card-body
+                        p
+                            | Because the media object has so few structural requirements, you can also use these classes on list HTML elements. On your
+                            code &lt;ul&gt;
+                            |  or
+                            code &lt;ol&gt;
+                            | , add the
+                            code .list-unstyled
+                            |  to remove any browser default list styles, and then apply
+                            code .media
+                            |  to your
+                            code &lt;li&gt;
+                            | s. As always, use spacing utilities wherever needed to fine tune.
+                        ul.list-unstyled
+                            li.media
+                                img.mr-3(src='assets/page-img/24.jpg' alt='#')
+                                .media-body
+                                    h5.mt-0.mb-1 List-based media object
+                                    |                                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            li.media.my-4
+                                img.mr-3(src='assets/page-img/15.jpg' alt='#')
+                                .media-body
+                                    h5.mt-0.mb-1 List-based media object
+                                    |                                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            li.media
+                                img.mr-3(src='assets/page-img/16.jpg' alt='#')
+                                .media-body
+                                    h5.mt-0.mb-1 List-based media object
+                                    |                                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.

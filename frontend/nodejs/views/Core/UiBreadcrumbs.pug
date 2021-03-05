@@ -1,0 +1,178 @@
+extends ../Layouts/master
+
+block content
+    .container-fluid
+        .row
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Breadcrumb
+                    .iq-card-body
+                        p
+                            | Use the items in order to programatically generate the breadcrumb links.use class
+                            code .breadcrumb to ol
+                        nav(aria-label='breadcrumb')
+                            ol.breadcrumb
+                                li.breadcrumb-item.active(aria-current='page') Home
+                        nav(aria-label='breadcrumb')
+                            ol.breadcrumb
+                                li.breadcrumb-item
+                                    a(href='#') Home
+                                li.breadcrumb-item.active(aria-current='page') Library
+                        nav(aria-label='breadcrumb')
+                            ol.breadcrumb
+                                li.breadcrumb-item
+                                    a(href='#') Home
+                                li.breadcrumb-item
+                                    a(href='#') Library
+                                li.breadcrumb-item.active(aria-current='page') Data
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Breadcrumb With Icon
+                    .iq-card-body
+                        p
+                            | Use the items in order to programatically generate the breadcrumb links.use class
+                            code .breadcrumb to ol
+                            |  with Icon
+                        nav(aria-label='breadcrumb')
+                            ol.breadcrumb
+                                li.breadcrumb-item.active(aria-current='page')
+                                    i.ri-home-4-line.mr-1.float-left
+                                    | Home
+                        nav(aria-label='breadcrumb')
+                            ol.breadcrumb
+                                li.breadcrumb-item
+                                    a(href='#')
+                                        i.ri-home-4-line.mr-1.float-left
+                                        | Home
+                                li.breadcrumb-item.active(aria-current='page') Library
+                        nav(aria-label='breadcrumb')
+                            ol.breadcrumb
+                                li.breadcrumb-item
+                                    a(href='#')
+                                        i.ri-home-4-line.mr-1.float-left
+                                        | Home
+                                li.breadcrumb-item
+                                    a(href='#') Library
+                                li.breadcrumb-item.active(aria-current='page') Data
+        .row
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Breadcrumb
+                    .iq-card-body
+                        p
+                            | use class
+                            code .breadcrumb .bg-primary
+                        nav(aria-label='breadcrumb ')
+                            ol.breadcrumb.bg-primary
+                                li.breadcrumb-item.active.text-white(aria-current='page') Home
+                        nav(aria-label='breadcrumb')
+                            ol.breadcrumb.bg-primary
+                                li.breadcrumb-item
+                                    a.text-white(href='#') Home
+                                li.breadcrumb-item.active.text-white(aria-current='page') Library
+                        nav(aria-label='breadcrumb')
+                            ol.breadcrumb.bg-primary.mb-0
+                                li.breadcrumb-item
+                                    a.text-white(href='#') Home
+                                li.breadcrumb-item
+                                    a.text-white(href='#') Library
+                                li.breadcrumb-item.active.text-white(aria-current='page') Data
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Breadcrumb With Icon
+                    .iq-card-body
+                        p
+                            | use class
+                            code .breadcrumb .bg-primary
+                            |  With Icon.
+                        nav(aria-label='breadcrumb')
+                            ol.breadcrumb.bg-primary
+                                li.breadcrumb-item.active.text-white(aria-current='page')
+                                    i.ri-home-4-line.mr-1.float-left
+                                    | Home
+                        nav(aria-label='breadcrumb')
+                            ol.breadcrumb.bg-primary
+                                li.breadcrumb-item
+                                    a.text-white(href='#')
+                                        i.ri-home-4-line.mr-1.float-left
+                                        | Home
+                                li.breadcrumb-item.active.text-white(aria-current='page') Library
+                        nav(aria-label='breadcrumb')
+                            ol.breadcrumb.bg-primary.mb-0
+                                li.breadcrumb-item
+                                    a.text-white(href='#')
+                                        i.ri-home-4-line.mr-1.float-left
+                                        | Home
+                                li.breadcrumb-item
+                                    a.text-white(href='#') Library
+                                li.breadcrumb-item.active.text-white(aria-current='page') Data
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Breadcrumb With Icon
+                    .iq-card-body
+                        p
+                            | use class
+                            code .breadcrumb .iq-bg-primary
+                        nav(aria-label='breadcrumb')
+                            ol.breadcrumb.iq-bg-primary
+                                li.breadcrumb-item.active(aria-current='page')
+                                    i.ri-home-4-line.mr-1.float-left
+                                    | Home
+                        nav(aria-label='breadcrumb')
+                            ol.breadcrumb.iq-bg-primary
+                                li.breadcrumb-item
+                                    a(href='#')
+                                        i.ri-home-4-line.mr-1.float-left
+                                        | Home
+                                li.breadcrumb-item.active(aria-current='page') Library
+                        nav(aria-label='breadcrumb')
+                            ol.breadcrumb.iq-bg-primary.mb-0
+                                li.breadcrumb-item
+                                    a(href='#')
+                                        i.ri-home-4-line.mr-1.float-left
+                                        | Home
+                                li.breadcrumb-item
+                                    a(href='#') Library
+                                li.breadcrumb-item.active(aria-current='page') Data
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Breadcrumb With Icon
+                    .iq-card-body
+                        p
+                            | use class
+                            code .breadcrumb .iq-bg-danger
+                        nav(aria-label='breadcrumb')
+                            ol.breadcrumb.iq-bg-danger
+                                li.breadcrumb-item.active(aria-current='page')
+                                    i.ri-home-4-line.mr-1.float-left
+                                    | Home
+                        nav(aria-label='breadcrumb')
+                            ol.breadcrumb.iq-bg-danger
+                                li.breadcrumb-item
+                                    a.text-danger(href='#')
+                                        i.ri-home-4-line.mr-1.float-left
+                                        | Home
+                                li.breadcrumb-item.active(aria-current='page') Library
+                        nav(aria-label='breadcrumb')
+                            ol.breadcrumb.iq-bg-danger.mb-0
+                                li.breadcrumb-item
+                                    a.text-danger(href='#')
+                                        i.ri-home-4-line.mr-1.float-left
+                                        | Home
+                                li.breadcrumb-item
+                                    a.text-danger(href='#') Library
+                                li.breadcrumb-item.active(aria-current='page') Data
+
+

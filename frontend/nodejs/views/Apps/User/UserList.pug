@@ -1,0 +1,227 @@
+extends ../../Layouts/master
+
+block content
+
+    .container-fluid
+        .row
+            .col-sm-12
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title User List
+                    .iq-card-body
+                        .table-responsive
+                            .row.justify-content-between
+                                .col-sm-12.col-md-6
+                                    #user_list_datatable_info.dataTables_filter
+                                        form.mr-3.position-relative
+                                            .form-group.mb-0
+                                                input#exampleInputSearch.form-control(type='search', placeholder='Search', aria-controls='user-list-table')
+                                .col-sm-12.col-md-6
+                                    .user-list-files.d-flex.float-right
+                                        a.chat-icon-phone(href='javascript:void();')
+                                            | Print
+                                        a.chat-icon-video(href='javascript:void();')
+                                            | Excel
+                                        a.chat-icon-delete(href='javascript:void();')
+                                            | Pdf
+                            table#user-list-table.table.table-striped.table-bordered.mt-4(role='grid', aria-describedby='user-list-page-info')
+                                thead
+                                    tr
+                                        th Profile
+                                        th Name
+                                        th Contact
+                                        th Email
+                                        th Country
+                                        th Status
+                                        th Company
+                                        th Join Date
+                                        th Action
+                                tbody
+                                    tr
+                                        td.text-center
+                                            img.rounded-circle.img-fluid.avatar-40(src='assets/images/user/01.jpg', alt='profile')
+                                        td Anna Sthesia
+                                        td (760) 756 7568
+                                        td annasthesia@gmail.com
+                                        td USA
+                                        td
+                                            span.badge.iq-bg-primary Active
+                                        td Acme Corporation
+                                        td 2019/12/01
+                                        td
+                                            .flex.align-items-center.list-user-action
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Add', href='#')
+                                                    i.ri-user-add-line
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Edit', href='#')
+                                                    i.ri-pencil-line
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Delete', href='#')
+                                                    i.ri-delete-bin-line
+                                    tr
+                                        td.text-center
+                                            img.rounded-circle.img-fluid.avatar-40(src='assets/images/user/02.jpg', alt='profile')
+                                        td Brock Lee
+                                        td +62 5689 458 658
+                                        td brocklee@gmail.com
+                                        td Indonesia
+                                        td
+                                            span.badge.iq-bg-primary Active
+                                        td Soylent Corp
+                                        td 2019/12/01
+                                        td
+                                            .flex.align-items-center.list-user-action
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Add', href='#')
+                                                    i.ri-user-add-line
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Edit', href='#')
+                                                    i.ri-pencil-line
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Delete', href='#')
+                                                    i.ri-delete-bin-line
+                                    tr
+                                        td.text-center
+                                            img.rounded-circle.img-fluid.avatar-40(src='assets/images/user/03.jpg', alt='profile')
+                                        td Dan Druff
+                                        td +55 6523 456 856
+                                        td dandruff@gmail.com
+                                        td Brazil
+                                        td
+                                            span.badge.iq-bg-warning Pending
+                                        td Umbrella Corporation
+                                        td 2019/12/01
+                                        td
+                                            .flex.align-items-center.list-user-action
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Add', href='#')
+                                                    i.ri-user-add-line
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Edit', href='#')
+                                                    i.ri-pencil-line
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Delete', href='#')
+                                                    i.ri-delete-bin-line
+                                    tr
+                                        td.text-center
+                                            img.rounded-circle.img-fluid.avatar-40(src='assets/images/user/04.jpg', alt='profile')
+                                        td Hans Olo
+                                        td +91 2586 253 125
+                                        td hansolo@gmail.com
+                                        td India
+                                        td
+                                            span.badge.iq-bg-danger Inactive
+                                        td Vehement Capital
+                                        td 2019/12/01
+                                        td
+                                            .flex.align-items-center.list-user-action
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Add', href='#')
+                                                    i.ri-user-add-line
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Edit', href='#')
+                                                    i.ri-pencil-line
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Delete', href='#')
+                                                    i.ri-delete-bin-line
+                                    tr
+                                        td.text-center
+                                            img.rounded-circle.img-fluid.avatar-40(src='assets/images/user/05.jpg', alt='profile')
+                                        td Lynn Guini
+                                        td +27 2563 456 589
+                                        td lynnguini@gmail.com
+                                        td Africa
+                                        td
+                                            span.badge.iq-bg-primary Active
+                                        td Massive Dynamic
+                                        td 2019/12/01
+                                        td
+                                            .flex.align-items-center.list-user-action
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Add', href='#')
+                                                    i.ri-user-add-line
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Edit', href='#')
+                                                    i.ri-pencil-line
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Delete', href='#')
+                                                    i.ri-delete-bin-line
+                                    tr
+                                        td.text-center
+                                            img.rounded-circle.img-fluid.avatar-40(src='assets/images/user/06.jpg', alt='profile')
+                                        td Eric Shun
+                                        td +55 25685 256 589
+                                        td ericshun@gmail.com
+                                        td Brazil
+                                        td
+                                            span.badge.iq-bg-warning Pending
+                                        td Globex Corporation
+                                        td 2019/12/01
+                                        td
+                                            .flex.align-items-center.list-user-action
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Add', href='#')
+                                                    i.ri-user-add-line
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Edit', href='#')
+                                                    i.ri-pencil-line
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Delete', href='#')
+                                                    i.ri-delete-bin-line
+                                    tr
+                                        td.text-center
+                                            img.rounded-circle.img-fluid.avatar-40(src='assets/images/user/07.jpg', alt='profile')
+                                        td aaronottix
+                                        td (760) 765 2658
+                                        td budwiser@ymail.com
+                                        td USA
+                                        td
+                                            span.badge.iq-bg-info Hold
+                                        td Acme Corporation
+                                        td 2019/12/01
+                                        td
+                                            .flex.align-items-center.list-user-action
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Add', href='#')
+                                                    i.ri-user-add-line
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Edit', href='#')
+                                                    i.ri-pencil-line
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Delete', href='#')
+                                                    i.ri-delete-bin-line
+                                    tr
+                                        td.text-center
+                                            img.rounded-circle.img-fluid.avatar-40(src='assets/images/user/08.jpg', alt='profile')
+                                        td Marge Arita
+                                        td +27 5625 456 589
+                                        td margearita@gmail.com
+                                        td Africa
+                                        td
+                                            span.badge.iq-bg-success Complite
+                                        td Vehement Capital
+                                        td 2019/12/01
+                                        td
+                                            .flex.align-items-center.list-user-action
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Add', href='#')
+                                                    i.ri-user-add-line
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Edit', href='#')
+                                                    i.ri-pencil-line
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Delete', href='#')
+                                                    i.ri-delete-bin-line
+                                    tr
+                                        td.text-center
+                                            img.rounded-circle.img-fluid.avatar-40(src='assets/images/user/09.jpg', alt='profile')
+                                        td Bill Dabear
+                                        td +55 2563 456 589
+                                        td billdabear@gmail.com
+                                        td Brazil
+                                        td
+                                            span.badge.iq-bg-primary active
+                                        td Massive Dynamic
+                                        td 2019/12/01
+                                        td
+                                            .flex.align-items-center.list-user-action
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Add', href='#')
+                                                    i.ri-user-add-line
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Edit', href='#')
+                                                    i.ri-pencil-line
+                                                a(data-toggle='tooltip', data-placement='top', title='', data-original-title='Delete', href='#')
+                                                    i.ri-delete-bin-line
+                        .row.justify-content-between.mt-3
+                            #user-list-page-info.col-md-6
+                                span Showing 1 to 5 of 5 entries
+                            .col-md-6
+                                nav(aria-label='Page navigation example')
+                                    ul.pagination.justify-content-end.mb-0
+                                        li.page-item.disabled
+                                            a.page-link(href='#', tabindex='-1', aria-disabled='true') Previous
+                                        li.page-item.active
+                                            a.page-link(href='#') 1
+                                        li.page-item
+                                            a.page-link(href='#') 2
+                                        li.page-item
+                                            a.page-link(href='#') 3
+                                        li.page-item
+                                            a.page-link(href='#') Next

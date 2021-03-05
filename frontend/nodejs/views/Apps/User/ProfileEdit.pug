@@ -1,0 +1,184 @@
+extends ../../Layouts/master
+
+block content
+    .container-fluid
+        .row
+            .col-lg-12
+                .iq-card
+                    .iq-card-body.p-0
+                        .iq-edit-list
+                            ul.iq-edit-profile.d-flex.nav.nav-pills
+                                li.col-md-3.p-0
+                                    a.nav-link.active(data-toggle='pill', href='#personal-information')
+                                        | Personal Information
+                                li.col-md-3.p-0
+                                    a.nav-link(data-toggle='pill', href='#chang-pwd')
+                                        | Change Password
+                                li.col-md-3.p-0
+                                    a.nav-link(data-toggle='pill', href='#emailandsms')
+                                        | Email and SMS
+                                li.col-md-3.p-0
+                                    a.nav-link(data-toggle='pill', href='#manage-contact')
+                                        | Manage Contact
+            .col-lg-12
+                .iq-edit-list-data
+                    .tab-content
+                        #personal-information.tab-pane.fade.active.show(role='tabpanel')
+                            .iq-card
+                                .iq-card-header.d-flex.justify-content-between
+                                    .iq-header-title
+                                        h4.card-title Personal Information
+                                .iq-card-body
+                                    form
+                                        .form-group.row.align-items-center
+                                            .col-md-12
+                                                .profile-img-edit
+                                                    img.profile-pic(src='assets/images/user/11.png', alt='profile-pic')
+                                                    .p-image
+                                                        i.ri-pencil-line.upload-button
+                                                        input.file-upload(type='file', accept='image/*')
+                                        .row.align-items-center
+                                            .form-group.col-sm-6
+                                                label(for='fname') First Name:
+                                                input#fname.form-control(type='text', value='Nik')
+                                            .form-group.col-sm-6
+                                                label(for='lname') Last Name:
+                                                input#lname.form-control(type='text', value='Jhon')
+                                            .form-group.col-sm-6
+                                                label(for='uname') User Name:
+                                                input#uname.form-control(type='text', value='Nik@01')
+                                            .form-group.col-sm-6
+                                                label(for='cname') City:
+                                                input#cname.form-control(type='text', value='Atlanta')
+                                            .form-group.col-sm-6
+                                                label.d-block Gender:
+                                                .custom-control.custom-radio.custom-control-inline
+                                                    input#customRadio6.custom-control-input(type='radio', name='customRadio1', checked='')
+                                                    label.custom-control-label(for='customRadio6')  Male 
+                                                .custom-control.custom-radio.custom-control-inline
+                                                    input#customRadio7.custom-control-input(type='radio', name='customRadio1')
+                                                    label.custom-control-label(for='customRadio7')  Female 
+                                            .form-group.col-sm-6
+                                                label(for='dob') Date Of Birth:
+                                                input#dob.form-control(type='date', value='1984-01-24')
+                                            .form-group.col-sm-6
+                                                label Marital Status:
+                                                select#mrgstatus.form-control
+                                                    option(selected='') Single
+                                                    option Married
+                                                    option Widowed
+                                                    option Divorced
+                                                    option Separated 
+                                            .form-group.col-sm-6
+                                                label Age:
+                                                select#age.form-control
+                                                    option 12-18
+                                                    option 19-32
+                                                    option(selected='') 33-45
+                                                    option 46-62
+                                                    option 63 > 
+                                            .form-group.col-sm-6
+                                                label Country:
+                                                select#country.form-control
+                                                    option Caneda
+                                                    option Noida
+                                                    option(selected='') USA
+                                                    option India
+                                                    option Africa
+                                            .form-group.col-sm-6
+                                                label State:
+                                                select#state.form-control
+                                                    option California
+                                                    option Florida
+                                                    option(selected='') Georgia
+                                                    option Connecticut
+                                                    option Louisiana
+                                            .form-group.col-sm-12
+                                                label Address:
+                                                textarea.form-control(name='address', rows='5', style='line-height: 22px;')
+                                                    | 37 Cardinal Lane
+                                                    | Petersburg, VA 23803
+                                                    | United States of America
+                                                    | Zip Code: 85001
+                                        button.btn.btn-primary.mr-2(type='submit') Submit
+                                        button.btn.iq-bg-danger(type='reset') Cancle
+                        #chang-pwd.tab-pane.fade(role='tabpanel')
+                            .iq-card
+                                .iq-card-header.d-flex.justify-content-between
+                                    .iq-header-title
+                                        h4.card-title Change Password
+                                .iq-card-body
+                                    form
+                                        .form-group
+                                            label(for='cpass') Current Password:
+                                            a.float-right(href='javascripe:void();') Forgot Password
+                                            input#cpass.form-control(type='Password', value='')
+                                        .form-group
+                                            label(for='npass') New Password:
+                                            input#npass.form-control(type='Password', value='')
+                                        .form-group
+                                            label(for='vpass') Verify Password:
+                                            input#vpass.form-control(type='Password', value='')
+                                        button.btn.btn-primary.mr-2(type='submit') Submit
+                                        button.btn.iq-bg-danger(type='reset') Cancle
+                        #emailandsms.tab-pane.fade(role='tabpanel')
+                            .iq-card
+                                .iq-card-header.d-flex.justify-content-between
+                                    .iq-header-title
+                                        h4.card-title Email and SMS
+                                .iq-card-body
+                                    form
+                                        .form-group.row.align-items-center
+                                            label.col-md-3(for='emailnotification') Email Notification:
+                                            .col-md-9.custom-control.custom-switch
+                                                input#emailnotification.custom-control-input(type='checkbox', checked='')
+                                                label.custom-control-label(for='emailnotification')
+                                        .form-group.row.align-items-center
+                                            label.col-md-3(for='smsnotification') SMS Notification:
+                                            .col-md-9.custom-control.custom-switch
+                                                input#smsnotification.custom-control-input(type='checkbox', checked='')
+                                                label.custom-control-label(for='smsnotification')
+                                        .form-group.row.align-items-center
+                                            label.col-md-3(for='npass') When To Email
+                                            .col-md-9
+                                                .custom-control.custom-checkbox
+                                                    input#email01.custom-control-input(type='checkbox')
+                                                    label.custom-control-label(for='email01') You have new notifications.
+                                                .custom-control.custom-checkbox
+                                                    input#email02.custom-control-input(type='checkbox')
+                                                    label.custom-control-label(for='email02') You're sent a direct message
+                                                .custom-control.custom-checkbox
+                                                    input#email03.custom-control-input(type='checkbox', checked='')
+                                                    label.custom-control-label(for='email03') Someone adds you as a connection
+                                        .form-group.row.align-items-center
+                                            label.col-md-3(for='npass') When To Escalate Emails
+                                            .col-md-9
+                                                .custom-control.custom-checkbox
+                                                    input#email04.custom-control-input(type='checkbox')
+                                                    label.custom-control-label(for='email04')  Upon new order.
+                                                .custom-control.custom-checkbox
+                                                    input#email05.custom-control-input(type='checkbox')
+                                                    label.custom-control-label(for='email05')  New membership approval
+                                                .custom-control.custom-checkbox
+                                                    input#email06.custom-control-input(type='checkbox', checked='')
+                                                    label.custom-control-label(for='email06')  Member registration
+                                        button.btn.btn-primary.mr-2(type='submit') Submit
+                                        button.btn.iq-bg-danger(type='reset') Cancle
+                        #manage-contact.tab-pane.fade(role='tabpanel')
+                            .iq-card
+                                .iq-card-header.d-flex.justify-content-between
+                                    .iq-header-title
+                                        h4.card-title Manage Contact
+                                .iq-card-body
+                                    form
+                                        .form-group
+                                            label(for='cno') Contact Number:
+                                            input#cno.form-control(type='text', value='001 2536 123 458')
+                                        .form-group
+                                            label(for='email') Email:
+                                            input#email.form-control(type='text', value='nikjone@demo.com')
+                                        .form-group
+                                            label(for='url') Url:
+                                            input#url.form-control(type='text', value='https://getbootstrap.com')
+                                        button.btn.btn-primary.mr-2(type='submit') Submit
+                                        button.btn.iq-bg-danger(type='reset') Cancle

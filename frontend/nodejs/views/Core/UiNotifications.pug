@@ -1,0 +1,169 @@
+extends ../Layouts/master
+
+block content
+    .container-fluid
+        .row
+            .col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Notifications
+                    .iq-card-body
+                        p
+                            | Toasts are as flexible as you need and have very little required markup. At a minimum, we require a single element to contain your &ldquo;toasted&rdquo; content and strongly encourage a dismiss button.
+                        .toast.fade.show(role='alert' aria-live='assertive' aria-atomic='true')
+                            .toast-header
+                                svg.bd-placeholder-img.rounded.mr-2(width='20' height='20' xmlns='http://www.w3.org/2000/svg' preserveaspectratio='xMidYMid slice' focusable='false' role='img')
+                                    rect(width='100%' height='100%' fill='#007aff')
+                                strong.mr-auto Bootstrap
+                                small 11 mins ago
+                                button.ml-2.mb-1.close(type='button' data-dismiss='toast' aria-label='Close')
+                                    span(aria-hidden='true') &times;
+                            .toast-body
+                                | Hello, world! This is a toast message.
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Stacking
+                    .iq-card-body
+                        p
+                            | When you have multiple toasts, we default to vertically stacking them in a readable manner.
+                        .toast.fade.show(role='alert' aria-live='assertive' aria-atomic='true')
+                            .toast-header
+                                svg.bd-placeholder-img.rounded.mr-2(width='20' height='20' xmlns='http://www.w3.org/2000/svg' preserveaspectratio='xMidYMid slice' focusable='false' role='img')
+                                    rect(width='100%' height='100%' fill='#007aff')
+                                strong.mr-auto Bootstrap
+                                small.text-muted just now
+                                button.ml-2.mb-1.close(type='button' data-dismiss='toast' aria-label='Close')
+                                    span(aria-hidden='true') &times;
+                            .toast-body
+                                | See? Just like this.
+                        .toast.fade.show(role='alert' aria-live='assertive' aria-atomic='true')
+                            .toast-header
+                                svg.bd-placeholder-img.rounded.mr-2(width='20' height='20' xmlns='http://www.w3.org/2000/svg' preserveaspectratio='xMidYMid slice' focusable='false' role='img')
+                                    rect(width='100%' height='100%' fill='#007aff')
+                                strong.mr-auto Bootstrap
+                                small.text-muted 2 seconds ago
+                                button.ml-2.mb-1.close(type='button' data-dismiss='toast' aria-label='Close')
+                                    span(aria-hidden='true') &times;
+                            .toast-body
+                                | Heads up, toasts will stack automatically
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Notifications horizontally and/or vertically
+                    .iq-card-body
+                        p
+                            | You can also get fancy with flexbox utilities to align toasts horizontally and/or vertically.
+                        .p-3.bg-dark
+                            // Flexbox container for aligning the toasts
+                            .d-flex.justify-content-center.align-items-center(aria-live='polite' aria-atomic='true' style='min-height: 200px;')
+                                // Then put toasts within
+                                .toast.fade.show(role='alert' aria-live='assertive' aria-atomic='true')
+                                    .toast-header
+                                        svg.bd-placeholder-img.rounded.mr-2(width='20' height='20' xmlns='http://www.w3.org/2000/svg' preserveaspectratio='xMidYMid slice' focusable='false' role='img')
+                                            rect(width='100%' height='100%' fill='#007aff')
+                                        strong.mr-auto Bootstrap
+                                        small 11 mins ago
+                                        button.ml-2.mb-1.close(type='button' data-dismiss='toast' aria-label='Close')
+                                            span(aria-hidden='true') &times;
+                                    .toast-body
+                                        | Hello, world! This is a toast message.
+            .col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Notifications
+                    .iq-card-body
+                        p
+                            | Toasts are slightly translucent, too, so they blend over whatever they might appear over. For browsers that support the
+                            code backdrop-filter
+                            |  CSS property, we&rsquo;ll also attempt to blur the elements under a toast.
+                        .p-3.bg-dark
+                            .toast.fade.show(role='alert' aria-live='assertive' aria-atomic='true')
+                                .toast-header
+                                    svg.bd-placeholder-img.rounded.mr-2(width='20' height='20' xmlns='http://www.w3.org/2000/svg' preserveaspectratio='xMidYMid slice' focusable='false' role='img')
+                                        rect(width='100%' height='100%' fill='#007aff')
+                                    strong.mr-auto Bootstrap
+                                    small 11 mins ago
+                                    button.ml-2.mb-1.close(type='button' data-dismiss='toast' aria-label='Close')
+                                        span(aria-hidden='true') &times;
+                                .toast-body
+                                    | Hello, world! This is a toast message.
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Stacking Placement
+                    .iq-card-body
+                        p
+                            | Place toasts with custom CSS as you need them. The top right is often used for notifications, as is the top middle. If you&rsquo;re only ever going to show one toast at a time, put the positioning styles right on the
+                            code .toast
+                            | .
+                        .bg-dark.p-3
+                            div(aria-live='polite' aria-atomic='true' style='position: relative; min-height: 200px;')
+                                .toast.fade.show(style='position: absolute; top: 0; right: 0;')
+                                    .toast-header
+                                        svg.bd-placeholder-img.rounded.mr-2(width='20' height='20' xmlns='http://www.w3.org/2000/svg' preserveaspectratio='xMidYMid slice' focusable='false' role='img')
+                                            rect(width='100%' height='100%' fill='#007aff')
+                                        strong.mr-auto Bootstrap
+                                        small 11 mins ago
+                                        button.ml-2.mb-1.close(type='button' data-dismiss='toast' aria-label='Close')
+                                            span(aria-hidden='true') &times;
+                                    .toast-body
+                                        | Hello, world! This is a toast message.
+                        p.mt-3
+                            | For systems that generate more notifications, consider using a wrapping element so they can easily stack.
+                        .bg-dark.p-3.mt-3
+                            div(aria-live='polite' aria-atomic='true' style='position: relative; min-height: 200px;')
+                                // Position it
+                                div(style='position: absolute; top: 0; right: 0;')
+                                    // Then put toasts within
+                                    .toast.fade.show(role='alert' aria-live='assertive' aria-atomic='true')
+                                        .toast-header
+                                            svg.bd-placeholder-img.rounded.mr-2(width='20' height='20' xmlns='http://www.w3.org/2000/svg' preserveaspectratio='xMidYMid slice' focusable='false' role='img')
+                                                rect(width='100%' height='100%' fill='#007aff')
+                                            strong.mr-auto Bootstrap
+                                            small.text-muted just now
+                                            button.ml-2.mb-1.close(type='button' data-dismiss='toast' aria-label='Close')
+                                                span(aria-hidden='true') &times;
+                                        .toast-body
+                                            | See? Just like this.
+                                    .toast.fade.show(role='alert' aria-live='assertive' aria-atomic='true')
+                                        .toast-header
+                                            svg.bd-placeholder-img.rounded.mr-2(width='20' height='20' xmlns='http://www.w3.org/2000/svg' preserveaspectratio='xMidYMid slice' focusable='false' role='img')
+                                                rect(width='100%' height='100%' fill='#007aff')
+                                            strong.mr-auto Bootstrap
+                                            small.text-muted 2 seconds ago
+                                            button.ml-2.mb-1.close(type='button' data-dismiss='toast' aria-label='Close')
+                                                span(aria-hidden='true') &times;
+                                        .toast-body
+                                            | Heads up, toasts will stack automatically
+            .col-sm-12
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Notifications
+                    .iq-card-body
+                        p
+                            | Toasts are as flexible as you need and have very little required markup. At a minimum, we require a single element to contain your &ldquo;toasted&rdquo; content and strongly encourage a dismiss button.
+                        .toast.fade.show.bg-primary.text-white.border-0(role='alert' aria-live='assertive' aria-atomic='true')
+                            .toast-header.bg-primary.text-white
+                                svg.bd-placeholder-img.rounded.mr-2(width='20' height='20' xmlns='http://www.w3.org/2000/svg' preserveaspectratio='xMidYMid slice' focusable='false' role='img')
+                                    rect(width='100%' height='100%' fill='#fff')
+                                strong.mr-auto.text-white Bootstrap
+                                small 11 mins ago
+                                button.ml-2.mb-1.close.text-white(type='button' data-dismiss='toast' aria-label='Close')
+                                    span(aria-hidden='true') &times;
+                            .toast-body
+                                | Hello, world! This is a toast message.
+                        .toast.fade.show.bg-success.text-white.border-0.mt-3(role='alert' aria-live='assertive' aria-atomic='true')
+                            .toast-header.bg-success.text-white
+                                svg.bd-placeholder-img.rounded.mr-2(width='20' height='20' xmlns='http://www.w3.org/2000/svg' preserveaspectratio='xMidYMid slice' focusable='false' role='img')
+                                    rect(width='100%' height='100%' fill='#fff')
+                                strong.mr-auto.text-white Bootstrap
+                                small 11 mins ago
+                                button.ml-2.mb-1.close.text-white(type='button' data-dismiss='toast' aria-label='Close')
+                                    span(aria-hidden='true') &times;
+                            .toast-body
+                                | Hello, world! This is a toast message.
+

@@ -1,0 +1,146 @@
+extends ../Layouts/master
+block content
+    .container-fluid
+        .row
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Slides only
+                    .iq-card-body
+                        p
+                            | Here&rsquo;s a carousel with slides only. Note the presence of the
+                            code .d-block
+                            |  and
+                            code .img-fluid
+                            |  on carousel images to prevent browser default image alignment.
+                        #carouselExampleSlidesOnly.carousel.slide(data-ride='carousel')
+                            .carousel-inner
+                                .carousel-item.active
+                                    img.d-block.w-100(src='assets/images/small/img-1.jpg' alt='#')
+                                .carousel-item
+                                    img.d-block.w-100(src='assets/images/small/img-1.jpg' alt='#')
+                                .carousel-item
+                                    img.d-block.w-100(src='assets/images/small/img-1.jpg' alt='#')
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Slides With Controls
+                    .iq-card-body
+                        p
+                            | Here&rsquo;s a carousel with slides only. Note the presence of the
+                            code .d-block
+                            |  and
+                            code .img-fluid
+                            |  on carousel images to prevent browser default image alignment.
+                        #carouselExampleControls.carousel.slide(data-ride='carousel')
+                            .carousel-inner
+                                .carousel-item.active
+                                    img.d-block.w-100(src='assets/images/small/img-1.jpg' alt='#')
+                                .carousel-item
+                                    img.d-block.w-100(src='assets/images/small/img-1.jpg' alt='#')
+                                .carousel-item
+                                    img.d-block.w-100(src='assets/images/small/img-1.jpg' alt='#')
+                            a.carousel-control-prev(href='#carouselExampleControls' role='button' data-slide='prev')
+                                span.carousel-control-prev-icon(aria-hidden='true')
+                                span.sr-only Previous
+                            a.carousel-control-next(href='#carouselExampleControls' role='button' data-slide='next')
+                                span.carousel-control-next-icon(aria-hidden='true')
+                                span.sr-only Next
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Slides With Indicators
+                    .iq-card-body
+                        p
+                            | Here&rsquo;s a carousel with slides only. Note the presence of the
+                            code .d-block
+                            |  and
+                            code .img-fluid
+                            |  on carousel images to prevent browser default image alignment.
+                        #carouselExampleIndicators.carousel.slide(data-ride='carousel')
+                            ol.carousel-indicators
+                                li.active(data-target='#carouselExampleIndicators' data-slide-to='0')
+                                li(data-target='#carouselExampleIndicators' data-slide-to='1')
+                                li(data-target='#carouselExampleIndicators' data-slide-to='2')
+                            .carousel-inner
+                                .carousel-item.active
+                                    img.d-block.w-100(src='assets/images/small/img-1.jpg' alt='#')
+                                .carousel-item
+                                    img.d-block.w-100(src='assets/images/small/img-1.jpg' alt='#')
+                                .carousel-item
+                                    img.d-block.w-100(src='assets/images/small/img-1.jpg' alt='#')
+                            a.carousel-control-prev(href='#carouselExampleIndicators' role='button' data-slide='prev')
+                                span.carousel-control-prev-icon(aria-hidden='true')
+                                span.sr-only Previous
+                            a.carousel-control-next(href='#carouselExampleIndicators' role='button' data-slide='next')
+                                span.carousel-control-next-icon(aria-hidden='true')
+                                span.sr-only Next
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Slides With Captions
+                    .iq-card-body
+                        p
+                            | Here&rsquo;s a carousel with slides only. Note the presence of the
+                            code .d-block
+                            |  and
+                            code .img-fluid
+                            |  on carousel images to prevent browser default image alignment.
+                        .bd-example
+                            #carouselExampleCaptions.carousel.slide(data-ride='carousel')
+                                ol.carousel-indicators
+                                    li.active(data-target='#carouselExampleCaptions' data-slide-to='0')
+                                    li(data-target='#carouselExampleCaptions' data-slide-to='1')
+                                    li(data-target='#carouselExampleCaptions' data-slide-to='2')
+                                .carousel-inner
+                                    .carousel-item.active
+                                        img.d-block.w-100(src='assets/images/small/img-1.jpg' alt='#')
+                                        .carousel-caption.d-none.d-md-block
+                                            h4.text-white First slide label
+                                            p Nulla vitae elit libero, a pharetra augue mollis interdum.
+                                    .carousel-item
+                                        img.d-block.w-100(src='assets/images/small/img-1.jpg' alt='#')
+                                        .carousel-caption.d-none.d-md-block
+                                            h4.text-white Second slide label
+                                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    .carousel-item
+                                        img.d-block.w-100(src='assets/images/small/img-1.jpg' alt='#')
+                                        .carousel-caption.d-none.d-md-block
+                                            h4.text-white Third slide label
+                                            p Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                                a.carousel-control-prev(href='#carouselExampleCaptions' role='button' data-slide='prev')
+                                    span.carousel-control-prev-icon(aria-hidden='true')
+                                    span.sr-only Previous
+                                a.carousel-control-next(href='#carouselExampleCaptions' role='button' data-slide='next')
+                                    span.carousel-control-next-icon(aria-hidden='true')
+                                    span.sr-only Next
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Slides With Crossfade
+                    .iq-card-body
+                        p
+                            | Here&rsquo;s a carousel with slides only. Note the presence of the
+                            code .d-block
+                            |  and
+                            code .img-fluid
+                            |  on carousel images to prevent browser default image alignment.
+                        #carouselExampleFade.carousel.slide.carousel-fade(data-ride='carousel')
+                            .carousel-inner
+                                .carousel-item.active
+                                    img.d-block.w-100(src='assets/images/small/img-1.jpg' alt='#')
+                                .carousel-item
+                                    img.d-block.w-100(src='assets/images/small/img-1.jpg' alt='#')
+                                .carousel-item
+                                    img.d-block.w-100(src='assets/images/small/img-1.jpg' alt='#')
+                            a.carousel-control-prev(href='#carouselExampleFade' role='button' data-slide='prev')
+                                span.carousel-control-prev-icon(aria-hidden='true')
+                                span.sr-only Previous
+                            a.carousel-control-next(href='#carouselExampleFade' role='button' data-slide='next')
+                                span.carousel-control-next-icon(aria-hidden='true')
+                                span.sr-only Next

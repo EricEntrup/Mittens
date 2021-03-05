@@ -1,0 +1,86 @@
+extends ../Layouts/master
+
+block content
+    .container-fluid
+        .row
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Tooltips
+                    .iq-card-body
+                        p
+                            | Hover over the buttons below to see the four tooltips directions: top, right, bottom, and left. The data-placement attribute specifies the tooltip position.
+                        button.btn.btn-secondary.mt-3(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+                            | Tooltip on top
+                        button.btn.btn-secondary.mt-3(type='button' data-toggle='tooltip' data-placement='right' title='Tooltip on right')
+                            | Tooltip on right
+                        button.btn.btn-secondary.mt-3(type='button' data-toggle='tooltip' data-placement='bottom' title='Tooltip on bottom')
+                            | Tooltip on bottom
+                        button.btn.btn-secondary.mt-3(type='button' data-toggle='tooltip' data-placement='left' title='Tooltip on left')
+                            | Tooltip on left
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Disabled elements
+                    .iq-card-body
+                        p
+                            | Elements with the
+                            code disabled
+                            |  attribute aren&rsquo;t interactive, meaning users cannot focus, hover, or click them to trigger a tooltip (or popover). As a workaround, you&rsquo;ll want to trigger the tooltip from a wrapper
+                            code &lt;div&gt;
+                            |  or
+                            code &lt;span&gt;
+                            | , ideally made keyboard-focusable using
+                            code tabindex=&quot;0&quot;
+                            | , and override the
+                            code pointer-events
+                            |  on the disabled element.
+                        span.d-inline-block(tabindex='0' data-toggle='tooltip' title='Disabled tooltip')
+                            button.btn.btn-primary(style='pointer-events: none;' type='button' disabled='') Disabled button
+            .col-sm-12.col-lg-6
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Tooltips
+                    .iq-card-body
+                        p
+                            | Hover over the buttons below to see the four tooltips directions: top, right, bottom, and left Using background colors
+                        button.btn.btn-primary.mt-3(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+                            | Tooltip on top
+                        button.btn.btn-success.mt-3(type='button' data-toggle='tooltip' data-placement='right' title='Tooltip on right')
+                            | Tooltip on right
+                        button.btn.btn-danger.mt-3(type='button' data-toggle='tooltip' data-placement='bottom' title='Tooltip on bottom')
+                            | Tooltip on bottom
+                        button.btn.btn-info.mt-3(type='button' data-toggle='tooltip' data-placement='left' title='Tooltip on left')
+                            | Tooltip on left
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Tooltips
+                    .iq-card-body
+                        p
+                            | Hover over the buttons below to see the four tooltips directions: top, right, bottom, and left Using Light background colors
+                        button.btn.iq-bg-primary.mt-3(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+                            | Tooltip on top
+                        button.btn.iq-bg-success.mt-3(type='button' data-toggle='tooltip' data-placement='right' title='Tooltip on right')
+                            | Tooltip on right
+                        button.btn.iq-bg-danger.mt-3(type='button' data-toggle='tooltip' data-placement='bottom' title='Tooltip on bottom')
+                            | Tooltip on bottom
+                        button.btn.iq-bg-info.mt-3(type='button' data-toggle='tooltip' data-placement='left' title='Tooltip on left')
+                            | Tooltip on left
+            .col-lg-12
+                .iq-card
+                    .iq-card-header.d-flex.justify-content-between
+                        .iq-header-title
+                            h4.card-title Hover elements
+                    .iq-card-body
+                        p Hover over the buttons below to see the tooltip.
+                        // HTML to write
+                        a(href='#' data-toggle='tooltip' title='Some tooltip text!') Hover over me
+                        // Generated markup by the plugin
+                        .tooltip.bs-tooltip-top(role='tooltip')
+                            .arrow
+                            .tooltip-inner
+                                | Some tooltip text!
+
