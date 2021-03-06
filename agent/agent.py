@@ -15,6 +15,7 @@ from tensorflow.keras.layers import Dense, Conv2D, Flatten, Input
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.losses import Huber
 from tensorflow.keras.initializers import he_normal
+from stable_baselines.common.callbacks import BaseCallback
 from tensorflow.keras.callbacks import History
 from stable_baselines import PPO2
 from stable_baselines.common.vec_env import DummyVecEnv
@@ -37,7 +38,8 @@ class MittensEnv(gym.Env):
     def __init__(self, ticker, principal=1000, receptive_field=30):
         super(MittensEnv, self).__init__()
         self.log = {}
-        self.last_quote = 0
+        self.last_ask = 0
+        self.last_bid = 0
         self.timestep = 0
         self.ticker = ticker
         self.holdings = 0
@@ -45,15 +47,18 @@ class MittensEnv(gym.Env):
         self.principal = principal
         self.initial_principal = principal
         self.receptive_field = receptive_field
-        self.action_space = spaces.Box(low=-1, high=1, shape=(1,), dtype=np.float32)
-        self.observation_space = spaces.Box(low=0, high=1, shape=(receptive_field, 3), dtype=np.float16)
+        # self.action_space = spaces.Box(low=-1, high=1, shape=(1,), dtype=np.float32)
+        self.action_space = spaces.Discrete(3)
+
+        self.observation_space = spaces.Box(low=0, high=1, shape=(receptive_field, 8), dtype=np.float16)
 
     def reset(self):
         print("======================= RESTART ======================")
         self.log = {}
         self.timestep = 0
         self.holdings = 0
-        self.last_quote = 0
+        self.last_ask = 0
+        self.last_bid = 0
         self.average_price = 0
         self.history = []
         self.principal = self.initial_principal
@@ -63,48 +68,72 @@ class MittensEnv(gym.Env):
         while count < int(2 * self.receptive_field):
             count += 1
             quote = self.crypto_quote()
-            self.history.append([quote["ask_price"], self.initial_principal, 0])
+            self.history.append([quote["ask_price"], quote["bid_price"], self.initial_principal, 0])
             time.sleep(1)
-
-        return self._next_observation()
-
-    def _next_observation(self):
-        time.sleep(1)
         quote = self.crypto_quote()
-        self.history.append([quote["ask_price"], self.principal, self.holdings])
+        return self._next_observation(quote["ask_price"], quote["bid_price"])
 
+    def _next_observation(self, ask, bid):
+        
+        self.history.append([ask, bid, self.principal, self.holdings])
+
+        avg_ask = np.convolve(
+            np.array(self.history)[:,0], np.ones(self.receptive_field)/self.receptive_field, mode='valid')[-self.receptive_field:]
+
+        avg_bid = np.convolve(
+            np.array(self.history)[:,1], np.ones(self.receptive_field)/self.receptive_field, mode='valid')[-self.receptive_field:]
+
+        avg1_ask = np.convolve(np.array(self.history)[:,0], np.ones(5)/5, mode='valid')[-self.receptive_field:]
+        avg1_bid = np.convolve(np.array(self.history)[:,1], np.ones(5)/5, mode='valid')[-self.receptive_field:]
+
+        avgs = np.array([avg_ask, avg_bid, avg1_ask, avg1_bid]).T
         obs = np.array(self.history[-self.receptive_field:])
+        obs = np.hstack((obs, avgs))
 
         return obs
 
     def step(self, action):
-        action = action[0]
-
+        # action = action[0]
+        time.sleep(1)
+        crypto_amount = 0
+        dollar_amount = 0
+        quote =  self.crypto_quote()
+        ask = quote['ask_price']
+        bid = quote['bid_price']
         status = "HOLD"
-        if action < 0:
+        penalty = .1
+        # if action < -0.1:
+        if action == 0:
             status = "SELL"
-            crypto_amount, dollar_amount, price = self.sell_order(abs(action))
+            penalty = -1
+            crypto_amount, dollar_amount = self.sell_order(ask, bid)
         
-        if action > 0:
+        # if action > 0.1:
+        if action == 2:
             status = "BUY"
-            crypto_amount, dollar_amount, price = self.buy_order(action)
+            penalty = -1
+            crypto_amount, dollar_amount = self.buy_order(ask, bid)
 
-        obs = self._next_observation()
+        obs = self._next_observation(ask, bid)
         
-        reward = self.principal
+        profit = self.principal + self.holdings * bid - self.initial_principal
+
+        reward = profit + penalty
         
-        done = (self.holdings < 1) and (self.principal < 1)
+        done = profit < 0.3 * self.initial_principal - self.initial_principal
         
         self.logging(
             status,
             action,
             crypto_amount,
             dollar_amount,
-            price,
+            ask,
+            bid,
             self.principal,
             self.holdings,
             reward,
-            done
+            done,
+            profit
         )
 
         return obs, reward, done, {}
@@ -112,22 +141,24 @@ class MittensEnv(gym.Env):
     def render(self, mode='human', **kwargs):
         return
 
-    def logging(self, status, action, crypto, dollar, price, principal, holding, reward, done):
+    def logging(self, status, action, crypto, dollar, ask, bid, principal, holding, reward, done, profit):
         payload = {
             "status": str(status),
             "action": float(action),
             "crypto": float(crypto),
             "dollar": float(dollar),
-            "price": float(price),
+            "price": float(ask),
+            "bid_price": float(bid),
             "principal": float(principal),
             "holding": float(holding),
             "reward": float(reward),
-            "done": str(done)
+            "done": str(done),
+            "profit": float(profit)
         }
         try:
             res = requests.post('http://localhost:8080/update', json=payload)
         except:
-            print(res)
+            print('oops')
 
         for i,j in payload.items():
             print(i, j)
@@ -159,11 +190,13 @@ class MittensEnv(gym.Env):
             data = {
                 'ask_price':  float(quote['ask_price']),
                 'volume':     float(quote['volume']),
+                'bid_price': float(quote['bid_price'])
             }
         except:
             data = {
-                'ask_price':  self.last_quote,
+                'ask_price':  self.last_ask,
                 'volume':     0,
+                'bid_price': self.last_bid
             }
 
         return data
@@ -179,63 +212,56 @@ class MittensEnv(gym.Env):
 
         return self.holdings
 
-    def sell_order(self, percent):
+    def sell_order(self, ask, bid):
         # Amount of crypto coins available
-        crypto_available = self.selling_power()
-
-        # Proportion of crypto coins to sell
-        crypto_amount = crypto_available * percent
+        crypto_amount = self.selling_power()
 
         # Complete the sell order
         #status = rs.orders.order_sell_crypto_by_quantity(self.ticker, sell_amount)
 
-        # TODO: Quick hack
-        quote = self.crypto_quote()
-
-        dollar_amount = quote["ask_price"] * crypto_amount
+        dollar_amount = bid * crypto_amount
 
         self.holdings -= crypto_amount
 
         self.principal += dollar_amount
 
-        return crypto_amount, dollar_amount, quote["ask_price"]
+        return crypto_amount, dollar_amount
 
-
-    def buy_order(self, percent):
+    def buy_order(self, ask, bid):
+        
         # Amount of dollars available
-        dollar_available = self.buying_power()
-
-        # Proportion of dollars to sell
-        dollar_amount = dollar_available * percent
+        dollar_amount = self.buying_power()
 
         # Complete the buy order
         #status = rs.order_buy_crypto_by_price(self.ticker, amountInDollars=buy_amount)
 
-        # TODO: Quick hack
-        quote = self.crypto_quote()
-
-        crypto_amount = dollar_amount / quote["ask_price"]
+        crypto_amount = dollar_amount / ask
         
         self.holdings += crypto_amount
 
         self.principal -= dollar_amount
 
-        return crypto_amount, dollar_amount, quote["ask_price"]
+        return crypto_amount, dollar_amount
         
+
+
+
+
 
 
 if __name__ == "__main__":
     from stable_baselines import ACKTR
-    vect_env = DummyVecEnv([lambda: MittensEnv(ticker="LTC", principal=1000, receptive_field=30)])
+    vect_env = DummyVecEnv([lambda: MittensEnv(ticker="LTC", principal=100, receptive_field=60)])
 
-    model = ACKTR(MlpLnLstmPolicy,
+    model = PPO2(MlpLnLstmPolicy,
              vect_env,
-             verbose=1, 
+             verbose=1,
+             nminibatches=1,
              tensorboard_log="./tensorboard/")
 
-    checkpoint_callback = CheckpointCallback(save_freq=1e4, save_path='./model_checkpoints/')
+    checkpoint_callback = CheckpointCallback(save_freq=500, save_path='./model_checkpoints/')
 
-    model.learn(total_timesteps=1000, callback=[checkpoint_callback])
+    model.learn(total_timesteps=10000, callback=[checkpoint_callback])
 
 
 

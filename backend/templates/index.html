@@ -7,44 +7,66 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" rel="stylesheet">
     
     
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> 
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">  -->
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <canvas id="canvas"></canvas>
+    <div id="content-page" class="content-page">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <canvas id="canvas"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <canvas id="canvas2" height="50"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <canvas id="canvas3"></canvas>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+
+
         </div>
+
+
     </div>
-    <div class="row">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <canvas id="canvas2" height="50"></canvas>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <canvas id="canvas3"></canvas>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
+
+
+
+
+
+
+
+
+
 <!--suppress JSUnresolvedLibraryURL -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <!--suppress JSUnresolvedLibraryURL -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <!--suppress JSUnresolvedLibraryURL -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+
+
+
 <script>
     $(document).ready(function () {
        
@@ -59,7 +81,9 @@
                     data: [],
                     fill: false,
                     borderWidth: 2,
-                    pointRadius: 0,
+                    pointRadius: [],
+                    pointBackgroundColor: [],
+                    pointBorderColor: []
                 },
                 {
                     label: "MA",
@@ -71,15 +95,6 @@
                     pointRadius: 0,
                     borderWidth: 1
                 },
-                // {
-                //     label: "Bid Price",
-                //     backgroundColor: 'rgba(2, 0, 69)',
-                //     borderColor: 'rgba(2, 0, 69)',
-                //     data: [],
-                //     fill: false,
-                //     pointRadius: 2,
-                //     borderWidth: 2
-                // }],
             ]},
             options: {
                 responsive: true,
@@ -172,52 +187,10 @@
         };
 
 
-        const context = document.getElementById('canvas').getContext('2d');
-
-        const lineChart = new Chart(context, config);
-
-        const context2 = document.getElementById('canvas2').getContext('2d');
-
-        const lineChart2 = new Chart(context2, config2);
-
-        const source = new EventSource("/chart-data");
-        // const source = new EventSource("/update");
-
-        source.onmessage = function (event) {
-            const data = JSON.parse(event.data);
-            var idx = config.data.labels.length;
-            if (config.data.labels.length === 301) {
-                config.data.labels.shift();
-                config.data.datasets[0].data.shift();
-                config.data.datasets[1].data.shift();
-            }
-            config.data.labels.push(idx);
-            config.data.datasets[0].data.push(data.ask_price);
-            config.data.datasets[1].data.push(data.avg_30sec);
-            lineChart.update();
-
-            if ('avg_5min' in data){
-                config2.data.datasets[0].data.push(data.avg_5min);
-                config2.data.datasets[1].data.push(data.avg_1hr);
-                lineChart2.update();
-            }
-
-            // config.data.datasets[2].data.push(data.bid_price);
-            idx = idx + 1;
-            
-        }
-
-    });
-
-</script>
 
 
 
-
-<script>
-    $(document).ready(function () {
-       
-        const config = {
+        const config3 = {
             type: 'line',
             data: {
                 labels: [0],
@@ -265,6 +238,455 @@
             
         };
 
+        const context = document.getElementById('canvas').getContext('2d');
+        const lineChart = new Chart(context, config);
+
+        const context2 = document.getElementById('canvas2').getContext('2d');
+        const lineChart2 = new Chart(context2, config2);
+
+        const context3 = document.getElementById('canvas3').getContext('2d');
+        const lineChart3 = new Chart(context3, config3);
+
+
+        const source = new EventSource("/model");
+
+        source.onmessage = function (event) {
+            const data = JSON.parse(event.data);
+            var idx = config.data.labels.length;
+
+            if (config.data.labels.length === 301) {
+                config.data.labels.shift();
+                config.data.datasets[0].data.shift();
+                config.data.datasets[1].data.shift();
+                config.data.datasets[0].pointBackgroundColor.shift();
+                config.data.datasets[0].pointRadius.shift();
+                config.data.datasets[0].pointBorderColor.shift();
+            }
+
+            config.data.labels.push(idx);
+            config.data.datasets[0].data.push(data.price);
+            config.data.datasets[1].data.push(data.avg_30sec);
+
+            config.data.datasets[0].pointBackgroundColor.push("#ff6384");
+            config.data.datasets[0].pointRadius.push(1);
+            config.data.datasets[0].pointBorderColor.push('#ff6384');
+            if (data.status === "BUY"){
+                config.data.datasets[0].pointBackgroundColor.push("#00c9af");
+                config.data.datasets[0].pointRadius.push(2);
+                config.data.datasets[0].pointBorderColor.push('#00c9af');
+            }
+
+            if (data.status === "SELL"){
+                config.data.datasets[0].pointBackgroundColor.push("#660038");
+                config.data.datasets[0].pointRadius.push(2);
+                config.data.datasets[0].pointBorderColor.push('#660038');
+            }
+
+
+            if (config3.data.labels.length === 1000) {
+                config3.data.labels.shift();
+                config3.data.datasets[0].data.shift();
+            }
+            config3.data.labels.push(idx);
+            config3.data.datasets[0].data.push(data.profit);
+            
+            // if ('avg_5min' in data){
+            //     // config2.data.datasets[0].data.push(data.avg_5min);
+            //     // config2.data.datasets[1].data.push(data.avg_1hr);
+            //     // lineChart2.update();
+            // }
+            lineChart.update();
+            lineChart3.update();
+
+            // config.data.datasets[2].data.push(data.bid_price);
+            idx = idx + 1;
+            
+        }
+
+    });
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    $(document).ready(function () {
+       
+        const config = {
+            type: 'line',
+            data: {
+                labels: [0],
+                datasets: [{
+                    label: "Ask Price",
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [],
+                    fill: false,
+                    borderWidth: 2,
+                    pointRadius: [],
+                    pointBackgroundColor: [],
+                    pointBorderColor: []
+                },
+                {
+                    label: "MA",
+                    backgroundColor: 'rgba(102, 102, 102)',
+                    borderColor: 'rgba(102, 102, 102)',
+                    data: [],
+                    fill: false,
+                    borderDash: [10,5],
+                    pointRadius: 0,
+                    borderWidth: 1
+                },
+            ]},
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'DOGE Price'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: false,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Time'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Price'
+                        }
+                    }]
+                }
+            },
+            
+        };
+
+        const config2 = {
+            type: 'line',
+            data: {
+                labels: Array(288),
+                datasets: [{
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [],
+                    fill: false,
+                    borderWidth: 1,
+                    pointRadius: 0,
+                },
+
+                {
+                    backgroundColor: 'rgba(102, 102, 102)',
+                    borderColor: 'rgba(102, 102, 102)',
+                    data: [],
+                    fill: false,
+                    borderDash: [10,5],
+                    pointRadius: 0,
+                    borderWidth: 1
+                },
+            ]},
+            options: {
+                responsive: true,
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: true,
+                    text: 'Trading Day'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                    }
+                    ],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Price'
+                        }
+                    }]
+                }
+            }
+        };
+
+
+
+
+
+        const config5 = {
+            type: 'line',
+            data: {
+                labels: [0],
+                datasets: [{
+                    label: "Profit",
+                    backgroundColor: 'rgb(0, 129, 138)',
+                    borderColor: 'rgb(0, 129, 138)',
+                    data: [],
+                    fill: false,
+                    borderWidth: 2,
+                    pointRadius: 0,
+                },
+            ]},
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Mittens Reward'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: false,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Time'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Amount'
+                        }
+                    }]
+                }
+            },
+            
+        };
+
+        const context5 = document.getElementById('canvas3').getContext('2d');
+
+        const lineChart5 = new Chart(context5, config5);
+
+        const source5 = new EventSource("/model");
+
+        var status = "HOLD";
+
+        source5.onmessage = function (event) {
+            const data = JSON.parse(event.data);
+            var idx = config5.data.labels.length;
+
+            status = data.order;
+
+            if (config5.data.labels.length === 1000) {
+                config5.data.labels.shift();
+                config5.data.datasets[0].data.shift();
+            }
+            config5.data.labels.push(idx);
+            config5.data.datasets[0].data.push(data.reward);
+            lineChart5.update();
+            idx = idx + 1;
+        }
+
+
+        const context = document.getElementById('canvas').getContext('2d');
+
+        const lineChart = new Chart(context, config);
+
+        const context2 = document.getElementById('canvas2').getContext('2d');
+
+        const lineChart2 = new Chart(context2, config2);
+
+        const source = new EventSource("/chart-data");
+        // const source = new EventSource("/update");
+
+        source.onmessage = function (event) {
+            const data = JSON.parse(event.data);
+            var idx = config.data.labels.length;
+            if (config.data.labels.length === 301) {
+                config.data.labels.shift();
+                config.data.datasets[0].data.shift();
+                config.data.datasets[1].data.shift();
+                config.data.datasets[0].pointBackgroundColor.shift();
+                config.data.datasets[0].pointRadius.shift();
+                config.data.datasets[0].pointBorderColor.shift();
+            }
+            config.data.labels.push(idx);
+            config.data.datasets[0].data.push(data.ask_price);
+            config.data.datasets[1].data.push(data.avg_30sec);
+
+            config.data.datasets[0].pointBackgroundColor.push("#ff6384");
+            config.data.datasets[0].pointRadius.push(1);
+            config.data.datasets[0].pointBorderColor.push('#ff6384');
+            if (status === "BUY"){
+                config.data.datasets[0].pointBackgroundColor.push("#00c9af");
+                config.data.datasets[0].pointRadius.push(2);
+                config.data.datasets[0].pointBorderColor.push('#00c9af');
+            }
+
+            if (status === "SELL"){
+                config.data.datasets[0].pointBackgroundColor.push("#660038");
+                config.data.datasets[0].pointRadius.push(2);
+                config.data.datasets[0].pointBorderColor.push('#660038');
+            }
+
+            lineChart.update();
+
+            if ('avg_5min' in data){
+                config2.data.datasets[0].data.push(data.avg_5min);
+                config2.data.datasets[1].data.push(data.avg_1hr);
+                lineChart2.update();
+            }
+
+            // config.data.datasets[2].data.push(data.bid_price);
+            idx = idx + 1;
+            
+        }
+
+    });
+
+</script> -->
+
+
+
+<!-- 
+<script>
+    $(document).ready(function () {
+       
+        const config = {
+            type: 'line',
+            data: {
+                labels: [0],
+                datasets: [{
+                    label: "Profit",
+                    backgroundColor: 'rgb(0, 129, 138)',
+                    borderColor: 'rgb(0, 129, 138)',
+                    data: [],
+                    fill: false,
+                    borderWidth: 2,
+                    pointRadius: [],
+                    pointBackgroundColor: [],
+                    pointBorderWidth: 0
+                },
+            ]},
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Mittens Reward'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: false,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Time'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Amount'
+                        }
+                    }]
+                }
+            },
+            
+        };
+
         const context = document.getElementById('canvas3').getContext('2d');
 
         const lineChart = new Chart(context, config);
@@ -274,6 +696,14 @@
         source.onmessage = function (event) {
             const data = JSON.parse(event.data);
             var idx = config.data.labels.length;
+            if (data.order === "BUY"){
+                config.data.datasets[0].pointBackgroundColor.push("#2da18b");
+                config.data.datasets[0].pointRadius.push(5);
+            }
+            if (data.order == "SELL"){
+                config.data.datasets[0].pointBackgroundColor.push("#c94471");
+                config.data.datasets[0].pointRadius.push(5);
+            }
             if (config.data.labels.length === 1000) {
                 config.data.labels.shift();
                 config.data.datasets[0].data.shift();
@@ -285,7 +715,7 @@
         }
     });
 
-</script>
+</script> -->
 
 
 

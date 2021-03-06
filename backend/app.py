@@ -46,45 +46,52 @@ def update():
 @app.route('/model')
 def model():
     def get_update():
+        prices = []
+
         while True:
             if len(queue) > 0:
                 item = queue.pop(0)
-                print(item["reward"])
-                json_data = {"reward": item["reward"]}
-                json_data = json.dumps(json_data)
+                prices.append(item["price"])
+
+                avg_30sec = np.convolve(np.array(prices), np.ones(30)/30, mode='valid')
+                if len(avg_30sec) > 30:
+                    item["avg_30sec"] = float(avg_30sec[-1])
+                else:
+                    item["avg_30sec"] = item["price"]
+                json_data = json.dumps(item)
                 yield f"data:{json_data}\n\n"
 
     return Response(get_update(), mimetype='text/event-stream')
 
 
 
-@app.route('/chart-data')
-def chart_data():
-    def get_quote():
-        i=0
-        idx=0
-        samples = pd.DataFrame()
+# @app.route('/chart-data')
+# def chart_data():
+#     def get_quote():
+#         i=0
+#         idx=0
+#         samples = pd.DataFrame()
 
-        while True:
-            i+=1
-            quote = crypto_quote(TICKER)
-            samples = samples.append(quote, ignore_index=True)
+#         while True:
+#             i+=1
+#             quote = crypto_quote(TICKER)
+#             samples = samples.append(quote, ignore_index=True)
 
-            json_data = {
-                'ask_price': samples['ask_price'].iloc[-1],
-                'avg_30sec': np.mean(samples['ask_price'].iloc[-30:]),
-            }
+#             json_data = {
+#                 'ask_price': samples['ask_price'].iloc[-1],
+#                 'avg_30sec': np.mean(samples['ask_price'].iloc[-30:]),
+#             }
 
-            if i%300==0 and not samples.empty:
-                idx = samples.index[-1]
-                json_data['avg_5min'] = np.mean(samples.loc[idx-300:idx, 'ask_price'])
-                json_data['avg_1hr'] = np.mean(samples.loc[idx-3600:idx, 'ask_price'])
+#             if i%300==0 and not samples.empty:
+#                 idx = samples.index[-1]
+#                 json_data['avg_5min'] = np.mean(samples.loc[idx-300:idx, 'ask_price'])
+#                 json_data['avg_1hr'] = np.mean(samples.loc[idx-3600:idx, 'ask_price'])
 
-            json_data = json.dumps(json_data)
-            yield f"data:{json_data}\n\n"
-            time.sleep(1)
+#             json_data = json.dumps(json_data)
+#             yield f"data:{json_data}\n\n"
+#             time.sleep(1)
 
-    return Response(get_quote(), mimetype='text/event-stream')
+#     return Response(get_quote(), mimetype='text/event-stream')
 
 
 
